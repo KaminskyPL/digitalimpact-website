@@ -106,7 +106,8 @@ import Layout from '../layouts/Layout.astro';
 	<section class="kontakt" id="kontakt">
 		<div class="container">
 			<h2 class="section-title">Kontakt</h2>
-			<form class="form" name="kontakt" method="POST">
+			<form class="form" id="contact-form" name="kontakt" action="https://formspree.io/f/xdajlkrp" method="POST">
+				<input type="hidden" name="_language" value="pl" />
 				<div class="form__group">
 					<label for="imie">Imię</label>
 					<input type="text" id="imie" name="imie" required placeholder="Twoje imię" />
@@ -126,6 +127,9 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<button type="submit" class="btn btn--accent btn--full">Wyślij wiadomość</button>
 			</form>
+			<p id="form-success" style="display:none; color: var(--color-accent); margin-top: 1rem; font-weight: 500;">
+				Dziękuję! Odezwę się w ciągu 24 godzin.
+			</p>
 		</div>
 	</section>
 </Layout>
@@ -144,6 +148,29 @@ import Layout from '../layouts/Layout.astro';
 			menu?.classList.remove('nav__menu--open');
 			hamburger?.setAttribute('aria-expanded', 'false');
 		});
+	});
+
+	const contactForm = document.querySelector<HTMLFormElement>('#contact-form');
+	const formSuccess = document.querySelector<HTMLElement>('#form-success');
+
+	contactForm?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const data = new FormData(contactForm);
+		try {
+			const res = await fetch(contactForm.action, {
+				method: 'POST',
+				body: data,
+				headers: { Accept: 'application/json' },
+			});
+			if (res.ok) {
+				contactForm.style.display = 'none';
+				if (formSuccess) formSuccess.style.display = 'block';
+			} else {
+				alert('Coś poszło nie tak. Spróbuj napisać bezpośrednio na: twoj@email.pl');
+			}
+		} catch {
+			alert('Coś poszło nie tak. Spróbuj napisać bezpośrednio na: twoj@email.pl');
+		}
 	});
 </script>
 
