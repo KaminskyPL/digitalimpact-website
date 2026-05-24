@@ -155,6 +155,14 @@ import Layout from '../layouts/Layout.astro';
 
 	contactForm?.addEventListener('submit', async (e) => {
 		e.preventDefault();
+		const submitBtn = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+		if (submitBtn) {
+			submitBtn.textContent = 'Wysyłanie...';
+			submitBtn.disabled = true;
+			submitBtn.style.opacity = '0.7';
+		}
+
 		const data = new FormData(contactForm);
 		try {
 			const res = await fetch(contactForm.action, {
@@ -163,12 +171,27 @@ import Layout from '../layouts/Layout.astro';
 				headers: { Accept: 'application/json' },
 			});
 			if (res.ok) {
+				if (submitBtn) {
+					submitBtn.textContent = 'Wyślij wiadomość';
+					submitBtn.disabled = false;
+					submitBtn.style.opacity = '1';
+				}
 				contactForm.style.display = 'none';
 				if (formSuccess) formSuccess.style.display = 'block';
 			} else {
+				if (submitBtn) {
+					submitBtn.textContent = 'Wyślij wiadomość';
+					submitBtn.disabled = false;
+					submitBtn.style.opacity = '1';
+				}
 				alert('Coś poszło nie tak. Spróbuj napisać bezpośrednio na: twoj@email.pl');
 			}
 		} catch {
+			if (submitBtn) {
+				submitBtn.textContent = 'Wyślij wiadomość';
+				submitBtn.disabled = false;
+				submitBtn.style.opacity = '1';
+			}
 			alert('Coś poszło nie tak. Spróbuj napisać bezpośrednio na: twoj@email.pl');
 		}
 	});
