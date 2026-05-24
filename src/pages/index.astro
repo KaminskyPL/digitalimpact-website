@@ -44,13 +44,19 @@ import Layout from '../layouts/Layout.astro';
 			<h2 class="section-title">Czy AI to dla Ciebie czarna magia?</h2>
 			<div class="cards">
 				<div class="card">
-					<p class="card__text">"Nie wiem od czego zacząć"</p>
+					<span class="card__quote">&ldquo;</span>
+					<p class="card__text">Nie wiem od czego zacząć</p>
+					<p class="card__subtitle">Właściciel firmy produkcyjnej, 45 pracowników</p>
 				</div>
 				<div class="card">
-					<p class="card__text">"Bałem się że to drogie i skomplikowane"</p>
+					<span class="card__quote">&ldquo;</span>
+					<p class="card__text">Bałem się że to drogie i skomplikowane</p>
+					<p class="card__subtitle">Właściciel agencji marketingowej, 12 osób</p>
 				</div>
 				<div class="card">
-					<p class="card__text">"Nikt mi nie wytłumaczył jak to działa w praktyce"</p>
+					<span class="card__quote">&ldquo;</span>
+					<p class="card__text">Nikt mi nie wytłumaczył jak to działa w praktyce</p>
+					<p class="card__subtitle">Dyrektor operacyjny, firma logistyczna</p>
 				</div>
 			</div>
 		</div>
@@ -62,18 +68,21 @@ import Layout from '../layouts/Layout.astro';
 			<h2 class="section-title">Co robimy</h2>
 			<div class="cards">
 				<div class="card card--service">
+					<span class="card__number">01</span>
 					<h3 class="card__title">Audyt AI</h3>
 					<p class="card__text card__text--muted">
 						Analizujemy Twoje procesy i wskazujemy gdzie AI da największy zwrot
 					</p>
 				</div>
 				<div class="card card--service">
+					<span class="card__number">02</span>
 					<h3 class="card__title">Wdrożenie</h3>
 					<p class="card__text card__text--muted">
 						Implementujemy konkretne narzędzia AI dopasowane do Twojej firmy
 					</p>
 				</div>
 				<div class="card card--service">
+					<span class="card__number">03</span>
 					<h3 class="card__title">Szkolenie</h3>
 					<p class="card__text card__text--muted">
 						Uczymy Twój zespół jak korzystać z AI w codziennej pracy
@@ -216,6 +225,31 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 1rem;
 	}
 
+	.card__quote {
+		display: block;
+		font-size: 3rem;
+		color: var(--color-accent);
+		line-height: 1;
+		margin-bottom: 0.5rem;
+		font-style: normal;
+	}
+
+	.card__subtitle {
+		margin-top: 0.75rem;
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+		font-style: normal;
+		margin-bottom: 0;
+	}
+
+	.card__number {
+		display: block;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--color-accent);
+		margin-bottom: 0.75rem;
+	}
+
 	/* NAV */
 	.nav {
 		position: sticky;
@@ -237,7 +271,7 @@ import Layout from '../layouts/Layout.astro';
 
 	.nav__logo {
 		font-weight: 800;
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		color: var(--color-primary);
 		text-decoration: none;
 		letter-spacing: 0.05em;
@@ -295,7 +329,7 @@ import Layout from '../layouts/Layout.astro';
 	/* HERO */
 	.hero {
 		background-color: var(--color-primary);
-		padding: 5rem 0;
+		padding: 5rem 1.5rem;
 		text-align: center;
 	}
 
@@ -328,13 +362,13 @@ import Layout from '../layouts/Layout.astro';
 	/* PROBLEM */
 	.problem {
 		background-color: var(--color-surface);
-		padding: 5rem 0;
+		padding: 5rem 1.5rem;
 	}
 
 	/* OFERTA */
 	.oferta {
 		background-color: var(--color-white);
-		padding: 5rem 0;
+		padding: 5rem 1.5rem;
 	}
 
 	.card--service {
@@ -344,7 +378,7 @@ import Layout from '../layouts/Layout.astro';
 	/* CTA SECTION */
 	.cta-section {
 		background-color: var(--color-primary);
-		padding: 5rem 0;
+		padding: 5rem 1.5rem;
 		text-align: center;
 	}
 
@@ -361,7 +395,7 @@ import Layout from '../layouts/Layout.astro';
 	/* KONTAKT */
 	.kontakt {
 		background-color: var(--color-surface);
-		padding: 5rem 0;
+		padding: 5rem 1.5rem;
 	}
 
 	.form {
