@@ -1,0 +1,439 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="O mnie — Kamil Kiersnowski | Digital Impact"
+	description="Prawie 30 lat w IT, 15 lat komercyjnie. Pomagam MŚP wdrażać AI konkretnie i praktycznie."
+>
+	<!-- NAWIGACJA -->
+	<nav class="nav">
+		<div class="nav__container">
+			<a href="/" class="nav__logo">DIGITAL IMPACT</a>
+			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav__menu" id="nav-menu" role="list">
+				<li><a href="/#oferta">Oferta</a></li>
+				<li><a href="/o-mnie" aria-current="page">O mnie</a></li>
+				<li><a href="/#kontakt">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<h1 class="hero__name">Kamil Kiersnowski</h1>
+			<p class="hero__tagline">Pomagam firmom przestać się bać AI — i zacząć na nim zarabiać.</p>
+			<p class="hero__lead">
+				Prawie 30 lat w IT, 15 lat komercyjnie. Od roku robię jedno: przekładam potencjał sztucznej
+				inteligencji na konkretne procesy i wyniki w firmach MŚP.
+			</p>
+		</div>
+	</section>
+
+	<!-- SKĄD TO WIEM -->
+	<section class="about">
+		<div class="container">
+			<div class="about__grid">
+				<div class="about__text">
+					<h2 class="section-title about__heading">Nie sprzedaję AI. Wdrażam je.</h2>
+					<p class="about__p">
+						Zanim zacząłem pomagać innym firmom, sam byłem po drugiej stronie — jako AI Ambassador
+						w dużej polskiej spółce dystrybucyjnej odpowiadałem za wdrożenia AI w codziennych
+						procesach: od automatyzacji systemów CMS, przez analizę zgodności produktowej z
+						regulacjami EU, po budowanie wewnętrznych narzędzi opartych na modelach językowych.
+					</p>
+					<p class="about__p">
+						To praktyczne doświadczenie — nie teoria z kursu — jest podstawą tego, co oferuję
+						klientom.
+					</p>
+				</div>
+				<div class="about__stats">
+					<div class="stat">
+						<span class="stat__value">30 lat</span>
+						<span class="stat__label">doświadczenia w IT</span>
+					</div>
+					<div class="stat">
+						<span class="stat__value">15 lat</span>
+						<span class="stat__label">komercyjnie</span>
+					</div>
+					<div class="stat">
+						<span class="stat__value">od 2011</span>
+						<span class="stat__label">własna działalność</span>
+					</div>
+					<div class="stat">
+						<span class="stat__value">AI w praktyce</span>
+						<span class="stat__label">nie w teorii</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CO KONKRETNIE ROBIĘ -->
+	<section class="services">
+		<div class="container">
+			<h2 class="section-title">Z czym przychodzą do mnie klienci</h2>
+			<div class="cards">
+				<div class="card card--service">
+					<span class="card__number">01</span>
+					<h3 class="card__title">Automatyzacja procesów</h3>
+					<p class="card__text">
+						Identyfikujemy powtarzalne zadania w Twojej firmie i zastępujemy je narzędziami AI —
+						od obsługi dokumentów po komunikację z klientami.
+					</p>
+				</div>
+				<div class="card card--service">
+					<span class="card__number">02</span>
+					<h3 class="card__title">Wdrożenie narzędzi AI</h3>
+					<p class="card__text">
+						Dobieramy i wdrażamy konkretne rozwiązania: modele językowe, asystentów, systemy baz
+						wiedzy — dopasowane do Twojego stacku technologicznego.
+					</p>
+				</div>
+				<div class="card card--service">
+					<span class="card__number">03</span>
+					<h3 class="card__title">Szkolenia dla zespołów</h3>
+					<p class="card__text">
+						Uczymy ludzi, nie tylko systemy. Warsztaty dla zespołów z realnego używania AI w
+						codziennej pracy.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="cta-section">
+		<div class="container">
+			<h2 class="cta-section__title">Chcesz sprawdzić czy AI ma sens w Twojej firmie?</h2>
+			<a href="/#kontakt" class="btn btn--accent">Porozmawiajmy</a>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger');
+	const menu = document.querySelector<HTMLUListElement>('.nav__menu');
+
+	hamburger?.addEventListener('click', () => {
+		const isOpen = menu?.classList.toggle('nav__menu--open');
+		hamburger.setAttribute('aria-expanded', String(isOpen));
+	});
+
+	document.querySelectorAll('.nav__menu a').forEach((link) => {
+		link.addEventListener('click', () => {
+			menu?.classList.remove('nav__menu--open');
+			hamburger?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<style>
+	/* LAYOUT */
+	.container {
+		width: 100%;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding-inline: 1.25rem;
+	}
+
+	/* BUTTONS */
+	.btn {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		border-radius: var(--radius-md);
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: opacity 0.2s;
+	}
+	.btn:hover {
+		opacity: 0.88;
+	}
+	.btn--accent {
+		background-color: var(--color-accent);
+		color: var(--color-white);
+	}
+
+	/* SHARED */
+	.section-title {
+		font-size: clamp(1.5rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--color-primary);
+		text-align: center;
+		margin-bottom: 2.5rem;
+		line-height: 1.25;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.card {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+	}
+
+	.card--service {
+		border-top: 3px solid var(--color-accent);
+	}
+
+	.card__number {
+		display: block;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--color-accent);
+		margin-bottom: 0.75rem;
+	}
+
+	.card__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	.card__text {
+		font-size: 1rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* NAV */
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.nav__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding: 1rem 1.25rem;
+		position: relative;
+	}
+
+	.nav__logo {
+		font-weight: 800;
+		font-size: 1.25rem;
+		color: var(--color-primary);
+		text-decoration: none;
+		letter-spacing: 0.05em;
+	}
+
+	.nav__hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.375rem;
+	}
+
+	.nav__hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: var(--color-primary);
+		border-radius: 2px;
+	}
+
+	.nav__menu {
+		display: none;
+		flex-direction: column;
+		list-style: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-md);
+		padding: 0.5rem 1.25rem 1.25rem;
+		margin: 0;
+	}
+
+	.nav__menu--open {
+		display: flex;
+	}
+
+	.nav__menu a {
+		display: block;
+		padding: 0.75rem 0;
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		border-bottom: 1px solid var(--color-surface);
+	}
+
+	.nav__menu a[aria-current='page'] {
+		color: var(--color-accent);
+	}
+
+	.nav__menu li:last-child a {
+		border-bottom: none;
+	}
+
+	/* HERO */
+	.hero {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	.hero__name {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 800;
+		color: var(--color-primary);
+		line-height: 1.1;
+		margin: 0 0 1rem;
+	}
+
+	.hero__tagline {
+		font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+		font-weight: 600;
+		color: var(--color-accent);
+		margin: 0 0 1.25rem;
+		line-height: 1.4;
+	}
+
+	.hero__lead {
+		font-size: 1.0625rem;
+		color: var(--color-text-muted);
+		max-width: 640px;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	/* SKĄD TO WIEM */
+	.about {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.about__heading {
+		text-align: left;
+	}
+
+	.about__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	.about__p {
+		font-size: 1rem;
+		color: var(--color-text);
+		line-height: 1.75;
+		margin-bottom: 1rem;
+	}
+
+	.about__p:last-child {
+		margin-bottom: 0;
+	}
+
+	.about__stats {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.stat {
+		border-left: 3px solid var(--color-accent);
+		padding: 1.5rem;
+		background-color: var(--color-surface);
+		border-radius: 0 var(--radius-md) var(--radius-md) 0;
+	}
+
+	.stat__value {
+		display: block;
+		font-size: 1.375rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		line-height: 1.2;
+		margin-bottom: 0.375rem;
+	}
+
+	.stat__label {
+		display: block;
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+		line-height: 1.4;
+	}
+
+	/* CO ROBIĘ */
+	.services {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	/* CTA */
+	.cta-section {
+		background-color: var(--color-primary);
+		padding: 4rem 1.5rem;
+		text-align: center;
+	}
+
+	.cta-section__title {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 700;
+		color: var(--color-white);
+		max-width: 600px;
+		margin-inline: auto;
+		margin-bottom: 2rem;
+		line-height: 1.3;
+	}
+
+	/* DESKTOP */
+	@media (min-width: 768px) {
+		.nav__hamburger {
+			display: none;
+		}
+
+		.nav__menu {
+			display: flex;
+			flex-direction: row;
+			position: static;
+			box-shadow: none;
+			padding: 0;
+			gap: 2.5rem;
+		}
+
+		.nav__menu a {
+			padding: 0;
+			border-bottom: none;
+			font-size: 0.9375rem;
+		}
+
+		.nav__menu a:hover {
+			color: var(--color-accent);
+		}
+
+		.about__grid {
+			grid-template-columns: 3fr 2fr;
+			align-items: start;
+		}
+
+		.cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>
