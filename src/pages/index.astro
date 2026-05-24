@@ -1,49 +1,445 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+<Layout
+	title="Digital Impact — AI Consulting dla MŚP"
+	description="Pomagamy MŚP automatyzować procesy i wykorzystywać AI — konkretnie, praktycznie, z wynikami."
+>
+	<!-- NAWIGACJA -->
+	<nav class="nav">
+		<div class="nav__container">
+			<a href="/" class="nav__logo">DIGITAL IMPACT</a>
+			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav__menu" id="nav-menu" role="list">
+				<li><a href="#oferta">Oferta</a></li>
+				<li><a href="#o-mnie">O mnie</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
 			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<p class="hero__overline">ai consulting dla biznesu</p>
+			<h1 class="hero__title">
+				Wdrażamy AI w Twojej firmie.<br />
+				Bez chaosu, z mierzalnym efektem.
+			</h1>
+			<p class="hero__subtitle">
+				Pomagamy MŚP automatyzować procesy i wykorzystywać AI — konkretnie, praktycznie, z wynikami.
 			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+			<a href="#kontakt" class="btn btn--accent">Umów bezpłatną konsultację</a>
+		</div>
+	</section>
+
+	<!-- PROBLEM -->
+	<section class="problem">
+		<div class="container">
+			<h2 class="section-title">Czy AI to dla Ciebie czarna magia?</h2>
+			<div class="cards">
+				<div class="card">
+					<p class="card__text">"Nie wiem od czego zacząć"</p>
+				</div>
+				<div class="card">
+					<p class="card__text">"Bałem się że to drogie i skomplikowane"</p>
+				</div>
+				<div class="card">
+					<p class="card__text">"Nikt mi nie wytłumaczył jak to działa w praktyce"</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- OFERTA -->
+	<section class="oferta" id="oferta">
+		<div class="container">
+			<h2 class="section-title">Co robimy</h2>
+			<div class="cards">
+				<div class="card card--service">
+					<h3 class="card__title">Audyt AI</h3>
+					<p class="card__text card__text--muted">
+						Analizujemy Twoje procesy i wskazujemy gdzie AI da największy zwrot
+					</p>
+				</div>
+				<div class="card card--service">
+					<h3 class="card__title">Wdrożenie</h3>
+					<p class="card__text card__text--muted">
+						Implementujemy konkretne narzędzia AI dopasowane do Twojej firmy
+					</p>
+				</div>
+				<div class="card card--service">
+					<h3 class="card__title">Szkolenie</h3>
+					<p class="card__text card__text--muted">
+						Uczymy Twój zespół jak korzystać z AI w codziennej pracy
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="cta-section">
+		<div class="container">
+			<h2 class="cta-section__title">
+				Gotowy żeby sprawdzić co AI może zrobić dla Twojej firmy?
+			</h2>
+			<a href="#kontakt" class="btn btn--accent">Napisz do mnie</a>
+		</div>
+	</section>
+
+	<!-- KONTAKT -->
+	<section class="kontakt" id="kontakt">
+		<div class="container">
+			<h2 class="section-title">Kontakt</h2>
+			<form class="form" name="kontakt" method="POST">
+				<div class="form__group">
+					<label for="imie">Imię</label>
+					<input type="text" id="imie" name="imie" required placeholder="Twoje imię" />
+				</div>
+				<div class="form__group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required placeholder="twoj@email.pl" />
+				</div>
+				<div class="form__group">
+					<label for="wiadomosc">Wiadomość</label>
+					<textarea
+						id="wiadomosc"
+						name="wiadomosc"
+						rows="5"
+						required
+						placeholder="Opowiedz mi o swojej firmie i wyzwaniach..."></textarea>
+				</div>
+				<button type="submit" class="btn btn--accent btn--full">Wyślij wiadomość</button>
+			</form>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger');
+	const menu = document.querySelector<HTMLUListElement>('.nav__menu');
+
+	hamburger?.addEventListener('click', () => {
+		const isOpen = menu?.classList.toggle('nav__menu--open');
+		hamburger.setAttribute('aria-expanded', String(isOpen));
+	});
+
+	document.querySelectorAll('.nav__menu a').forEach((link) => {
+		link.addEventListener('click', () => {
+			menu?.classList.remove('nav__menu--open');
+			hamburger?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<style>
+	/* LAYOUT */
+	.container {
+		width: 100%;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding-inline: 1.25rem;
+	}
+
+	/* BUTTONS */
+	.btn {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		border-radius: var(--radius-md);
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: opacity 0.2s;
+	}
+	.btn:hover {
+		opacity: 0.88;
+	}
+	.btn--accent {
+		background-color: var(--color-accent);
+		color: var(--color-white);
+	}
+	.btn--full {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* SHARED */
+	.section-title {
+		font-size: clamp(1.5rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--color-primary);
+		text-align: center;
+		margin-bottom: 2.5rem;
+		line-height: 1.25;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.card {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.card__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	.card__text {
+		font-size: 1.125rem;
+		color: var(--color-text);
+		line-height: 1.6;
+		font-style: italic;
+		margin: 0;
+	}
+
+	.card__text--muted {
+		font-style: normal;
+		color: var(--color-text-muted);
+		font-size: 1rem;
+	}
+
+	/* NAV */
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.nav__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding: 1rem 1.25rem;
+		position: relative;
+	}
+
+	.nav__logo {
+		font-weight: 800;
+		font-size: 1.125rem;
+		color: var(--color-primary);
+		text-decoration: none;
+		letter-spacing: 0.05em;
+	}
+
+	.nav__hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.375rem;
+	}
+
+	.nav__hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: var(--color-primary);
+		border-radius: 2px;
+	}
+
+	.nav__menu {
+		display: none;
+		flex-direction: column;
+		list-style: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-md);
+		padding: 0.5rem 1.25rem 1.25rem;
+		margin: 0;
+	}
+
+	.nav__menu--open {
+		display: flex;
+	}
+
+	.nav__menu a {
+		display: block;
+		padding: 0.75rem 0;
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		border-bottom: 1px solid var(--color-surface);
+	}
+
+	.nav__menu li:last-child a {
+		border-bottom: none;
+	}
+
+	/* HERO */
+	.hero {
+		background-color: var(--color-primary);
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.hero__overline {
+		font-size: 0.875rem;
+		letter-spacing: 0.1em;
+		color: var(--color-accent-light);
+		margin-bottom: 1.25rem;
+		font-weight: 500;
+		margin: 0 0 1.25rem;
+	}
+
+	.hero__title {
+		font-size: clamp(2rem, 5vw, 3.25rem);
+		font-weight: 800;
+		line-height: 1.15;
+		color: var(--color-white);
+		margin: 0 0 1.5rem;
+	}
+
+	.hero__subtitle {
+		font-size: 1.125rem;
+		color: var(--color-accent-light);
+		max-width: 600px;
+		margin-inline: auto;
+		margin-bottom: 2.5rem;
+		line-height: 1.7;
+	}
+
+	/* PROBLEM */
+	.problem {
+		background-color: var(--color-surface);
+		padding: 5rem 0;
+	}
+
+	/* OFERTA */
+	.oferta {
+		background-color: var(--color-white);
+		padding: 5rem 0;
+	}
+
+	.card--service {
+		border-top: 3px solid var(--color-accent);
+	}
+
+	/* CTA SECTION */
+	.cta-section {
+		background-color: var(--color-primary);
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.cta-section__title {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 700;
+		color: var(--color-white);
+		max-width: 640px;
+		margin-inline: auto;
+		margin-bottom: 2rem;
+		line-height: 1.3;
+	}
+
+	/* KONTAKT */
+	.kontakt {
+		background-color: var(--color-surface);
+		padding: 5rem 0;
+	}
+
+	.form {
+		max-width: 560px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.form__group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.375rem;
+	}
+
+	.form__group label {
+		font-weight: 500;
+		font-size: 0.9375rem;
+		color: var(--color-text);
+	}
+
+	.form__group input,
+	.form__group textarea {
+		border: 1.5px solid #d1d5db;
+		border-radius: var(--radius-md);
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		color: var(--color-text);
+		background-color: var(--color-white);
+		transition: border-color 0.15s;
+		width: 100%;
+	}
+
+	.form__group input:focus,
+	.form__group textarea:focus {
+		outline: none;
+		border-color: var(--color-accent);
+		box-shadow: 0 0 0 3px rgba(45, 126, 248, 0.15);
+	}
+
+	.form__group textarea {
+		resize: vertical;
+		min-height: 140px;
+	}
+
+	/* DESKTOP */
+	@media (min-width: 768px) {
+		.nav__hamburger {
+			display: none;
+		}
+
+		.nav__menu {
+			display: flex;
+			flex-direction: row;
+			position: static;
+			box-shadow: none;
+			padding: 0;
+			gap: 2.5rem;
+		}
+
+		.nav__menu a {
+			padding: 0;
+			border-bottom: none;
+			font-size: 0.9375rem;
+		}
+
+		.nav__menu a:hover {
+			color: var(--color-accent);
+		}
+
+		.cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.btn--full {
+			width: auto;
+		}
+	}
+</style>

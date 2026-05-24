@@ -23,3 +23,13 @@ const { title, description = '' } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	body {
+		font-family: var(--font-sans);
+		color: var(--color-text);
+		background-color: var(--color-white);
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+	}
+</style>
