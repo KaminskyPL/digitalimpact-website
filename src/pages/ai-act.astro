@@ -479,14 +479,22 @@ import Nav from '../components/Nav.astro';
 	}
 
 	.timeline__item--deadline {
-		background-color: rgba(255, 248, 240, 1);
-		border: 1.5px solid rgba(224, 124, 36, 0.3);
-		border-radius: var(--radius-lg);
-		padding: 1.25rem 1.25rem 1.25rem 0;
-		margin-left: -2rem;
-		padding-left: calc(2rem + 1.25rem);
 		position: relative;
 		z-index: 1;
+		padding-top: 1.25rem;
+		padding-right: 1.25rem;
+		padding-bottom: 1.25rem;
+	}
+
+	.timeline__item--deadline::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		margin-left: -2rem;
+		background-color: rgb(255, 248, 240);
+		border: 1.5px solid rgba(224, 124, 36, 0.3);
+		border-radius: var(--radius-lg);
+		z-index: -1;
 	}
 
 	.timeline__desc {
@@ -830,9 +838,8 @@ import Nav from '../components/Nav.astro';
 			left: 11px;
 		}
 
-		.timeline__item--deadline {
+		.timeline__item--deadline::before {
 			margin-left: -2.5rem;
-			padding-left: calc(2.5rem + 1.25rem);
 		}
 	}
 </style>
