@@ -60,8 +60,11 @@ import Nav from '../components/Nav.astro';
 					<h3 class="card__title">Audyt AI</h3>
 					<p class="card__text card__text--muted">
 						Analizuję Twoje procesy i wskazuję gdzie AI da największy zwrot.
-						<a href="/kalkulator-roi" class="card__link">Wstępnie oszacuj ROI →</a>
 					</p>
+					<a href="/kalkulator-roi" class="card__roi-link">
+						Wstępnie oszacuj ROI
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+					</a>
 				</div>
 				<div class="card card--service">
 					<span class="card__number">02</span>
@@ -386,16 +389,23 @@ import Nav from '../components/Nav.astro';
 		margin: 0;
 	}
 
-	.card__link {
-		display: inline-block;
-		margin-top: 0.625rem;
-		font-size: 0.875rem;
+	.card__roi-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+		margin-top: 1rem;
+		padding: 0.4rem 0.875rem;
+		background-color: var(--color-accent-light);
 		color: var(--color-accent);
+		border-radius: 999px;
+		font-size: 0.8125rem;
+		font-weight: 600;
 		text-decoration: none;
-		font-weight: 500;
+		transition: background-color 0.15s, color 0.15s;
 	}
-	.card__link:hover {
-		text-decoration: underline;
+	.card__roi-link:hover {
+		background-color: var(--color-accent);
+		color: var(--color-white);
 	}
 
 	/* DESKTOP */
