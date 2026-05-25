@@ -85,7 +85,12 @@ import Nav from '../components/Nav.astro';
 	const u = 'kontakt';
 	const d = 'digitalimpact.pl';
 	const el = document.getElementById('email-wrap');
-	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link">' + u + '@' + d + '</a>';
+	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link" style="color:#1A1A2E;text-decoration:none;font-weight:500;">' + u + '@' + d + '</a>';
+	var emailLink = el.querySelector('a');
+	if (emailLink) {
+		emailLink.addEventListener('mouseenter', function() { this.style.color = '#2D7EF8'; });
+		emailLink.addEventListener('mouseleave', function() { this.style.color = '#1A1A2E'; });
+	}
 
 	// Form submission
 	const contactForm = document.querySelector<HTMLFormElement>('#contact-form');
