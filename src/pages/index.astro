@@ -44,25 +44,26 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<!-- PROBLEM -->
-	<section class="problem">
+	<!-- METRICS -->
+	<section class="metrics">
 		<div class="container">
-			<h2 class="section-title">Czy AI to dla Ciebie czarna magia?</h2>
-			<div class="cards">
-				<div class="card">
-					<span class="card__quote">&ldquo;</span>
-					<p class="card__text">Nie wiem od czego zacząć</p>
-					<p class="card__subtitle">Właściciel firmy produkcyjnej, 45 pracowników</p>
+			<p class="metrics__label">W liczbach</p>
+			<div class="metrics__grid">
+				<div class="metrics__item">
+					<span class="metrics__value">20+</span>
+					<span class="metrics__desc">lat doświadczenia w IT i transformacji cyfrowej</span>
 				</div>
-				<div class="card">
-					<span class="card__quote">&ldquo;</span>
-					<p class="card__text">Bałem się że to drogie i skomplikowane</p>
-					<p class="card__subtitle">Właściciel agencji marketingowej, 12 osób</p>
+				<div class="metrics__item">
+					<span class="metrics__value">4–6</span>
+					<span class="metrics__desc">tygodni do pierwszych mierzalnych efektów wdrożenia</span>
 				</div>
-				<div class="card">
-					<span class="card__quote">&ldquo;</span>
-					<p class="card__text">Nikt mi nie wytłumaczył jak to działa w praktyce</p>
-					<p class="card__subtitle">Dyrektor operacyjny, firma logistyczna</p>
+				<div class="metrics__item">
+					<span class="metrics__value">0 zł</span>
+					<span class="metrics__desc">kosztów agencji zewnętrznej przy przebudowie stron – AI zastępuje podwykonawców</span>
+				</div>
+				<div class="metrics__item">
+					<span class="metrics__value">100%</span>
+					<span class="metrics__desc">projektów realizowanych bez wysyłania danych firmowych do chmury</span>
 				</div>
 			</div>
 		</div>
@@ -333,10 +334,47 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.7;
 	}
 
-	/* PROBLEM */
-	.problem {
-		background-color: var(--color-surface);
+	/* METRICS */
+	.metrics {
+		background-color: var(--color-primary);
 		padding: 4rem 1.5rem;
+	}
+
+	.metrics__label {
+		text-align: center;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--color-accent-light);
+		margin: 0 0 2.5rem;
+	}
+
+	.metrics__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 3rem;
+		max-width: 860px;
+		margin-inline: auto;
+	}
+
+	.metrics__item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.metrics__value {
+		font-size: clamp(2.25rem, 5vw, 3rem);
+		font-weight: 800;
+		color: var(--color-accent);
+		line-height: 1;
+	}
+
+	.metrics__desc {
+		font-size: 0.9375rem;
+		color: var(--color-accent-light);
+		line-height: 1.5;
 	}
 
 	/* OFERTA */
@@ -393,6 +431,11 @@ import Layout from '../layouts/Layout.astro';
 
 		.cards {
 			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.metrics__grid {
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
 		}
 	}
 </style>
