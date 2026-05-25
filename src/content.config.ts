@@ -14,6 +14,8 @@ const blog = defineCollection({
 			klient: z.string().optional(),
 			branża: z.string().optional(),
 			efekt: z.string().optional(),
+			kategoria: z.string().optional(),
+			czas_czytania: z.string().optional(),
 		}),
 });
 

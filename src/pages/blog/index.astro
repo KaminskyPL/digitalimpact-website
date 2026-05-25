@@ -1,114 +1,295 @@
 ---
-import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+const posts = allPosts
+	.filter((p) => !p.id.startsWith('case-study-'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout
+	title="Blog — Digital Impact"
+	description="Praktyczne artykuły o AI dla firm. Automatyzacje, koszty, case studies — konkretnie i bez żargonu."
+>
+	<!-- NAWIGACJA -->
+	<nav class="nav">
+		<div class="nav__container">
+			<a href="/" class="nav__logo"><img src="/logo.svg" alt="Digital Impact AI Consulting" height="44" style="display:block; height:44px; width:auto;"></a>
+			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav__menu" id="nav-menu" role="list">
+				<li><a href="/#oferta">Oferta</a></li>
+				<li><a href="/proces">Proces</a></li>
+				<li><a href="/case-studies">Case Studies</a></li>
+				<li><a href="/blog" aria-current="page">Blog</a></li>
+				<li><a href="/o-mnie">O mnie</a></li>
+				<li><a href="/kontakt">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<h1 class="hero__title">Blog</h1>
+			<p class="hero__subtitle">Praktycznie o AI dla firm.</p>
+		</div>
+	</section>
+
+	<!-- ARTYKUŁY -->
+	<section class="posts-section">
+		<div class="container">
+			<div class="posts">
+				{posts.map((post) => (
+					<article class="card">
+						<div class="card__meta">
+							{post.data.kategoria && (
+								<span class="card__tag">{post.data.kategoria}</span>
+							)}
+							{post.data.czas_czytania && (
+								<span class="card__time">⏱ {post.data.czas_czytania}</span>
+							)}
+						</div>
+						<h2 class="card__title">
+							<a href={`/blog/${post.id}`}>{post.data.title}</a>
+						</h2>
+						{post.data.description && (
+							<p class="card__desc">{post.data.description}</p>
+						)}
+						<a href={`/blog/${post.id}`} class="btn btn--accent">Czytaj artykuł</a>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger');
+	const menu = document.querySelector<HTMLUListElement>('.nav__menu');
+
+	hamburger?.addEventListener('click', () => {
+		const isOpen = menu?.classList.toggle('nav__menu--open');
+		hamburger.setAttribute('aria-expanded', String(isOpen));
+	});
+
+	document.querySelectorAll('.nav__menu a').forEach((link) => {
+		link.addEventListener('click', () => {
+			menu?.classList.remove('nav__menu--open');
+			hamburger?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<style>
+	.container {
+		width: 100%;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding-inline: 1.25rem;
+	}
+
+	/* NAV */
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.nav__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding: 0.75rem 1.5rem;
+		min-height: 64px;
+		position: relative;
+	}
+
+	.nav__logo { text-decoration: none; line-height: 0; padding: 0; }
+
+	.nav__hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.375rem;
+	}
+
+	.nav__hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: var(--color-primary);
+		border-radius: 2px;
+	}
+
+	.nav__menu {
+		display: none;
+		flex-direction: column;
+		list-style: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-md);
+		padding: 0.5rem 1.25rem 1.25rem;
+		margin: 0;
+	}
+
+	.nav__menu--open { display: flex; }
+
+	.nav__menu a {
+		display: block;
+		padding: 0.75rem 0;
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		border-bottom: 1px solid var(--color-surface);
+	}
+
+	.nav__menu a[aria-current='page'] { color: var(--color-accent); }
+	.nav__menu li:last-child a { border-bottom: none; }
+
+	/* HERO */
+	.hero {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+		text-align: center;
+	}
+
+	.hero__title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 800;
+		color: var(--color-primary);
+		margin: 0 0 1rem;
+		line-height: 1.15;
+	}
+
+	.hero__subtitle {
+		font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+		color: var(--color-text-muted);
+		margin: 0;
+	}
+
+	/* POSTS */
+	.posts-section {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.card {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		border-top: 3px solid var(--color-accent);
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.card__meta {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem;
+		flex-wrap: wrap;
+	}
+
+	.card__tag {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--color-accent);
+		background-color: rgba(45, 126, 248, 0.08);
+		padding: 0.25rem 0.625rem;
+		border-radius: 999px;
+	}
+
+	.card__time {
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+	}
+
+	.card__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		line-height: 1.3;
+		margin: 0;
+	}
+
+	.card__title a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.card__title a:hover { color: var(--color-accent); }
+
+	.card__desc {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.65;
+		margin: 0;
+		flex: 1;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: var(--radius-md);
+		font-weight: 600;
+		font-size: 0.9375rem;
+		font-family: var(--font-sans);
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: opacity 0.2s;
+		align-self: flex-start;
+	}
+
+	.btn:hover { opacity: 0.88; }
+	.btn--accent { background-color: var(--color-accent); color: var(--color-white); }
+
+	/* DESKTOP */
+	@media (min-width: 768px) {
+		.nav__hamburger { display: none; }
+
+		.nav__menu {
+			display: flex;
+			flex-direction: row;
+			position: static;
+			box-shadow: none;
+			padding: 0;
+			gap: 2rem;
+		}
+
+		.nav__menu a {
+			padding: 0;
+			border-bottom: none;
+			font-size: 0.9375rem;
+		}
+
+		.nav__menu a:hover { color: var(--color-accent); }
+
+		.posts {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+</style>
