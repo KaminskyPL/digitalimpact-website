@@ -85,7 +85,7 @@ import Nav from '../components/Nav.astro';
 	const u = 'kontakt';
 	const d = 'digitalimpact.pl';
 	const el = document.getElementById('email-wrap');
-	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link" style="text-decoration:none;">' + u + '@' + d + '</a>';
+	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link">' + u + '@' + d + '</a>';
 
 	// Form submission
 	const contactForm = document.querySelector<HTMLFormElement>('#contact-form');
