@@ -38,6 +38,9 @@ const caseStudies = allPosts.filter((p) => p.id.startsWith('case-study-'));
 					</article>
 				))}
 			</div>
+			<div class="cs-more">
+				<p class="cs-more__text">Kolejne realizacje w przygotowaniu.</p>
+			</div>
 		</div>
 	</section>
 </Layout>
@@ -158,6 +161,17 @@ const caseStudies = allPosts.filter((p) => p.id.startsWith('case-study-'));
 	.btn--accent {
 		background-color: var(--color-accent);
 		color: var(--color-white);
+	}
+
+	.cs-more {
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.cs-more__text {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		font-style: italic;
 	}
 
 	/* DESKTOP */

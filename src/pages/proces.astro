@@ -52,7 +52,7 @@ import Nav from '../components/Nav.astro';
 						<p class="step__desc">Analizuję wybrane procesy w Twojej firmie – dokumenty, workflow, narzędzia których używasz. Szukam konkretnych miejsc gdzie AI da największy zwrot z inwestycji. Nie potrzebuję dostępu do systemów – wystarczy rozmowa z Tobą i Twoim zespołem.</p>
 						<div class="step__deliverable">
 							<span class="step__deliverable-label">Dostajesz:</span>
-							<span class="step__deliverable-text">Raport z mapą możliwości – które procesy zautomatyzować, w jakiej kolejności, z szacowaną oszczędnością czasu i kosztów.</span>
+							<span class="step__deliverable-text">Raport z mapą możliwości – które procesy zautomatyzować, w jakiej kolejności, z szacowaną oszczędnością czasu i kosztów. Chcesz wstępnie oszacować ROI jeszcze przed rozmową? <a href="/kalkulator-roi" class="step__link">Skorzystaj z kalkulatora</a>.</span>
 						</div>
 					</div>
 				</div>
@@ -396,6 +396,16 @@ import Nav from '../components/Nav.astro';
 		font-size: 1.0625rem;
 		color: var(--color-accent-light);
 		margin: 0 0 2rem;
+	}
+
+	.step__link {
+		color: var(--color-accent);
+		text-decoration: underline;
+		text-decoration-color: rgba(45, 126, 248, 0.4);
+		text-underline-offset: 2px;
+	}
+	.step__link:hover {
+		text-decoration-color: var(--color-accent);
 	}
 
 	/* DESKTOP */

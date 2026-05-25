@@ -6,7 +6,7 @@ import Nav from '../components/Nav.astro';
 
 <Layout
 	title="Digital Impact – AI Consulting dla firm"
-	description="Pomagamy firmom wdrażać AI i automatyzować procesy. Konkretnie, praktycznie, z mierzalnym efektem. Umów bezpłatną konsultację."
+	description="Pomagam firmom wdrażać AI i automatyzować procesy. Konkretnie, praktycznie, z mierzalnym efektem. Umów bezpłatną konsultację."
 >
 	<Nav current="oferta" />
 
@@ -59,7 +59,8 @@ import Nav from '../components/Nav.astro';
 					<span class="card__number">01</span>
 					<h3 class="card__title">Audyt AI</h3>
 					<p class="card__text card__text--muted">
-						Analizuję Twoje procesy i wskazuję gdzie AI da największy zwrot
+						Analizuję Twoje procesy i wskazuję gdzie AI da największy zwrot.
+						<a href="/kalkulator-roi" class="card__link">Wstępnie oszacuj ROI →</a>
 					</p>
 				</div>
 				<div class="card card--service">
@@ -383,6 +384,18 @@ import Nav from '../components/Nav.astro';
 		color: var(--color-text-muted);
 		line-height: 1.65;
 		margin: 0;
+	}
+
+	.card__link {
+		display: inline-block;
+		margin-top: 0.625rem;
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		text-decoration: none;
+		font-weight: 500;
+	}
+	.card__link:hover {
+		text-decoration: underline;
 	}
 
 	/* DESKTOP */
