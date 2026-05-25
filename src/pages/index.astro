@@ -99,6 +99,58 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<!-- WYROZNIKI -->
+	<section class="wyrozniki">
+		<div class="container">
+			<h2 class="section-title">Dlaczego Digital Impact?</h2>
+			<p class="wyrozniki__lead">
+				Na rynku nie brakuje firm oferujących wdrożenia AI. Różnica tkwi w podejściu.
+			</p>
+			<div class="wyrozniki__grid">
+				<div class="wyrozniki__item">
+					<div class="wyrozniki__icon" aria-hidden="true">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 12l2 2 4-4"/>
+							<path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.51 0 2.93.37 4.18 1.02"/>
+							<path d="M21 3l-9 9-3-3"/>
+						</svg>
+					</div>
+					<h3 class="wyrozniki__title">Praktyk, nie teoretyk</h3>
+					<p class="wyrozniki__text">
+						Każde rozwiązanie, które rekomendujemy, wcześniej wdrożyliśmy u realnych klientów
+						lub przetestowaliśmy we własnej pracy. Żadnych modeli „na papierze".
+					</p>
+				</div>
+				<div class="wyrozniki__item">
+					<div class="wyrozniki__icon" aria-hidden="true">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="11" width="18" height="11" rx="2"/>
+							<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+						</svg>
+					</div>
+					<h3 class="wyrozniki__title">Dane zostają u Ciebie</h3>
+					<p class="wyrozniki__text">
+						Wdrażamy modele lokalne i prywatne środowiska AI. Dokumenty firmowe, dane klientów
+						i know-how nie opuszczają Twojej infrastruktury.
+					</p>
+				</div>
+				<div class="wyrozniki__item">
+					<div class="wyrozniki__icon" aria-hidden="true">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 20h9"/>
+							<path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+						</svg>
+					</div>
+					<h3 class="wyrozniki__title">Jeden punkt kontaktu</h3>
+					<p class="wyrozniki__text">
+						Nie przekazujemy Cię między działami ani podwykonawcami. Od audytu po szkolenie
+						zespołu – pracujesz z tą samą osobą przez cały projekt.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- CTA -->
 	<section class="cta-section">
 		<div class="container">
@@ -336,8 +388,8 @@ import Layout from '../layouts/Layout.astro';
 	.metrics__grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		max-width: 860px;
+		gap: 1.25rem;
+		max-width: 1060px;
 		margin-inline: auto;
 	}
 
@@ -346,22 +398,22 @@ import Layout from '../layouts/Layout.astro';
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		background-color: var(--color-surface);
+		background-color: var(--color-white);
 		border-radius: var(--radius-lg);
-		border: 1px solid rgba(15, 31, 61, 0.07);
-		padding: 1.75rem 1.25rem;
-		gap: 0.5rem;
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		padding: 2rem 1.5rem;
+		gap: 0.625rem;
 	}
 
 	.metrics__value {
-		font-size: clamp(2rem, 5vw, 2.5rem);
+		font-size: clamp(2.25rem, 5vw, 2.75rem);
 		font-weight: 800;
-		color: var(--color-accent);
+		color: var(--color-primary);
 		line-height: 1;
 	}
 
 	.metrics__desc {
-		font-size: 0.875rem;
+		font-size: 0.9375rem;
 		color: var(--color-text-muted);
 		line-height: 1.5;
 	}
@@ -391,6 +443,56 @@ import Layout from '../layouts/Layout.astro';
 		margin-inline: auto;
 		margin-bottom: 2rem;
 		line-height: 1.3;
+	}
+
+	/* WYROZNIKI */
+	.wyrozniki {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	.wyrozniki__lead {
+		text-align: center;
+		font-size: 1.0625rem;
+		color: var(--color-text-muted);
+		max-width: 560px;
+		margin-inline: auto;
+		margin-top: -1.5rem;
+		margin-bottom: 2.5rem;
+		line-height: 1.6;
+	}
+
+	.wyrozniki__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.wyrozniki__item {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		padding: 2rem;
+	}
+
+	.wyrozniki__icon {
+		color: var(--color-accent);
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.wyrozniki__title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.625rem;
+	}
+
+	.wyrozniki__text {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.65;
+		margin: 0;
 	}
 
 	/* DESKTOP */
@@ -424,6 +526,10 @@ import Layout from '../layouts/Layout.astro';
 
 		.metrics__grid {
 			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.wyrozniki__grid {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>
