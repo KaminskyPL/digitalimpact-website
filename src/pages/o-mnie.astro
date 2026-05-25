@@ -1,32 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <Layout
 	title="Kamil Kiersnowski – AI Consultant | Digital Impact"
 	description="Ponad 20 lat w IT, od roku specjalizuję się we wdrożeniach AI dla firm. Poznaj moje doświadczenie i podejście do pracy."
 >
-	<!-- NAWIGACJA -->
-	<nav class="nav">
-		<div class="nav__container">
-			<a href="/" class="nav__logo"><img src="/logo.svg" alt="Digital Impact AI Consulting" height="44" style="display:block; height:44px; width:auto;"></a>
-			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-			<ul class="nav__menu" id="nav-menu" role="list">
-				<li><a href="/#oferta">Oferta</a></li>
-				<li><a href="/proces">Proces</a></li>
-				<li><a href="/ai-act">AI Act</a></li>
-				<li><a href="/case-studies">Case Studies</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/o-mnie" aria-current="page">O mnie</a></li>
-				<li><a href="/kalkulator-roi">Kalkulator ROI</a></li>
-				<li><a href="/kontakt">Kontakt</a></li>
-			</ul>
-		</div>
-	</nav>
+	<Nav current="o-mnie" />
 
 	<!-- HERO -->
 	<section class="hero">
@@ -121,22 +102,6 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 </Layout>
 
-<script>
-	const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger');
-	const menu = document.querySelector<HTMLUListElement>('.nav__menu');
-
-	hamburger?.addEventListener('click', () => {
-		const isOpen = menu?.classList.toggle('nav__menu--open');
-		hamburger.setAttribute('aria-expanded', String(isOpen));
-	});
-
-	document.querySelectorAll('.nav__menu a').forEach((link) => {
-		link.addEventListener('click', () => {
-			menu?.classList.remove('nav__menu--open');
-			hamburger?.setAttribute('aria-expanded', 'false');
-		});
-	});
-</script>
 
 <style>
 	/* LAYOUT */
@@ -216,85 +181,6 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--color-text-muted);
 		line-height: 1.6;
 		margin: 0;
-	}
-
-	/* NAV */
-	.nav {
-		position: sticky;
-		top: 0;
-		z-index: 100;
-		background-color: var(--color-white);
-		box-shadow: var(--shadow-sm);
-	}
-
-	.nav__container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 1100px;
-		margin-inline: auto;
-		padding: 0.75rem 1.5rem;
-		min-height: 64px;
-		position: relative;
-	}
-
-	.nav__logo {
-		text-decoration: none;
-		line-height: 0;
-		padding: 0;
-	}
-
-	.nav__hamburger {
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 0.375rem;
-	}
-
-	.nav__hamburger span {
-		display: block;
-		width: 24px;
-		height: 2px;
-		background-color: var(--color-primary);
-		border-radius: 2px;
-	}
-
-	.nav__menu {
-		display: none;
-		flex-direction: column;
-		list-style: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background-color: var(--color-white);
-		box-shadow: var(--shadow-md);
-		padding: 0.5rem 1.25rem 1.25rem;
-		margin: 0;
-	}
-
-	.nav__menu--open {
-		display: flex;
-	}
-
-	.nav__menu a {
-		display: block;
-		padding: 0.75rem 0;
-		color: var(--color-text);
-		text-decoration: none;
-		font-weight: 500;
-		border-bottom: 1px solid var(--color-surface);
-	}
-
-	.nav__menu a[aria-current='page'] {
-		color: var(--color-accent);
-	}
-
-	.nav__menu li:last-child a {
-		border-bottom: none;
 	}
 
 	/* HERO */
@@ -408,29 +294,6 @@ import Layout from '../layouts/Layout.astro';
 
 	/* DESKTOP */
 	@media (min-width: 768px) {
-		.nav__hamburger {
-			display: none;
-		}
-
-		.nav__menu {
-			display: flex;
-			flex-direction: row;
-			position: static;
-			box-shadow: none;
-			padding: 0;
-			gap: 2.5rem;
-		}
-
-		.nav__menu a {
-			padding: 0;
-			border-bottom: none;
-			font-size: 0.9375rem;
-		}
-
-		.nav__menu a:hover {
-			color: var(--color-accent);
-		}
-
 		.about__grid {
 			grid-template-columns: 3fr 2fr;
 			align-items: start;
