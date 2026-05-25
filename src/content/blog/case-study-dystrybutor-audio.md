@@ -4,6 +4,7 @@ pubDate: 2025-01-01
 klient: "Wiodący dystrybutor audio-video, kilkadziesiąt osób w strukturach"
 branża: "Dystrybucja, B2B"
 efekt: "Eliminacja kosztów sesji lifestyle'owych, samodzielna realizacja zadań programistycznych, wspólny standard pracy z AI dla zespołu"
+description: "Jak wdrożenie AI wyeliminowało koszty sesji lifestyle'owych, zastąpiło zewnętrznych podwykonawców i dało zespołowi wspólny standard pracy z AI."
 ---
 
 ## Sytuacja wyjściowa
