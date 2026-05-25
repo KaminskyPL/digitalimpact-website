@@ -58,6 +58,10 @@ import Layout from '../layouts/Layout.astro';
 								<span class="info-block__icon">✉️</span>
 								<span id="email-wrap"></span>
 							</li>
+							<li>
+								<span class="info-block__icon">🕐</span>
+								<span class="info-block__text">pon.–pt. 9:00–17:00</span>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -330,6 +334,11 @@ import Layout from '../layouts/Layout.astro';
 
 	.info-block__link:hover {
 		color: var(--color-accent);
+	}
+
+	.info-block__text {
+		color: var(--color-text);
+		font-weight: 500;
 	}
 
 	/* PRAWA KOLUMNA */
