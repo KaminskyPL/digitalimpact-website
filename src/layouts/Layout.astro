@@ -30,6 +30,48 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": ["LocalBusiness", "ProfessionalService"],
+			"name": "Digital Impact",
+			"legalName": "Digital Impact Kamil Kiersnowski",
+			"description": "Konsulting AI dla firm – wdrożenia sztucznej inteligencji, automatyzacja procesów, szkolenia zespołów.",
+			"url": "https://digitalimpact.pl",
+			"logo": "https://digitalimpact.pl/logo.svg",
+			"image": "https://digitalimpact.pl/og-image.jpg",
+			"telephone": "+48696480318",
+			"email": "kontakt@digitalimpact.pl",
+			"founder": {
+				"@type": "Person",
+				"name": "Kamil Kiersnowski",
+				"jobTitle": "AI Consultant",
+				"url": "https://digitalimpact.pl/o-mnie"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "ul. Sowlańska 42/22",
+				"addressLocality": "Białystok",
+				"postalCode": "15-560",
+				"addressCountry": "PL"
+			},
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+					"opens": "09:00",
+					"closes": "17:00"
+				}
+			],
+			"areaServed": {
+				"@type": "Country",
+				"name": "PL"
+			},
+			"priceRange": "$$",
+			"knowsAbout": ["Artificial Intelligence", "Machine Learning", "Business Automation", "AI Act compliance"],
+			"sameAs": []
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
