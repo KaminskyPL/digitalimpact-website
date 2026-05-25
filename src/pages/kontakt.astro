@@ -36,15 +36,11 @@ import Nav from '../components/Nav.astro';
 						<ul class="info-block__list">
 							<li>
 								<span class="info-block__icon">📞</span>
-								<a href="tel:+48696480318" class="info-block__link">+48 696 480 318</a>
+								<a href="tel:+48696480318" class="info-block__link">+48 696 480 318 <span class="info-block__hours">(pn.–pt. 9:00–17:00)</span></a>
 							</li>
 							<li>
 								<span class="info-block__icon">✉️</span>
 								<span id="email-wrap"></span>
-							</li>
-							<li>
-								<span class="info-block__icon">🕐</span>
-								<span class="info-block__text">pon.–pt. 9:00–17:00</span>
 							</li>
 						</ul>
 					</div>
@@ -89,7 +85,7 @@ import Nav from '../components/Nav.astro';
 	const u = 'kontakt';
 	const d = 'digitalimpact.pl';
 	const el = document.getElementById('email-wrap');
-	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link">' + u + '@' + d + '</a>';
+	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link" style="text-decoration:none;">' + u + '@' + d + '</a>';
 
 	// Form submission
 	const contactForm = document.querySelector<HTMLFormElement>('#contact-form');
@@ -230,6 +226,12 @@ import Nav from '../components/Nav.astro';
 
 	.info-block__link:hover {
 		color: var(--color-accent);
+	}
+
+	.info-block__hours {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		font-weight: 400;
 	}
 
 	.info-block__text {
