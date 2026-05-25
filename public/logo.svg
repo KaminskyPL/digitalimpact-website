@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1072 165" width="1072" height="165">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Symbol: ścieżki z oryginału SVG, podzielone na granat i niebieski -->
+  <!-- Górna część symbolu (lewa wstęga - granat) -->
+  <g transform="translate(-14.282029,172.967257) scale(0.100000,-0.100000)">
+
+    <!-- Lewa wstęga górna - granat #002047 -->
+    <path fill="#002047" d="M1200 1710 c-194 -48 -350 -156 -482 -333 -62 -85 -566 -840 -575
+-863 -4 -12 31 -14 210 -14 l215 0 220 334 c121 183 246 361 277 395 83 89
+159 124 283 129 182 8 258 -35 435 -244 64 -76 115 -144 113 -150 -2 -6 -52
+-83 -110 -172 -58 -88 -106 -163 -106 -166 0 -12 89 -55 138 -66 42 -10 67
+-10 115 0 129 25 168 62 352 340 71 107 222 336 337 508 l208 312 -215 0 -216
+0 -142 -215 -142 -216 -54 63 c-90 105 -203 211 -265 253 -171 112 -403 153
+-596 105z"/>
+
+    <!-- Prawa wstęga dolna - niebieski #026CE4 -->
+    <path fill="#026CE4" d="M2455 944 c-249 -375 -284 -416 -395 -467 -134 -61 -313 -44 -425 41
+-27 20 -100 100 -162 176 l-111 138 63 97 c125 189 156 241 150 251 -13 20
+-84 49 -146 59 -114 18 -232 -25 -302 -112 -19 -23 -152 -220 -294 -437 -347
+-528 -393 -599 -393 -605 0 -3 96 -5 213 -5 l212 0 137 210 c76 116 142 210
+146 210 5 0 32 -28 60 -63 133 -164 281 -276 429 -324 114 -37 315 -44 431
+-15 172 44 329 148 454 302 38 47 576 853 585 877 4 11 -33 13 -208 13 l-214
+-1 -230 -345z"/>
+
+  </g>
+
+  <!-- Wordmark: prawdziwy tekst SVG z Inter -->
+  <text
+    x="355" y="108"
+    font-family="'Inter', 'Segoe UI', Arial, sans-serif"
+    font-size="78"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#002047">DIGITAL IMPACT</text>
+
+  <text
+    x="359" y="148"
+    font-family="'Inter', 'Segoe UI', Arial, sans-serif"
+    font-size="30"
+    font-weight="400"
+    letter-spacing="10"
+    fill="#002047">AI CONSULTING</text>
+
+</svg>

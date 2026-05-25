@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
 	<!-- NAWIGACJA -->
 	<nav class="nav">
 		<div class="nav__container">
-			<a href="/" class="nav__logo">DIGITAL IMPACT</a>
+			<a href="/" class="nav__logo"><img src="/logo.svg" alt="Digital Impact AI Consulting" height="38" style="display:block;"></a>
 			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
@@ -316,16 +316,14 @@ import Layout from '../layouts/Layout.astro';
 		justify-content: space-between;
 		max-width: 1100px;
 		margin-inline: auto;
-		padding: 1rem 1.25rem;
+		padding: 0.75rem 1.25rem;
+		min-height: 64px;
 		position: relative;
 	}
 
 	.nav__logo {
-		font-weight: 800;
-		font-size: 1.25rem;
-		color: var(--color-primary);
 		text-decoration: none;
-		letter-spacing: 0.05em;
+		line-height: 0;
 	}
 
 	.nav__hamburger {
