@@ -1,0 +1,532 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Proces współpracy — Digital Impact"
+	description="Jak wygląda wdrożenie AI w Twojej firmie? 5 kroków od pierwszej rozmowy do działającego rozwiązania."
+>
+	<!-- NAWIGACJA -->
+	<nav class="nav">
+		<div class="nav__container">
+			<a href="/" class="nav__logo"><img src="/logo.svg" alt="Digital Impact AI Consulting" height="44" style="display:block; height:44px; width:auto;"></a>
+			<button class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav__menu" id="nav-menu" role="list">
+				<li><a href="/#oferta">Oferta</a></li>
+				<li><a href="/proces" aria-current="page">Proces</a></li>
+				<li><a href="/case-studies">Case Studies</a></li>
+				<li><a href="/o-mnie">O mnie</a></li>
+				<li><a href="/#kontakt">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<h1 class="hero__title">Jak wygląda współpraca?</h1>
+			<p class="hero__subtitle">Od pierwszej rozmowy do działającego rozwiązania AI — bez niespodzianek, bez chaosu.</p>
+		</div>
+	</section>
+
+	<!-- KROKI -->
+	<section class="steps-section">
+		<div class="container">
+			<h2 class="section-title">5 kroków do wdrożenia AI w Twojej firmie</h2>
+			<div class="steps">
+
+				<div class="step">
+					<div class="step__left">
+						<div class="step__num">01</div>
+					</div>
+					<div class="step__content">
+						<div class="step__header">
+							<h3 class="step__title">Bezpłatna konsultacja</h3>
+							<span class="step__badge">⏱ 45–60 minut</span>
+						</div>
+						<p class="step__desc">Zaczynamy od rozmowy — bez prezentacji, bez oferty. Chcę zrozumieć jak działa Twoja firma, gdzie tracisz czas i gdzie AI mogłoby realnie pomóc. Ty mówisz, ja słucham i zadaję pytania.</p>
+						<div class="step__deliverable">
+							<span class="step__deliverable-label">Dostajesz:</span>
+							<span class="step__deliverable-text">Wstępną ocenę potencjału AI w Twojej firmie i rekomendację czy warto iść dalej — szczerą, nawet jeśli odpowiedź brzmi „jeszcze nie teraz".</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__left">
+						<div class="step__num">02</div>
+					</div>
+					<div class="step__content">
+						<div class="step__header">
+							<h3 class="step__title">Audyt procesów</h3>
+							<span class="step__badge">⏱ 3–5 dni roboczych</span>
+						</div>
+						<p class="step__desc">Analizuję wybrane procesy w Twojej firmie — dokumenty, workflow, narzędzia których używasz. Szukam konkretnych miejsc gdzie AI da największy zwrot z inwestycji. Nie potrzebuję dostępu do systemów — wystarczy rozmowa z Tobą i Twoim zespołem.</p>
+						<div class="step__deliverable">
+							<span class="step__deliverable-label">Dostajesz:</span>
+							<span class="step__deliverable-text">Raport z mapą możliwości — które procesy zautomatyzować, w jakiej kolejności, z szacowaną oszczędnością czasu i kosztów.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__left">
+						<div class="step__num">03</div>
+					</div>
+					<div class="step__content">
+						<div class="step__header">
+							<h3 class="step__title">Propozycja rozwiązania</h3>
+							<span class="step__badge">⏱ 2–3 dni robocze</span>
+						</div>
+						<p class="step__desc">Na podstawie audytu przygotowuję konkretną propozycję: jakie narzędzia, jaki zakres wdrożenia, jaki harmonogram i budżet. Bez ogólników — każda pozycja ma uzasadnienie.</p>
+						<div class="step__deliverable">
+							<span class="step__deliverable-label">Dostajesz:</span>
+							<span class="step__deliverable-text">Jasną ofertę z ceną, zakresem i timeline'm. Decydujesz czy chcesz kontynuować — bez presji i bez ukrytych kosztów.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__left">
+						<div class="step__num">04</div>
+					</div>
+					<div class="step__content">
+						<div class="step__header">
+							<h3 class="step__title">Wdrożenie</h3>
+							<span class="step__badge">⏱ 2–6 tygodni (zależnie od zakresu)</span>
+						</div>
+						<p class="step__desc">Implementuję wybrane rozwiązania AI krok po kroku — zaczynamy od najważniejszego, mierzę efekty, iteruję. W trakcie regularnie raportuję postępy i jestem dostępny na pytania. Twój zespół uczy się przy okazji.</p>
+						<div class="step__deliverable">
+							<span class="step__deliverable-label">Dostajesz:</span>
+							<span class="step__deliverable-text">Działające rozwiązanie AI zintegrowane z Twoimi procesami, przeszkolony zespół i dokumentację jak z tego korzystać.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="step">
+					<div class="step__left">
+						<div class="step__num">05</div>
+					</div>
+					<div class="step__content">
+						<div class="step__header">
+							<h3 class="step__title">Wsparcie po wdrożeniu</h3>
+							<span class="step__badge">⏱ 30 dni w cenie, potem opcjonalnie</span>
+						</div>
+						<p class="step__desc">Pierwsze 30 dni po wdrożeniu jestem do dyspozycji — pytania, drobne poprawki, optymalizacje. Jeśli coś nie działa tak jak powinno, naprawiam. Jeśli chcesz rozszerzyć zakres — rozmawiamy.</p>
+						<div class="step__deliverable">
+							<span class="step__deliverable-label">Dostajesz:</span>
+							<span class="step__deliverable-text">Pewność że inwestycja działa i ktoś czuwa nad rezultatami.</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="faq-section">
+		<div class="container">
+			<h2 class="section-title">Najczęstsze pytania</h2>
+			<div class="faq">
+
+				<details class="faq__item">
+					<summary class="faq__question">Czy muszę znać się na AI żeby skorzystać z Twoich usług?</summary>
+					<p class="faq__answer">Nie — i właśnie dlatego jestem. Moją rolą jest przetłumaczenie technologii na język Twojego biznesu. Wystarczy że wiesz co chcesz osiągnąć — resztą zajmuję się ja.</p>
+				</details>
+
+				<details class="faq__item">
+					<summary class="faq__question">Ile kosztuje wdrożenie AI?</summary>
+					<p class="faq__answer">To zależy od zakresu — i zawsze mówię to wprost zanim zaczniesz płacić cokolwiek. Audyt daje Ci konkretną wycenę. Bezpłatna konsultacja pozwoli ocenić czy w ogóle warto inwestować w Twoim przypadku.</p>
+				</details>
+
+				<details class="faq__item">
+					<summary class="faq__question">Jak długo trwa całe wdrożenie od pierwszego kontaktu?</summary>
+					<p class="faq__answer">Przy typowym projekcie — od pierwszej rozmowy do działającego rozwiązania: 4–10 tygodni. Proste automatyzacje możemy zamknąć w 2 tygodnie. Kompleksowe wdrożenia wymagają więcej czasu, ale efekty są proporcjonalne.</p>
+				</details>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="cta-section">
+		<div class="container">
+			<h2 class="cta-section__title">Zacznijmy od rozmowy.</h2>
+			<p class="cta-section__sub">Bezpłatna konsultacja — 45 minut, zero zobowiązań.</p>
+			<a href="/#kontakt" class="btn btn--accent">Umów konsultację</a>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger');
+	const menu = document.querySelector<HTMLUListElement>('.nav__menu');
+
+	hamburger?.addEventListener('click', () => {
+		const isOpen = menu?.classList.toggle('nav__menu--open');
+		hamburger.setAttribute('aria-expanded', String(isOpen));
+	});
+
+	document.querySelectorAll('.nav__menu a').forEach((link) => {
+		link.addEventListener('click', () => {
+			menu?.classList.remove('nav__menu--open');
+			hamburger?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<style>
+	.container {
+		width: 100%;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding-inline: 1.25rem;
+	}
+
+	.section-title {
+		font-size: clamp(1.5rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--color-primary);
+		text-align: center;
+		margin-bottom: 3rem;
+		line-height: 1.25;
+	}
+
+	/* BUTTONS */
+	.btn {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		border-radius: var(--radius-md);
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		transition: opacity 0.2s;
+	}
+	.btn:hover { opacity: 0.88; }
+	.btn--accent {
+		background-color: var(--color-accent);
+		color: var(--color-white);
+	}
+
+	/* NAV */
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.nav__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1100px;
+		margin-inline: auto;
+		padding: 0.75rem 1.5rem;
+		min-height: 64px;
+		position: relative;
+	}
+
+	.nav__logo {
+		text-decoration: none;
+		line-height: 0;
+		padding: 0;
+	}
+
+	.nav__hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.375rem;
+	}
+
+	.nav__hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: var(--color-primary);
+		border-radius: 2px;
+	}
+
+	.nav__menu {
+		display: none;
+		flex-direction: column;
+		list-style: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-md);
+		padding: 0.5rem 1.25rem 1.25rem;
+		margin: 0;
+	}
+
+	.nav__menu--open { display: flex; }
+
+	.nav__menu a {
+		display: block;
+		padding: 0.75rem 0;
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		border-bottom: 1px solid var(--color-surface);
+	}
+
+	.nav__menu a[aria-current='page'] { color: var(--color-accent); }
+	.nav__menu li:last-child a { border-bottom: none; }
+
+	/* HERO */
+	.hero {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+		text-align: center;
+	}
+
+	.hero__title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 800;
+		color: var(--color-primary);
+		margin: 0 0 1rem;
+		line-height: 1.15;
+	}
+
+	.hero__subtitle {
+		font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
+		color: var(--color-text-muted);
+		max-width: 620px;
+		margin-inline: auto;
+		line-height: 1.6;
+	}
+
+	/* STEPS */
+	.steps-section {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.steps {
+		position: relative;
+		max-width: 780px;
+		margin-inline: auto;
+	}
+
+	/* vertical connecting line */
+	.steps::before {
+		content: '';
+		position: absolute;
+		left: 27px;
+		top: 56px;
+		bottom: 56px;
+		width: 2px;
+		background-color: var(--color-accent-light);
+	}
+
+	.step {
+		display: grid;
+		grid-template-columns: 56px 1fr;
+		gap: 1.5rem;
+		padding: 0 0 2.5rem;
+	}
+
+	.step:last-child { padding-bottom: 0; }
+
+	.step__left {
+		display: flex;
+		justify-content: center;
+		padding-top: 2px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.step__num {
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background-color: rgba(45, 126, 248, 0.12);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1rem;
+		font-weight: 800;
+		color: var(--color-accent);
+		flex-shrink: 0;
+	}
+
+	.step__content {
+		padding-top: 0.875rem;
+	}
+
+	.step__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.875rem;
+	}
+
+	.step__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin: 0;
+	}
+
+	.step__badge {
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: var(--color-text-muted);
+		background-color: var(--color-surface);
+		border: 1px solid rgba(15, 31, 61, 0.1);
+		padding: 0.25rem 0.625rem;
+		border-radius: 999px;
+		white-space: nowrap;
+	}
+
+	.step__desc {
+		font-size: 1rem;
+		color: var(--color-text);
+		line-height: 1.75;
+		margin: 0 0 1rem;
+	}
+
+	.step__deliverable {
+		display: flex;
+		gap: 0.5rem;
+		background-color: var(--color-surface);
+		border-left: 3px solid var(--color-accent);
+		border-radius: 0 var(--radius-md) var(--radius-md) 0;
+		padding: 0.75rem 1rem;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	.step__deliverable-label {
+		font-weight: 700;
+		color: var(--color-accent);
+		white-space: nowrap;
+	}
+
+	.step__deliverable-text {
+		color: var(--color-text);
+	}
+
+	/* FAQ */
+	.faq-section {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	.faq {
+		max-width: 720px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.faq__item {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		overflow: hidden;
+	}
+
+	.faq__question {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.25rem 1.5rem;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		cursor: pointer;
+		list-style: none;
+		gap: 1rem;
+	}
+
+	.faq__question::-webkit-details-marker { display: none; }
+
+	.faq__question::after {
+		content: '+';
+		font-size: 1.25rem;
+		font-weight: 400;
+		color: var(--color-accent);
+		flex-shrink: 0;
+		transition: transform 0.2s;
+	}
+
+	.faq__item[open] .faq__question::after {
+		transform: rotate(45deg);
+	}
+
+	.faq__answer {
+		padding: 0 1.5rem 1.25rem;
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin: 0;
+		border-top: 1px solid var(--color-surface);
+	}
+
+	/* CTA */
+	.cta-section {
+		background-color: var(--color-primary);
+		padding: 4rem 1.5rem;
+		text-align: center;
+	}
+
+	.cta-section__title {
+		font-size: clamp(1.75rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--color-white);
+		margin: 0 0 0.5rem;
+		line-height: 1.2;
+	}
+
+	.cta-section__sub {
+		font-size: 1.0625rem;
+		color: var(--color-accent-light);
+		margin: 0 0 2rem;
+	}
+
+	/* DESKTOP */
+	@media (min-width: 768px) {
+		.nav__hamburger { display: none; }
+
+		.nav__menu {
+			display: flex;
+			flex-direction: row;
+			position: static;
+			box-shadow: none;
+			padding: 0;
+			gap: 2.5rem;
+		}
+
+		.nav__menu a {
+			padding: 0;
+			border-bottom: none;
+			font-size: 0.9375rem;
+		}
+
+		.nav__menu a:hover { color: var(--color-accent); }
+
+		.step__num {
+			width: 56px;
+			height: 56px;
+			font-size: 1.125rem;
+		}
+	}
+</style>
