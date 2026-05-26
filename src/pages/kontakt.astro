@@ -94,11 +94,16 @@ import Nav from '../components/Nav.astro';
 	const u = 'kontakt';
 	const d = 'digitalimpact.pl';
 	const el = document.getElementById('email-wrap');
-	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link" style="color:#1A1A2E;text-decoration:none;font-weight:500;">' + u + '@' + d + '</a>';
+	if (el) el.innerHTML = '<a href="mailto:' + u + '@' + d + '" class="info-block__link" style="text-decoration:none;">' + u + '@' + d + '</a>';
 	var emailLink = el.querySelector('a');
 	if (emailLink) {
-		emailLink.addEventListener('mouseenter', function() { this.style.color = '#2D7EF8'; });
-		emailLink.addEventListener('mouseleave', function() { this.style.color = '#1A1A2E'; });
+		var root = document.documentElement;
+		var colorText = getComputedStyle(root).getPropertyValue('--color-text').trim();
+		var colorAccent = getComputedStyle(root).getPropertyValue('--color-accent').trim();
+		emailLink.style.color = colorText;
+		emailLink.style.fontWeight = '500';
+		emailLink.addEventListener('mouseenter', function() { this.style.color = colorAccent; });
+		emailLink.addEventListener('mouseleave', function() { this.style.color = colorText; });
 	}
 
 	// Form submission
