@@ -23,6 +23,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={Astro.url} />
+		<link rel="alternate" type="application/rss+xml" title="Digital Impact – Blog o AI dla firm" href="https://digitalimpact.pl/rss.xml" />
 
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
@@ -127,7 +128,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 				<span class="site-footer__copy">© 2026 Digital Impact Kamil Kiersnowski</span>
 				<div class="site-footer__bottom-links">
 					<a href="/polityka-prywatnosci" class="site-footer__link">Polityka prywatności</a>
-					<button id="cookie-settings-btn" class="site-footer__cookie-btn">Ustawienia cookies</button>
+					<button type="button" id="cookie-settings-btn" class="site-footer__cookie-btn">Ustawienia cookies</button>
 				</div>
 			</div>
 		</footer>
@@ -139,8 +140,8 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 					<a href="/polityka-prywatnosci" class="cookie-banner__policy-link">Polityka prywatności</a>
 				</p>
 				<div class="cookie-banner__btns">
-					<button id="cookie-accept-all" class="cookie-btn cookie-btn--accept">Akceptuję wszystkie</button>
-					<button id="cookie-necessary-only" class="cookie-btn cookie-btn--necessary">Tylko niezbędne</button>
+					<button type="button" id="cookie-accept-all" class="cookie-btn cookie-btn--accept">Akceptuję wszystkie</button>
+					<button type="button" id="cookie-necessary-only" class="cookie-btn cookie-btn--necessary">Tylko niezbędne</button>
 				</div>
 			</div>
 		</div>
