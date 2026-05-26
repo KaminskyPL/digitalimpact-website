@@ -21,6 +21,10 @@
   --shadow-md: 0 4px 16px rgba(15, 31, 61, 0.12);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
