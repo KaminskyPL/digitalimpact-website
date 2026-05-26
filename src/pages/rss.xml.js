@@ -1,6 +1,5 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export async function GET(context) {
 	const posts = await getCollection('blog');
@@ -8,8 +7,8 @@ export async function GET(context) {
 		.filter((post) => !post.id.startsWith('case-study-'))
 		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 	return rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
+		title: 'Digital Impact – Blog o AI dla firm',
+		description: 'Praktyczne artykuły o wdrożeniach AI, automatyzacji procesów i AI Act. Konkretnie, bez żargonu.',
 		site: context.site,
 		items: blogPosts.map((post) => ({
 			...post.data,
