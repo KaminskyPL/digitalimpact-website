@@ -14,13 +14,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, klient, efekt } = entry.data;
+const { title, klient, efekt, pubDate } = entry.data;
 const branza = entry.data['branża'];
 ---
 
 <Layout
 	title={`${title} – Digital Impact`}
 	description={efekt ?? entry.data.description ?? ''}
+	ogType="article"
+	ogDate={pubDate ? pubDate.toISOString() : undefined}
 >
 	<Nav current="case-studies" />
 

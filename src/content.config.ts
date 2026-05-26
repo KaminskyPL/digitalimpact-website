@@ -10,7 +10,7 @@ const blog = defineCollection({
 			description: z.string().optional(),
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
-klient: z.string().optional(),
+			klient: z.string().optional(),
 			branża: z.string().optional(),
 			efekt: z.string().optional(),
 			kategoria: z.string().optional(),

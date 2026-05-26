@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout
+	title="Strona nie istnieje – Digital Impact"
+	description="Ta strona nie istnieje. Wróć na stronę główną Digital Impact."
+>
+	<Nav current="" />
+
+	<section class="not-found">
+		<div class="container">
+			<p class="not-found__code">404</p>
+			<h1 class="not-found__title">Ta strona nie istnieje</h1>
+			<p class="not-found__desc">
+				Mogła zostać przeniesiona lub usunięta. Wróć na stronę główną i zacznij od nowa.
+			</p>
+			<a href="/" class="btn btn--accent">Wróć na stronę główną</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.not-found {
+		background-color: var(--color-surface);
+		padding: 6rem 1.5rem;
+		text-align: center;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.not-found .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.not-found__code {
+		font-size: clamp(5rem, 15vw, 9rem);
+		font-weight: 800;
+		color: var(--color-accent);
+		line-height: 1;
+		opacity: 0.15;
+	}
+
+	.not-found__title {
+		font-size: clamp(1.5rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--color-primary);
+		line-height: 1.25;
+		margin-top: -1rem;
+	}
+
+	.not-found__desc {
+		font-size: 1.0625rem;
+		color: var(--color-text-muted);
+		max-width: 480px;
+		line-height: 1.6;
+	}
+</style>
