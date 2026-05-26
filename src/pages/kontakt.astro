@@ -141,13 +141,6 @@ import Nav from '../components/Nav.astro';
 </script>
 
 <style>
-	.container {
-		width: 100%;
-		max-width: 1100px;
-		margin-inline: auto;
-		padding-inline: 1.25rem;
-	}
-
 	/* KONTAKT SECTION */
 	.kontakt-section {
 		background-color: var(--color-surface);
@@ -303,41 +296,12 @@ import Nav from '../components/Nav.astro';
 		min-height: 140px;
 	}
 
-	.btn {
-		display: inline-block;
-		padding: 0.875rem 2rem;
-		border-radius: var(--radius-md);
-		font-weight: 600;
-		font-size: 1rem;
-		font-family: var(--font-sans);
-		text-decoration: none;
-		cursor: pointer;
-		border: none;
-		transition: opacity 0.2s;
-	}
-
-	.btn:hover { opacity: 0.88; }
-
-	.btn--accent {
-		background-color: var(--color-accent);
-		color: var(--color-white);
-	}
-
-	.btn--full {
-		width: 100%;
-		text-align: center;
-	}
-
 	/* DESKTOP */
 	@media (min-width: 768px) {
 		.kontakt-grid {
 			grid-template-columns: 1fr 1.5fr;
 			gap: 4rem;
 			align-items: start;
-		}
-
-		.btn--full {
-			width: auto;
 		}
 	}
 </style>
