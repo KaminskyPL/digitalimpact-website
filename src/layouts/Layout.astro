@@ -495,6 +495,17 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		border: 1.5px solid rgba(255, 255, 255, 0.6);
 	}
 
+	/* Focus visible — dostępność klawiaturowa */
+	:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 3px;
+		border-radius: var(--radius-sm);
+	}
+
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
+
 	/* Skip to content — dostępność */
 	.skip-link {
 		position: absolute;
