@@ -64,4 +64,4 @@ Nowy pracownik pyta te same pytania co poprzedni. Gdzie jest procedura X? Jak dz
 
 Nie od wszystkiego naraz. Wybierz jeden proces – ten który najbardziej boli. Zmierz ile czasu zajmuje teraz. Wdróż prostą automatyzację. Zmierz po miesiącu.
 
-Jeśli nie wiesz który wybrać – [umów bezpłatną konsultację](/kontakt). W 45 minut znajdziemy razem najlepszy punkt wejścia dla Twojej firmy.
+Jeśli nie wiesz który wybrać – [umów bezpłatną konsultację](/kontakt). W 45 minut znajdziesz najlepszy punkt wejścia dla swojej firmy.

@@ -16,13 +16,13 @@ const { current } = Astro.props;
       <span></span>
     </button>
     <ul class="nav__menu" id="nav-menu" role="list">
-      <li><a href="/#oferta" class={current === 'oferta' ? 'nav__active' : ''}>Oferta</a></li>
-      <li><a href="/proces" class={current === 'proces' ? 'nav__active' : ''}>Proces</a></li>
-      <li><a href="/ai-act" class={current === 'ai-act' ? 'nav__active' : ''}>AI Act</a></li>
-      <li><a href="/case-studies" class={current === 'case-studies' ? 'nav__active' : ''}>Case Studies</a></li>
-      <li><a href="/blog" class={current === 'blog' ? 'nav__active' : ''}>Blog</a></li>
-      <li><a href="/o-mnie" class={current === 'o-mnie' ? 'nav__active' : ''}>O mnie</a></li>
-      <li><a href="/kontakt" class={current === 'kontakt' ? 'nav__active' : ''}>Kontakt</a></li>
+      <li><a href="/#oferta" class={current === 'oferta' ? 'nav__active' : ''} aria-current={current === 'oferta' ? 'page' : undefined}>Oferta</a></li>
+      <li><a href="/proces" class={current === 'proces' ? 'nav__active' : ''} aria-current={current === 'proces' ? 'page' : undefined}>Proces</a></li>
+      <li><a href="/ai-act" class={current === 'ai-act' ? 'nav__active' : ''} aria-current={current === 'ai-act' ? 'page' : undefined}>AI Act</a></li>
+      <li><a href="/case-studies" class={current === 'case-studies' ? 'nav__active' : ''} aria-current={current === 'case-studies' ? 'page' : undefined}>Case Studies</a></li>
+      <li><a href="/blog" class={current === 'blog' ? 'nav__active' : ''} aria-current={current === 'blog' ? 'page' : undefined}>Blog</a></li>
+      <li><a href="/o-mnie" class={current === 'o-mnie' ? 'nav__active' : ''} aria-current={current === 'o-mnie' ? 'page' : undefined}>O mnie</a></li>
+      <li><a href="/kontakt" class={current === 'kontakt' ? 'nav__active' : ''} aria-current={current === 'kontakt' ? 'page' : undefined}>Kontakt</a></li>
     </ul>
   </div>
 </nav>
