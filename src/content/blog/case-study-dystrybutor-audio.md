@@ -1,6 +1,6 @@
 ---
 title: "AI w dużej organizacji dystrybucyjnej – od eksperymentu do standardu"
-pubDate: 2025-01-01
+pubDate: 2025-03-15
 klient: "Wiodący dystrybutor audio-video, ponad 200 osób w strukturach"
 branża: "Dystrybucja, B2B"
 efekt: "Eliminacja kosztów sesji lifestyle'owych, samodzielna realizacja zadań programistycznych, wspólny standard pracy z AI dla zespołu"
