@@ -21,8 +21,6 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 				var stored = localStorage.getItem('di-theme');
 				if (stored === 'dark') {
 					document.documentElement.setAttribute('data-theme', 'dark');
-				} else if (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					document.documentElement.setAttribute('data-theme', 'dark');
 				}
 			})();
 		</script>
