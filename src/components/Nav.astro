@@ -108,6 +108,12 @@ const { current } = Astro.props;
     position: relative;
   }
 
+  @media (min-width: 900px) {
+    .nav__container {
+      padding: 0.75rem 2rem;
+    }
+  }
+
   .nav__logo {
     text-decoration: none;
     line-height: 0;
@@ -130,6 +136,10 @@ const { current } = Astro.props;
     height: 2px;
     background-color: var(--color-primary);
     border-radius: 2px;
+  }
+
+  html.theme--dark .nav__hamburger span {
+    background-color: var(--color-text);
   }
 
   .nav__menu {
@@ -167,7 +177,7 @@ const { current } = Astro.props;
     color: var(--color-accent) !important;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .nav__hamburger {
       display: none;
     }
@@ -179,17 +189,28 @@ const { current } = Astro.props;
       position: static;
       box-shadow: none;
       padding: 0;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .nav__menu a {
       padding: 0;
       border-bottom: none;
-      font-size: 0.9375rem;
+      font-size: 0.875rem;
+      white-space: nowrap;
     }
 
     .nav__menu a:hover {
       color: var(--color-accent);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .nav__menu {
+      gap: 2rem;
+    }
+
+    .nav__menu a {
+      font-size: 0.9375rem;
     }
   }
 
@@ -231,7 +252,7 @@ const { current } = Astro.props;
   }
 
   /* On mobile: show toggle in menu row */
-  @media (max-width: 767px) {
+  @media (max-width: 899px) {
     .nav__theme-item {
       padding: 0.5rem 0;
       border-bottom: 1px solid var(--color-surface);
@@ -239,7 +260,7 @@ const { current } = Astro.props;
   }
 
   /* On desktop: normal nav item */
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .nav__theme-toggle {
       border-color: rgba(15, 31, 61, 0.2);
     }
