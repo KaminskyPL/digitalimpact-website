@@ -36,6 +36,9 @@ const posts = allPosts
 							{post.data.czas_czytania && (
 								<span class="card__time">⏱ {post.data.czas_czytania}</span>
 							)}
+							<time class="card__date" datetime={post.data.pubDate.toISOString().split('T')[0]}>
+								{post.data.pubDate.toLocaleDateString('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' })}
+							</time>
 						</div>
 						<h2 class="card__title">
 							<a href={`/blog/${post.id}`}>{post.data.title}</a>
@@ -110,6 +113,11 @@ const posts = allPosts
 	}
 
 	.card__time {
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+	}
+
+	.card__date {
 		font-size: 0.8125rem;
 		color: var(--color-text-muted);
 	}

@@ -4,14 +4,14 @@
 
 :root {
   --color-primary: #0F1F3D;
-  --color-accent: #2D7EF8;
+  --color-accent: #0068D9;
   --color-accent-light: #E8F1FF;
   --color-text: #1A1A2E;
   --color-text-muted: #6B7280;
   --color-surface: #F8FAFC;
   --color-white: #FFFFFF;
 
-  --font-sans: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-sans: system-ui, 'Segoe UI', Arial, sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;

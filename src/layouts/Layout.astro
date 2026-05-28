@@ -16,6 +16,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="theme-color" content="#0F1F3D" />
 	<meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
 		<script is:inline>
 			(function() {
@@ -34,6 +35,8 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		<link rel="canonical" href={Astro.url} />
 		<link rel="alternate" type="application/rss+xml" title="Digital Impact – Blog o AI dla firm" href="https://digitalimpact.pl/rss.xml" />
 
+		<meta property="og:locale" content="pl_PL" />
+		<meta property="og:site_name" content="Digital Impact" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content={ogType} />
@@ -92,11 +95,6 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 			]
 		}
 		</script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Przejdź do treści</a>

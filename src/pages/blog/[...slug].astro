@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { title, description, kategoria, czas_czytania, pubDate } = entry.data;
+const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <Layout
@@ -31,6 +32,7 @@ const { title, description, kategoria, czas_czytania, pubDate } = entry.data;
 			<div class="hero__meta">
 				{kategoria && <span class="hero__tag">{kategoria}</span>}
 				{czas_czytania && <span class="hero__time">⏱ {czas_czytania}</span>}
+				<time class="hero__date" datetime={pubDate.toISOString().split('T')[0]}>{pubDateFormatted}</time>
 			</div>
 			<h1 class="hero__title">{title}</h1>
 		</div>
@@ -52,6 +54,31 @@ const { title, description, kategoria, czas_czytania, pubDate } = entry.data;
 			<a href="/kontakt" class="btn btn--accent">Umów bezpłatną konsultację</a>
 		</div>
 	</section>
+
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": title,
+		"description": description ?? '',
+		"datePublished": pubDate.toISOString(),
+		"dateModified": pubDate.toISOString(),
+		"author": {
+			"@type": "Person",
+			"name": "Kamil Kiersnowski",
+			"url": "https://digitalimpact.pl/o-mnie"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Digital Impact",
+			"url": "https://digitalimpact.pl",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://digitalimpact.pl/logo.svg"
+			}
+		},
+		"url": `https://digitalimpact.pl/blog/${entry.id}`,
+		"mainEntityOfPage": `https://digitalimpact.pl/blog/${entry.id}`
+	})} />
 </Layout>
 
 <style>
@@ -92,6 +119,12 @@ const { title, description, kategoria, czas_czytania, pubDate } = entry.data;
 	.hero__time {
 		font-size: 0.8125rem;
 		color: var(--color-text-muted);
+	}
+
+	.hero__date {
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+		font-weight: 400;
 	}
 
 	.hero__title {
