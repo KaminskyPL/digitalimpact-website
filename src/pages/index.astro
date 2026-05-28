@@ -571,7 +571,7 @@ import Nav from '../components/Nav.astro';
 
 	/* QUIZ */
 	.quiz-section {
-		background-color: var(--color-primary);
+		background-color: #0F1F3D;
 		padding: 5rem 1.5rem;
 	}
 
@@ -613,7 +613,11 @@ import Nav from '../components/Nav.astro';
 	}
 
 	.quiz__step--hidden {
-		display: none;
+		display: none !important;
+	}
+
+	.quiz__result:not(.quiz__step--hidden) {
+		display: flex;
 	}
 
 	.quiz__question {
@@ -659,7 +663,6 @@ import Nav from '../components/Nav.astro';
 
 	.quiz__result {
 		text-align: center;
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 1.25rem;
