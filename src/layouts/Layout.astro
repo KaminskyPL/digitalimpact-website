@@ -550,6 +550,21 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	   Dark Mode — per-page overrides (is:global required for Astro scoping)
 	   ============================================= */
 
+	/* Cookie banner */
+	[data-theme="dark"] .cookie-banner {
+		background-color: #071020;
+		border-top: 1px solid rgba(232, 241, 255, 0.15);
+	}
+
+	[data-theme="dark"] .cookie-banner__text {
+		color: rgba(232, 241, 255, 0.85);
+	}
+
+	[data-theme="dark"] .cookie-btn--necessary {
+		color: rgba(232, 241, 255, 0.85);
+		border-color: rgba(232, 241, 255, 0.4);
+	}
+
 	/* Kontakt — formularz */
 	[data-theme="dark"] .form-col {
 		background-color: #132035 !important;
@@ -565,7 +580,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 
 	[data-theme="dark"] .form__group input::placeholder,
 	[data-theme="dark"] .form__group textarea::placeholder {
-		color: rgba(232, 241, 255, 0.35);
+		color: rgba(232, 241, 255, 0.35) !important;
 	}
 
 	[data-theme="dark"] .form__group input:focus,
@@ -574,12 +589,9 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		box-shadow: 0 0 0 3px rgba(91, 158, 250, 0.2);
 	}
 
-	[data-theme="dark"] .form__group label {
-		color: var(--color-text);
-	}
-
+	[data-theme="dark"] .form__group label,
 	[data-theme="dark"] .form-col__heading {
-		color: var(--color-text);
+		color: var(--color-text) !important;
 	}
 
 	/* Dynamically-created email links (JS-injected, no data-astro-cid) */
