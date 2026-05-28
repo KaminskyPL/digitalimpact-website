@@ -545,4 +545,35 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		background-color: #071020;
 		border-top: 1px solid rgba(232, 241, 255, 0.08);
 	}
+
+	/* =============================================
+	   Dark Mode — per-page overrides (is:global required for Astro scoping)
+	   ============================================= */
+
+	/* Kontakt — formularz */
+	[data-theme="dark"] .form__group input,
+	[data-theme="dark"] .form__group textarea {
+		background-color: #0d1929;
+		border-color: rgba(232, 241, 255, 0.2);
+		color: var(--color-text);
+	}
+
+	[data-theme="dark"] .form__group input::placeholder,
+	[data-theme="dark"] .form__group textarea::placeholder {
+		color: rgba(232, 241, 255, 0.35);
+	}
+
+	[data-theme="dark"] .form__group input:focus,
+	[data-theme="dark"] .form__group textarea:focus {
+		border-color: var(--color-accent);
+		box-shadow: 0 0 0 3px rgba(91, 158, 250, 0.2);
+	}
+
+	[data-theme="dark"] .form__group label {
+		color: var(--color-text);
+	}
+
+	[data-theme="dark"] .form-col__heading {
+		color: var(--color-text);
+	}
 </style>
