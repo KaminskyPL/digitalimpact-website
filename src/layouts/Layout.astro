@@ -16,6 +16,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
 		<script is:inline>
 			(function() {
 				var stored = localStorage.getItem('di-theme');
@@ -135,12 +136,15 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 					<span class="site-footer__nav-heading">Kontakt</span>
 					<span class="site-footer__contact-item">Digital Impact Kamil Kiersnowski</span>
 					<span class="site-footer__contact-item">ul. Sowlańska 42/22, 15-560 Białystok</span>
-					<span class="site-footer__contact-item">NIP: 5432071736</span>
-					<a href="tel:+48696480318" class="site-footer__link site-footer__contact-row">
+					<span class="site-footer__contact-item"><span style="unicode-bidi:plaintext">NIP:&nbsp;5432071736</span></span>
+					<a href="tel:+48696480318" class="site-footer__link site-footer__contact-row site-footer__contact-row--phone">
 						<svg class="site-footer__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 							<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.07 6.07l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/>
 						</svg>
-						+48 696 480 318 <span class="site-footer__hours">(pn.–pt. 9:00–17:00)</span>
+						<span class="site-footer__phone-wrap">
+							<span class="site-footer__phone-number">+48 696 480 318</span>
+							<span class="site-footer__hours">(pn.–pt. 9:00–17:00)</span>
+						</span>
 					</a>
 					<span id="footer-email-wrap" class="site-footer__link site-footer__contact-row"></span>
 				</div>
@@ -458,6 +462,21 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		font-size: 0.75rem;
 		opacity: 0.7;
 		margin-left: 0.2rem;
+		white-space: nowrap;
+	}
+
+	.site-footer__contact-row--phone {
+		align-items: flex-start;
+	}
+
+	.site-footer__phone-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 0.125rem;
+	}
+
+	.site-footer__phone-number {
+		white-space: nowrap;
 	}
 
 	@media (min-width: 768px) {
