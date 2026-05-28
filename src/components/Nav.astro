@@ -8,7 +8,7 @@ const { current } = Astro.props;
 <nav class="nav">
   <div class="nav__container">
     <a href="/" class="nav__logo">
-      <img src="/logo.svg" alt="Digital Impact AI Consulting" width="160" height="44" style="display:block; height:44px; width:auto;">
+      <img src="/logo.svg" alt="Digital Impact AI Consulting" width="160" height="44" class="nav__logo-img" style="display:block; height:44px; width:auto;">
     </a>
     <button type="button" class="nav__hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span>
@@ -22,6 +22,17 @@ const { current } = Astro.props;
       <li><a href="/case-studies" class={current === 'case-studies' ? 'nav__active' : ''} aria-current={current === 'case-studies' ? 'page' : undefined}>Case Studies</a></li>
       <li><a href="/blog" class={current === 'blog' ? 'nav__active' : ''} aria-current={current === 'blog' ? 'page' : undefined}>Blog</a></li>
       <li><a href="/o-mnie" class={current === 'o-mnie' ? 'nav__active' : ''} aria-current={current === 'o-mnie' ? 'page' : undefined}>O mnie</a></li>
+      <li class="nav__theme-item">
+        <button type="button" id="theme-toggle" class="nav__theme-toggle" aria-label="Przełącz tryb ciemny">
+          <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </li>
       <li><a href="/kontakt" class={current === 'kontakt' ? 'nav__active' : ''} aria-current={current === 'kontakt' ? 'page' : undefined}>Kontakt</a></li>
     </ul>
   </div>
@@ -41,6 +52,45 @@ const { current } = Astro.props;
       menu?.classList.remove('nav__menu--open');
       hamburger?.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+
+  function applyTheme(theme: string) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('di-theme', theme);
+    updateToggleIcon(theme);
+  }
+
+  function updateToggleIcon(theme: string) {
+    const html = document.documentElement;
+    if (theme === 'dark') {
+      html.classList.add('theme--dark');
+    } else {
+      html.classList.remove('theme--dark');
+    }
+  }
+
+  function getCurrentTheme(): string {
+    const stored = localStorage.getItem('di-theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  // Init icon state on load
+  updateToggleIcon(getCurrentTheme());
+
+  themeToggle?.addEventListener('click', () => {
+    const current = getCurrentTheme();
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system preference changes (when no manual override)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('di-theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
   });
 </script>
 
@@ -145,6 +195,58 @@ const { current } = Astro.props;
 
     .nav__menu a:hover {
       color: var(--color-accent);
+    }
+  }
+
+  /* Theme toggle */
+  .nav__theme-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: none;
+    border: 1.5px solid rgba(15, 31, 61, 0.15);
+    cursor: pointer;
+    color: var(--color-text);
+    transition: background-color 0.2s, border-color 0.2s;
+    padding: 0;
+  }
+
+  .nav__theme-toggle:hover {
+    background-color: var(--color-surface);
+  }
+
+  /* Show sun in dark mode, moon in light mode */
+  .theme-icon--moon { display: block; }
+  .theme-icon--sun  { display: none;  }
+
+  html.theme--dark .theme-icon--moon { display: none;  }
+  html.theme--dark .theme-icon--sun  { display: block; }
+
+  /* Logo invert in dark mode */
+  html.theme--dark .nav__logo-img {
+    filter: brightness(0) invert(1);
+  }
+
+  /* On mobile: show toggle in menu row */
+  @media (max-width: 767px) {
+    .nav__theme-item {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--color-surface);
+    }
+  }
+
+  /* On desktop: normal nav item */
+  @media (min-width: 768px) {
+    .nav__theme-toggle {
+      border-color: rgba(15, 31, 61, 0.2);
     }
   }
 </style>
