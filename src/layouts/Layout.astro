@@ -550,6 +550,16 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	   Dark Mode — per-page overrides (is:global required for Astro scoping)
 	   ============================================= */
 
+	/* Buttons */
+	[data-theme="dark"] .btn--outline {
+		border-color: rgba(232, 241, 255, 0.35) !important;
+		color: var(--color-text) !important;
+	}
+
+	[data-theme="dark"] .btn--outline:hover {
+		border-color: rgba(232, 241, 255, 0.6) !important;
+	}
+
 	/* Hero i sekcje z tłem primary — utrzymaj ciemne w dark mode */
 	[data-theme="dark"] .hero {
 		background-color: #0a1628 !important;
