@@ -39,7 +39,8 @@ const caseStudies = allPosts.filter((p) => p.id.startsWith('case-study-'));
 				))}
 			</div>
 			<div class="cs-more">
-				<p class="cs-more__text">Kolejne realizacje w przygotowaniu.</p>
+				<p class="cs-more__text">Kolejne realizacje dostępne wkrótce — skontaktuj się, jeśli chcesz poznać szczegóły podobnych projektów.</p>
+				<a href="/kontakt" class="cs-more__link">Napisz do mnie →</a>
 			</div>
 		</div>
 	</div>
@@ -153,10 +154,22 @@ const caseStudies = allPosts.filter((p) => p.id.startsWith('case-study-'));
 		font-style: italic;
 	}
 
+	.cs-more__link {
+		display: inline-block;
+		margin-top: 0.5rem;
+		color: var(--color-accent);
+		font-size: 0.9375rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.cs-more__link:hover {
+		text-decoration: underline;
+	}
+
 	/* DESKTOP */
 	@media (min-width: 768px) {
 		.cards {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 		}
 	}
 </style>

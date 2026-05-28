@@ -69,6 +69,16 @@ import Nav from '../components/Nav.astro';
 							<input type="email" id="email" name="email" required placeholder="twoj@email.pl" autocomplete="email" />
 						</div>
 						<div class="form__group">
+							<label for="temat">Czego szukasz?</label>
+							<select id="temat" name="temat" required autocomplete="off">
+								<option value="" disabled selected>Wybierz temat…</option>
+								<option value="audyt">Audyt procesów pod kątem AI</option>
+								<option value="wdrozenie">Wdrożenie konkretnego narzędzia AI</option>
+								<option value="szkolenie">Szkolenie dla zespołu</option>
+								<option value="rozmowa">Nie wiem jeszcze — chcę porozmawiać</option>
+							</select>
+						</div>
+						<div class="form__group">
 							<label for="wiadomosc">Wiadomość</label>
 							<textarea
 								id="wiadomosc"
@@ -302,6 +312,33 @@ import Nav from '../components/Nav.astro';
 	.form__group textarea {
 		resize: vertical;
 		min-height: 140px;
+	}
+
+	.form__group select {
+		border: 1.5px solid rgba(15, 31, 61, 0.15);
+		border-radius: var(--radius-md);
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		color: var(--color-text);
+		background-color: var(--color-white);
+		transition: border-color 0.15s;
+		width: 100%;
+		appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 0.875rem center;
+		cursor: pointer;
+	}
+
+	.form__group select:focus {
+		outline: none;
+		border-color: var(--color-accent);
+		box-shadow: 0 0 0 3px rgba(45, 126, 248, 0.15);
+	}
+
+	.form__group select option[value=""][disabled] {
+		color: var(--color-text-muted);
 	}
 
 	/* DESKTOP */
