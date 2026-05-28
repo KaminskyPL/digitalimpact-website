@@ -538,7 +538,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	}
 
 	[data-theme="dark"] .cta-section__sub {
-		color: rgba(232, 241, 255, 0.75);
+		color: rgba(232, 241, 255, 0.75) !important;
 	}
 
 	[data-theme="dark"] .site-footer {
@@ -551,6 +551,11 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	   ============================================= */
 
 	/* Kontakt — formularz */
+	[data-theme="dark"] .form-col {
+		background-color: #132035;
+		border-color: rgba(232, 241, 255, 0.1);
+	}
+
 	[data-theme="dark"] .form__group input,
 	[data-theme="dark"] .form__group textarea {
 		background-color: #0d1929;
