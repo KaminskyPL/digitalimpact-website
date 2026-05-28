@@ -576,4 +576,25 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	[data-theme="dark"] .form-col__heading {
 		color: var(--color-text);
 	}
+
+	/* Dynamically-created email links (JS-injected, no data-astro-cid) */
+	.info-block__link--email {
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.info-block__link--email:hover {
+		color: var(--color-accent);
+	}
+
+	.email-link {
+		color: var(--color-text);
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.email-link:hover {
+		color: var(--color-accent);
+	}
 </style>

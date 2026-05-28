@@ -84,11 +84,8 @@ import Nav from '../components/Nav.astro';
 		const a = document.createElement('a');
 		a.href = 'mailto:' + u + '@' + d;
 		a.textContent = u + '@' + d;
-		a.style.color = '#1A1A2E';
+		a.className = 'email-link';
 		a.style.textDecoration = 'none';
-		a.style.fontWeight = '500';
-		a.addEventListener('mouseenter', function() { this.style.color = '#2D7EF8'; });
-		a.addEventListener('mouseleave', function() { this.style.color = '#1A1A2E'; });
 		el.appendChild(a);
 	});
 </script>
@@ -176,5 +173,6 @@ import Nav from '../components/Nav.astro';
 		font-size: 0.875rem;
 		color: var(--color-text-muted);
 	}
+
 
 </style>
