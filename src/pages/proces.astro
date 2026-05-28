@@ -176,6 +176,7 @@ import Nav from '../components/Nav.astro';
 	.steps-section {
 		background-color: var(--color-white);
 		padding: 4rem 1.5rem;
+		overflow-x: hidden;
 	}
 
 	.steps {
@@ -216,7 +217,7 @@ import Nav from '../components/Nav.astro';
 		width: 56px;
 		height: 56px;
 		border-radius: 50%;
-		background-color: rgba(45, 126, 248, 0.12);
+		background-color: var(--color-accent-light);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -265,7 +266,8 @@ import Nav from '../components/Nav.astro';
 
 	.step__deliverable {
 		display: flex;
-		gap: 0.5rem;
+		flex-direction: column;
+		gap: 0.25rem;
 		background-color: var(--color-surface);
 		border-left: 3px solid var(--color-accent);
 		border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -278,6 +280,7 @@ import Nav from '../components/Nav.astro';
 		font-weight: 700;
 		color: var(--color-accent);
 		white-space: nowrap;
+		flex-shrink: 0;
 	}
 
 	.step__deliverable-text {
@@ -364,6 +367,11 @@ import Nav from '../components/Nav.astro';
 			width: 56px;
 			height: 56px;
 			font-size: 1.125rem;
+		}
+
+		.step__deliverable {
+			flex-direction: row;
+			gap: 0.5rem;
 		}
 	}
 </style>
