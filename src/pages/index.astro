@@ -139,6 +139,109 @@ import Nav from '../components/Nav.astro';
 		</div>
 	</section>
 
+	<!-- FAQ — OBIEKCJE -->
+	<section class="faq-index">
+		<div class="container">
+			<h2 class="section-title">Najczęstsze pytania</h2>
+			<div class="faq-index__grid">
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Czy musimy mieć własny dział IT?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Nie. Większość wdrożeń, które realizuję, nie wymaga programistów ani specjalistów IT po stronie klienta. Zajmuję się całą stroną techniczną – od doboru narzędzi po konfigurację i wdrożenie.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Czy nasze dane będą bezpieczne?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Tak. Pracuję wyłącznie z modelami lokalnymi i prywatnymi środowiskami AI. Dokumenty firmowe, dane klientów i know-how nie opuszczają Twojej infrastruktury – to jedna z moich kluczowych zasad.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Dla jak dużych firm to działa?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Najlepsze efekty osiągam z firmami zatrudniającymi 10–150 osób. Na tym etapie jest już wystarczająco dużo powtarzalnych procesów, żeby AI robiło realną różnicę – i wystarczająco dużo elastyczności, żeby wdrożyć je sprawnie.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Co jeśli AI nie sprawdzi się w naszej firmie?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Dlatego zawsze zaczynamy od audytu. Zanim cokolwiek wdrożymy, oceniamy czy to ma sens w Twojej sytuacji. Nie sprzedaję rozwiązań, które nie przyniosą zwrotu – to po prostu nieopłacalne dla obu stron.</p>
+				</details>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- QUIZ GOTOWOŚCI AI -->
+	<section class="quiz-section" id="quiz-gotowosci">
+		<div class="container">
+			<div class="quiz">
+				<div class="quiz__header">
+					<p class="quiz__overline">Bezpłatna diagnoza — 30 sekund</p>
+					<h2 class="quiz__title">Czy Twoja firma jest gotowa na AI?</h2>
+					<p class="quiz__lead">Odpowiedz na 3 pytania i dowiedz się od czego zacząć.</p>
+				</div>
+
+				<div class="quiz__steps" id="quiz-steps">
+
+					<!-- KROK 1 -->
+					<div class="quiz__step" id="step-1">
+						<p class="quiz__question">Ile osób w Twojej firmie wykonuje powtarzalne zadania z dokumentami lub danymi?</p>
+						<div class="quiz__options">
+							<button type="button" class="quiz__option" data-step="1" data-value="low">1–5 osób</button>
+							<button type="button" class="quiz__option" data-step="1" data-value="mid">6–20 osób</button>
+							<button type="button" class="quiz__option" data-step="1" data-value="high">Ponad 20 osób</button>
+						</div>
+					</div>
+
+					<!-- KROK 2 -->
+					<div class="quiz__step quiz__step--hidden" id="step-2">
+						<p class="quiz__question">Jak oceniasz wrażliwość danych, z którymi pracujecie?</p>
+						<div class="quiz__options">
+							<button type="button" class="quiz__option" data-step="2" data-value="low">Dane publiczne / niskie ryzyko</button>
+							<button type="button" class="quiz__option" data-step="2" data-value="mid">Dane klientów lub finansowe</button>
+							<button type="button" class="quiz__option" data-step="2" data-value="high">Dane poufne / tajemnica handlowa</button>
+						</div>
+					</div>
+
+					<!-- KROK 3 -->
+					<div class="quiz__step quiz__step--hidden" id="step-3">
+						<p class="quiz__question">Jaki efekt jest dla Ciebie najważniejszy?</p>
+						<div class="quiz__options">
+							<button type="button" class="quiz__option" data-step="3" data-value="time">Oszczędność czasu zespołu</button>
+							<button type="button" class="quiz__option" data-step="3" data-value="cost">Redukcja kosztów operacyjnych</button>
+							<button type="button" class="quiz__option" data-step="3" data-value="scale">Skalowanie bez nowych etatów</button>
+						</div>
+					</div>
+
+					<!-- WYNIK -->
+					<div class="quiz__result quiz__step--hidden" id="quiz-result">
+						<div class="quiz__result-icon" aria-hidden="true">✓</div>
+						<p class="quiz__result-label">Twoja diagnoza</p>
+						<p class="quiz__result-text" id="quiz-result-text"></p>
+						<a href="/kontakt" class="btn btn--accent">Umów bezpłatną konsultację</a>
+						<button type="button" class="quiz__restart" id="quiz-restart">Wypełnij ponownie</button>
+					</div>
+
+				</div>
+
+				<!-- PASEK POSTĘPU -->
+				<div class="quiz__progress" id="quiz-progress" aria-hidden="true">
+					<div class="quiz__progress-bar" id="quiz-progress-bar"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- CTA -->
 	<section class="cta-section">
 		<div class="container">
@@ -149,6 +252,73 @@ import Nav from '../components/Nav.astro';
 		</div>
 	</section>
 </Layout>
+
+<script>
+(function() {
+  var answers = {};
+  var currentStep = 1;
+  var totalSteps = 3;
+
+  var results = {
+    default: 'Twoja firma ma realny potencjał automatyzacji. Najlepszym pierwszym krokiem jest audyt procesów – pozwoli wskazać gdzie AI da najszybszy zwrot bez ryzyka.',
+    high_data: 'Pracujesz z wrażliwymi danymi – to nie blokuje AI, ale wymaga odpowiedniego podejścia. Wdrażam wyłącznie modele lokalne: dane nie opuszczają Twojej infrastruktury.',
+    time_focus: 'Oszczędność czasu to najczęstszy i najszybciej mierzalny efekt wdrożenia AI. Przy 6+ osobach w zespole pierwsze automatyzacje zwracają się średnio w 6–8 tygodni.',
+    scale_focus: 'Skalowanie bez nowych etatów to jeden z najmocniejszych argumentów za AI w firmach 10–100 osób. Zacznijmy od rozmowy o procesach, które dziś blokują wzrost.'
+  };
+
+  function getResult() {
+    var dataVal = answers[2] || '';
+    var goalVal = answers[3] || '';
+    if (dataVal === 'high') return results.high_data;
+    if (goalVal === 'time') return results.time_focus;
+    if (goalVal === 'scale') return results.scale_focus;
+    return results.default;
+  }
+
+  function updateProgress(step) {
+    var bar = document.getElementById('quiz-progress-bar');
+    if (bar) bar.style.width = ((step / totalSteps) * 100) + '%';
+  }
+
+  function showStep(stepNum) {
+    var allSteps = document.querySelectorAll('.quiz__step, .quiz__result');
+    allSteps.forEach(function(el) { el.classList.add('quiz__step--hidden'); });
+    if (stepNum <= totalSteps) {
+      var el = document.getElementById('step-' + stepNum);
+      if (el) el.classList.remove('quiz__step--hidden');
+      updateProgress(stepNum - 1);
+    } else {
+      var result = document.getElementById('quiz-result');
+      if (result) result.classList.remove('quiz__step--hidden');
+      var resultText = document.getElementById('quiz-result-text');
+      if (resultText) resultText.textContent = getResult();
+      var progressBar = document.getElementById('quiz-progress-bar');
+      if (progressBar) progressBar.style.width = '100%';
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-step]');
+    if (btn) {
+      var step = parseInt(btn.getAttribute('data-step'), 10);
+      var value = btn.getAttribute('data-value');
+      answers[step] = value;
+
+      var siblings = btn.parentElement.querySelectorAll('.quiz__option');
+      siblings.forEach(function(s) { s.classList.remove('quiz__option--selected'); });
+      btn.classList.add('quiz__option--selected');
+
+      setTimeout(function() { showStep(step + 1); }, 280);
+    }
+
+    if (e.target.id === 'quiz-restart') {
+      answers = {};
+      currentStep = 1;
+      showStep(1);
+    }
+  });
+})();
+</script>
 
 
 <style>
@@ -338,6 +508,222 @@ import Nav from '../components/Nav.astro';
 	.card__roi-link:hover {
 		background-color: var(--color-accent);
 		color: var(--color-white);
+	}
+
+	/* FAQ INDEX */
+	.faq-index {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.faq-index__grid {
+		max-width: 720px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.faq-index__item {
+		border-bottom: 1px solid rgba(15, 31, 61, 0.08);
+	}
+
+	.faq-index__item:first-child {
+		border-top: 1px solid rgba(15, 31, 61, 0.08);
+	}
+
+	.faq-index__question {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.25rem 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		cursor: pointer;
+		list-style: none;
+		line-height: 1.4;
+	}
+
+	.faq-index__question::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-index__chevron {
+		flex-shrink: 0;
+		color: var(--color-accent);
+		transition: transform 0.2s;
+	}
+
+	details[open] .faq-index__chevron {
+		transform: rotate(180deg);
+	}
+
+	.faq-index__answer {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin: 0;
+		padding-bottom: 1.25rem;
+		max-width: 620px;
+	}
+
+	/* QUIZ */
+	.quiz-section {
+		background-color: var(--color-primary);
+		padding: 5rem 1.5rem;
+	}
+
+	.quiz {
+		max-width: 640px;
+		margin-inline: auto;
+	}
+
+	.quiz__header {
+		text-align: center;
+		margin-bottom: 2.5rem;
+	}
+
+	.quiz__overline {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--color-accent-light);
+		margin: 0 0 1rem;
+	}
+
+	.quiz__title {
+		font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+		font-weight: 800;
+		color: var(--color-white);
+		margin: 0 0 0.75rem;
+		line-height: 1.2;
+	}
+
+	.quiz__lead {
+		font-size: 1rem;
+		color: rgba(232, 241, 255, 0.75);
+		margin: 0;
+	}
+
+	.quiz__step {
+		transition: opacity 0.2s;
+	}
+
+	.quiz__step--hidden {
+		display: none;
+	}
+
+	.quiz__question {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: var(--color-white);
+		margin: 0 0 1.5rem;
+		line-height: 1.4;
+		text-align: center;
+	}
+
+	.quiz__options {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.quiz__option {
+		background-color: rgba(232, 241, 255, 0.08);
+		border: 1.5px solid rgba(232, 241, 255, 0.18);
+		border-radius: var(--radius-md);
+		color: rgba(232, 241, 255, 0.9);
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		font-weight: 500;
+		padding: 1rem 1.25rem;
+		cursor: pointer;
+		text-align: left;
+		transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+	}
+
+	.quiz__option:hover {
+		background-color: rgba(45, 126, 248, 0.2);
+		border-color: var(--color-accent);
+		color: var(--color-white);
+	}
+
+	.quiz__option--selected {
+		background-color: var(--color-accent);
+		border-color: var(--color-accent);
+		color: var(--color-white);
+	}
+
+	.quiz__result {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.quiz__result-icon {
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background-color: var(--color-accent);
+		color: var(--color-white);
+		font-size: 1.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+	}
+
+	.quiz__result-label {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--color-accent-light);
+		margin: 0;
+	}
+
+	.quiz__result-text {
+		font-size: 1.0625rem;
+		color: rgba(232, 241, 255, 0.9);
+		line-height: 1.65;
+		max-width: 520px;
+		margin: 0;
+	}
+
+	.quiz__restart {
+		background: none;
+		border: none;
+		color: rgba(232, 241, 255, 0.5);
+		font-size: 0.875rem;
+		font-family: var(--font-sans);
+		cursor: pointer;
+		padding: 0;
+		text-decoration: underline;
+	}
+
+	.quiz__restart:hover {
+		color: rgba(232, 241, 255, 0.8);
+	}
+
+	.quiz__progress {
+		height: 3px;
+		background-color: rgba(232, 241, 255, 0.12);
+		border-radius: 999px;
+		margin-top: 2.5rem;
+		overflow: hidden;
+	}
+
+	.quiz__progress-bar {
+		height: 100%;
+		background-color: var(--color-accent);
+		border-radius: 999px;
+		width: 0%;
+		transition: width 0.3s ease;
 	}
 
 	/* DESKTOP */
