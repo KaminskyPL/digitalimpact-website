@@ -97,17 +97,17 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		</script>
 	</head>
 	<body>
-		<a href="#main-content" class="skip-link">Przejdź do treści</a>
+		<a href="#main-content" class="skip-link" tabindex="0">Przejdź do treści</a>
 		<main id="main-content">
 			<slot />
 		</main>
 
-		<footer class="site-footer">
+		<footer class="site-footer" aria-label="Stopka strony">
 			<div class="site-footer__inner">
 				<div class="site-footer__brand">
 					<img src="/logo.svg" alt="Digital Impact AI Consulting" width="132" height="36" style="display:block; height:36px; width:auto; filter: brightness(0) invert(1); opacity: 0.85;">
 					<p class="site-footer__tagline">AI Consulting dla firm.<br>Konkretnie, praktycznie, z wynikami.</p>
-					<p class="site-footer__since">Działamy od 2011 roku</p>
+					<p class="site-footer__since">Działam od 2011 roku</p>
 					<a
 						href="https://www.linkedin.com/in/kamilkiersnowski/"
 						class="site-footer__linkedin"
@@ -156,7 +156,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 			</div>
 		</footer>
 
-		<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Zgoda na cookies" style="display:none;">
+		<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Zgoda na pliki cookie" aria-modal="false" style="display:none;">
 			<div class="cookie-banner__inner">
 				<p class="cookie-banner__text">
 					Używamy cookies do analizy ruchu (Google Analytics). Możesz zaakceptować wszystkie lub tylko niezbędne.

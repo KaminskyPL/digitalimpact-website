@@ -86,7 +86,9 @@ import Nav from '../components/Nav.astro';
 								<label class="slider-group__label" for="slider-people">Ile osób wykonuje ten proces?</label>
 								<span class="slider-group__value"><span id="val-people">5</span> os.</span>
 							</div>
-							<input type="range" id="slider-people" min="1" max="50" value="5" step="1">
+							<input type="range" id="slider-people" min="1" max="50" value="5" step="1"
+								aria-label="Liczba osób wykonujących proces"
+								aria-valuetext="5 osób">
 							<div class="slider-group__range">
 								<span>1</span><span>50</span>
 							</div>
@@ -97,7 +99,9 @@ import Nav from '../components/Nav.astro';
 								<label class="slider-group__label" for="slider-hours">Ile godzin tygodniowo każda osoba poświęca na ten proces?</label>
 								<span class="slider-group__value"><span id="val-hours">8</span> godz.</span>
 							</div>
-							<input type="range" id="slider-hours" min="1" max="40" value="8" step="1">
+							<input type="range" id="slider-hours" min="1" max="40" value="8" step="1"
+								aria-label="Godziny tygodniowo na proces"
+								aria-valuetext="8 godzin">
 							<div class="slider-group__range">
 								<span>1</span><span>40</span>
 							</div>
@@ -108,7 +112,9 @@ import Nav from '../components/Nav.astro';
 								<label class="slider-group__label" for="slider-rate">Średnia stawka godzinowa tych osób</label>
 								<span class="slider-group__value"><span id="val-rate">80</span> PLN</span>
 							</div>
-							<input type="range" id="slider-rate" min="50" max="300" value="80" step="10">
+							<input type="range" id="slider-rate" min="50" max="300" value="80" step="10"
+								aria-label="Koszt godziny pracy"
+								aria-valuetext="80 zł/h">
 							<div class="slider-group__range">
 								<span>50 PLN</span><span>300 PLN</span>
 							</div>
@@ -192,6 +198,7 @@ import Nav from '../components/Nav.astro';
 	}
 
 	// Init sliders
+	const sliderUnits: Record<string, string> = { people: ' osób', hours: ' godzin', rate: ' zł/h' };
 	(['people', 'hours', 'rate'] as const).forEach((name) => {
 		const slider = document.getElementById(`slider-${name}`) as HTMLInputElement;
 		const display = document.getElementById(`val-${name}`);
@@ -200,6 +207,7 @@ import Nav from '../components/Nav.astro';
 		slider.addEventListener('input', () => {
 			display.textContent = slider.value;
 			updateSliderFill(slider);
+			slider.setAttribute('aria-valuetext', slider.value + (sliderUnits[name] ?? ''));
 		});
 	});
 
