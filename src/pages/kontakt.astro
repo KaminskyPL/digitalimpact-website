@@ -247,11 +247,16 @@ import Nav from '../components/Nav.astro';
 		color: var(--color-accent);
 	}
 
+	.info-block__link--phone:hover .info-block__phone-number {
+		color: var(--color-accent);
+	}
+
 	.info-block__hours {
 		font-size: 0.875rem;
-		color: var(--color-text-muted);
+		color: var(--color-text-muted) !important;
 		font-weight: 400;
 		white-space: nowrap;
+		pointer-events: none;
 	}
 
 	.info-block__link--phone {
