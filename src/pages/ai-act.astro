@@ -12,9 +12,11 @@ import Nav from '../components/Nav.astro';
 	<!-- HERO -->
 	<section class="hero">
 		<div class="container">
-			<p class="hero__overline">zgodność z prawem UE</p>
-			<h1 class="hero__title">AI Act – co musisz wiedzieć i co powinieneś zrobić</h1>
-			<p class="hero__lead">Unia Europejska uchwaliła pierwsze na świecie kompleksowe prawo regulujące sztuczną inteligencję. Część przepisów już obowiązuje. Sierpień 2026 to data, do której większość firm musi być gotowa. Pomogę Ci przez to przejść – konkretnie i bez paniki.</p>
+			<div class="hero__content">
+				<p class="hero__overline">zgodność z prawem UE</p>
+				<h1 class="hero__title">AI Act – co musisz wiedzieć i co powinieneś zrobić</h1>
+				<p class="hero__lead">Unia Europejska uchwaliła pierwsze na świecie kompleksowe prawo regulujące sztuczną inteligencję. Część przepisów już obowiązuje. Sierpień 2026 to data, do której większość firm musi być gotowa. Pomogę Ci przez to przejść – konkretnie i bez paniki.</p>
+			</div>
 		</div>
 	</section>
 
@@ -298,6 +300,11 @@ import Nav from '../components/Nav.astro';
 		margin: 0 0 1rem;
 	}
 
+	.hero__content {
+		max-width: 780px;
+		margin-inline: auto;
+	}
+
 	.hero__title {
 		font-size: clamp(1.875rem, 4.5vw, 3rem);
 		font-weight: 800;
@@ -323,6 +330,7 @@ import Nav from '../components/Nav.astro';
 
 	.intro-content {
 		max-width: 760px;
+		margin-inline: auto;
 	}
 
 	.intro-content p {
