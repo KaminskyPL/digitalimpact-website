@@ -258,19 +258,25 @@ import Nav from '../components/Nav.astro';
   var totalSteps = 3;
 
   var results = {
-    default: 'Twoja firma ma realny potencjał automatyzacji. Najlepszym pierwszym krokiem jest audyt procesów – pozwoli wskazać gdzie AI da najszybszy zwrot bez ryzyka.',
+    small: 'Przy mniejszym zespole AI najszybciej zwraca się tam, gdzie kilka osób powtarza te same czynności. Audyt procesów wskaże 1–2 miejsca, gdzie automatyzacja da efekt już w pierwszych tygodniach – bez dużych nakładów.',
+    mid: 'Przy zespole kilkunastu osób powtarzalne procesy zaczynają realnie kosztować. To moment, w którym audyt AI zwykle znajduje kilka procesów do automatyzacji naraz – z mierzalnym zwrotem w skali miesięcy.',
+    large: 'Przy zespole ponad 20 osób skala powtarzalnej pracy jest na tyle duża, że dobrze dobrana automatyzacja potrafi uwolnić etaty na zadania o wyższej wartości. Zacznijmy od audytu, który zmapuje największe rezerwy.',
     high_data: 'Pracujesz z wrażliwymi danymi – to nie blokuje AI, ale wymaga odpowiedniego podejścia. Wdrażam wyłącznie modele lokalne: dane nie opuszczają Twojej infrastruktury.',
     time_focus: 'Oszczędność czasu to najczęstszy i najszybciej mierzalny efekt wdrożenia AI. Przy 6+ osobach w zespole pierwsze automatyzacje zwracają się średnio w 6–8 tygodni.',
     scale_focus: 'Skalowanie bez nowych etatów to jeden z najmocniejszych argumentów za AI w firmach 10–100 osób. Zacznijmy od rozmowy o procesach, które dziś blokują wzrost.'
   };
 
   function getResult() {
+    var sizeVal = answers[1] || '';
     var dataVal = answers[2] || '';
     var goalVal = answers[3] || '';
     if (dataVal === 'high') return results.high_data;
     if (goalVal === 'time') return results.time_focus;
     if (goalVal === 'scale') return results.scale_focus;
-    return results.default;
+    if (sizeVal === 'low') return results.small;
+    if (sizeVal === 'mid') return results.mid;
+    if (sizeVal === 'high') return results.large;
+    return results.small;
   }
 
   function updateProgress(step) {

@@ -1,0 +1,17 @@
+{
+  "name": "Digital Impact – AI Consulting",
+  "short_name": "Digital Impact",
+  "description": "Wdrożenia AI i automatyzacja procesów dla firm.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1F3D",
+  "theme_color": "#0F1F3D",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "pl"
+}
