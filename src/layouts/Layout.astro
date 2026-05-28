@@ -550,6 +550,24 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	   Dark Mode — per-page overrides (is:global required for Astro scoping)
 	   ============================================= */
 
+	/* AI Act — deadline box */
+	[data-theme="dark"] .timeline__item--deadline::before {
+		background-color: #1a1000 !important;
+		border-color: rgba(224, 124, 36, 0.4) !important;
+	}
+
+	[data-theme="dark"] .timeline__item--deadline .timeline__title {
+		color: var(--color-warning) !important;
+	}
+
+	[data-theme="dark"] .timeline__item--deadline .timeline__desc {
+		color: rgba(232, 241, 255, 0.7) !important;
+	}
+
+	[data-theme="dark"] .timeline__item--deadline .timeline__date {
+		color: var(--color-warning) !important;
+	}
+
 	/* Cookie banner */
 	[data-theme="dark"] .cookie-banner {
 		background-color: #071020;
