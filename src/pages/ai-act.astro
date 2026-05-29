@@ -527,6 +527,10 @@ import Nav from '../components/Nav.astro';
 		background-color: var(--color-accent-light);
 	}
 
+	.risk-card--limited .risk-card__tag {
+		color: #4B5563;
+	}
+
 	.risk-card--minimal {
 		border-color: var(--color-success-border);
 		background-color: rgba(56, 161, 105, 0.04);
@@ -628,6 +632,10 @@ import Nav from '../components/Nav.astro';
 	.role-card--highlight {
 		border-color: var(--color-accent);
 		background-color: var(--color-accent-light);
+	}
+
+	.role-card--highlight .role-card__en {
+		color: #4B5563;
 	}
 
 	.role-card__icon {
@@ -813,5 +821,10 @@ import Nav from '../components/Nav.astro';
 		.timeline__item--deadline::before {
 			margin-left: -2.5rem;
 		}
+	}
+
+	[data-theme="dark"] .risk-card--limited .risk-card__tag,
+	[data-theme="dark"] .role-card--highlight .role-card__en {
+		color: rgba(232, 241, 255, 0.7);
 	}
 </style>
