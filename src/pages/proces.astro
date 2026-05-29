@@ -353,12 +353,12 @@ import Nav from '../components/Nav.astro';
 
 	.step__link {
 		color: var(--color-accent);
-		text-decoration: underline;
-		text-decoration-color: rgba(45, 126, 248, 0.4);
-		text-underline-offset: 2px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: opacity 0.15s;
 	}
 	.step__link:hover {
-		text-decoration-color: var(--color-accent);
+		opacity: 0.75;
 	}
 
 	/* DESKTOP */
