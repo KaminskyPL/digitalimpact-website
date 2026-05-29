@@ -14,7 +14,10 @@ const { current } = Astro.props;
     <div class="nav__controls">
       <div class="nav__hint-wrap">
         <div id="theme-hint" class="nav__hint" role="tooltip" aria-live="polite" hidden>
-          <div class="nav__hint-arrow" aria-hidden="true"></div>
+          <svg class="nav__hint-arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="nav__hint-arrow-border" d="M0 7L7 0L14 7" stroke-width="1"/>
+            <path class="nav__hint-arrow-fill" d="M0 7L7 0.5L14 7Z"/>
+          </svg>
           <button type="button" class="nav__hint-close" id="theme-hint-close" aria-label="Zamknij podpowiedź">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
           </button>
@@ -50,7 +53,10 @@ const { current } = Astro.props;
       <li class="nav__theme-item">
         <div class="nav__hint-wrap">
           <div id="theme-hint-desktop" class="nav__hint" role="tooltip" aria-live="polite" hidden>
-            <div class="nav__hint-arrow" aria-hidden="true"></div>
+            <svg class="nav__hint-arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="nav__hint-arrow-border" d="M0 7L7 0L14 7" stroke-width="1"/>
+            <path class="nav__hint-arrow-fill" d="M0 7L7 0.5L14 7Z"/>
+          </svg>
             <button type="button" class="nav__hint-close" id="theme-hint-close-desktop" aria-label="Zamknij podpowiedź">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
@@ -399,14 +405,20 @@ const { current } = Astro.props;
 
   .nav__hint-arrow {
     position: absolute;
-    top: -6px;
-    right: 11px;
-    width: 12px;
-    height: 6px;
-    background: #FFFFFF;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    border-left: 1px solid rgba(15, 31, 61, 0.12);
-    border-right: 1px solid rgba(15, 31, 61, 0.12);
+    top: -7px;
+    right: 10px;
+    width: 14px;
+    height: 7px;
+    overflow: visible;
+  }
+
+  .nav__hint-arrow-border {
+    stroke: rgba(15, 31, 61, 0.15);
+    fill: none;
+  }
+
+  .nav__hint-arrow-fill {
+    fill: #FFFFFF;
   }
 
   .nav__hint-close {
@@ -491,10 +503,12 @@ const { current } = Astro.props;
     border-color: rgba(232, 241, 255, 0.15);
   }
 
-  html.theme--dark .nav__hint-arrow {
-    background: #1a2d4d;
-    border-left-color: rgba(232, 241, 255, 0.15);
-    border-right-color: rgba(232, 241, 255, 0.15);
+  html.theme--dark .nav__hint-arrow-border {
+    stroke: rgba(232, 241, 255, 0.2);
+  }
+
+  html.theme--dark .nav__hint-arrow-fill {
+    fill: #1a2d4d;
   }
 
   html.theme--dark .nav__hint-text {
