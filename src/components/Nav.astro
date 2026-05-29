@@ -200,8 +200,14 @@ const { current } = Astro.props;
 
   .nav__logo-img {
     display: block;
-    height: 44px;
+    height: 32px;
     width: auto;
+  }
+
+  @media (min-width: 900px) {
+    .nav__logo-img {
+      height: 44px;
+    }
   }
 
   /* CONTROLS: toggle + hamburger razem po prawej */
