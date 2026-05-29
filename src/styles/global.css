@@ -19,6 +19,14 @@
 
   --shadow-sm: 0 1px 3px rgba(15, 31, 61, 0.08);
   --shadow-md: 0 4px 16px rgba(15, 31, 61, 0.12);
+
+  /* Semantic — kolory znaczeniowe (używane na /ai-act i w dark mode overrides) */
+  --color-danger: #C53030;
+  --color-danger-border: #E53E3E;
+  --color-warning: #B85C00;
+  --color-warning-border: #E07C24;
+  --color-success: #276749;
+  --color-success-border: #38A169;
 }
 
 html {
@@ -66,6 +74,13 @@ body {
   --color-white: #0F1F3D;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  --color-danger: #FC8181;
+  --color-danger-border: #FC8181;
+  --color-warning: #F6AD55;
+  --color-warning-border: #F6AD55;
+  --color-success: #68D391;
+  --color-success-border: #68D391;
 }
 
 [data-theme="dark"] body {
