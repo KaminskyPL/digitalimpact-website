@@ -28,13 +28,15 @@ const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', 
 	<!-- HERO -->
 	<section class="hero">
 		<div class="container">
-			<a href="/blog" class="back-link">← Blog</a>
-			<div class="hero__meta">
-				{kategoria && <span class="hero__tag">{kategoria}</span>}
-				{czas_czytania && <span class="hero__time">⏱ {czas_czytania}</span>}
-				<time class="hero__date" datetime={pubDate.toISOString().split('T')[0]}>{pubDateFormatted}</time>
+			<div class="hero__inner">
+				<a href="/blog" class="back-link">← Blog</a>
+				<div class="hero__meta">
+					{kategoria && <span class="hero__tag">{kategoria}</span>}
+					{czas_czytania && <span class="hero__time">⏱ {czas_czytania}</span>}
+					<time class="hero__date" datetime={pubDate.toISOString().split('T')[0]}>{pubDateFormatted}</time>
+				</div>
+				<h1 class="hero__title">{title}</h1>
 			</div>
-			<h1 class="hero__title">{title}</h1>
 		</div>
 	</section>
 
@@ -133,13 +135,17 @@ const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', 
 		color: var(--color-primary);
 		line-height: 1.2;
 		margin: 0;
-		max-width: 820px;
 	}
 
 	/* CONTENT */
 	.content-section {
 		background-color: var(--color-white);
 		padding: 3rem 1.5rem 4rem;
+	}
+
+	.hero__inner {
+		max-width: 760px;
+		margin-inline: auto;
 	}
 
 	.prose {
