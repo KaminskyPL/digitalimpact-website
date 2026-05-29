@@ -263,6 +263,7 @@ import Nav from '../components/Nav.astro';
     large: 'Przy zespole ponad 20 osób skala powtarzalnej pracy jest na tyle duża, że dobrze dobrana automatyzacja potrafi uwolnić etaty na zadania o wyższej wartości. Zacznijmy od audytu, który zmapuje największe rezerwy.',
     high_data: 'Pracujesz z wrażliwymi danymi – to nie blokuje AI, ale wymaga odpowiedniego podejścia. Wdrażam wyłącznie modele lokalne: dane nie opuszczają Twojej infrastruktury.',
     time_focus: 'Oszczędność czasu to najczęstszy i najszybciej mierzalny efekt wdrożenia AI. Przy 6+ osobach w zespole pierwsze automatyzacje zwracają się średnio w 6–8 tygodni.',
+    cost_focus: 'Redukcja kosztów operacyjnych to jeden z najłatwiej mierzalnych efektów AI. Automatyzacja powtarzalnych zadań bezpośrednio przekłada się na mniejsze koszty pracy i mniej błędów – z konkretną liczbą na koniec miesiąca.',
     scale_focus: 'Skalowanie bez nowych etatów to jeden z najmocniejszych argumentów za AI w firmach 10–100 osób. Zacznijmy od rozmowy o procesach, które dziś blokują wzrost.'
   };
 
@@ -272,6 +273,7 @@ import Nav from '../components/Nav.astro';
     var goalVal = answers[3] || '';
     if (dataVal === 'high') return results.high_data;
     if (goalVal === 'time') return results.time_focus;
+    if (goalVal === 'cost') return results.cost_focus;
     if (goalVal === 'scale') return results.scale_focus;
     if (sizeVal === 'low') return results.small;
     if (sizeVal === 'mid') return results.mid;
