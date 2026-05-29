@@ -54,6 +54,15 @@ const { current } = Astro.props;
     });
   });
 
+  document.addEventListener('click', (e) => {
+    if (!menu?.classList.contains('nav__menu--open')) return;
+    const target = e.target as Node;
+    if (!menu.contains(target) && !hamburger?.contains(target)) {
+      menu.classList.remove('nav__menu--open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   // Theme toggle
   const themeToggle = document.getElementById('theme-toggle');
 
