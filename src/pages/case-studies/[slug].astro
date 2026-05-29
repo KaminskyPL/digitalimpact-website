@@ -123,8 +123,8 @@ const branza = entry.data['branża'];
 	.meta-cards {
 		max-width: 760px;
 		margin-inline: auto;
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
 	}
 
@@ -136,12 +136,10 @@ const branza = entry.data['branża'];
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
-		min-width: 160px;
 	}
 
 	.meta-card--wide {
-		flex: 1;
-		min-width: 280px;
+		grid-column: 1 / -1;
 	}
 
 	.meta-card__label {
