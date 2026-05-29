@@ -179,9 +179,13 @@ const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', 
 	.prose :global(a) {
 		color: var(--color-accent);
 		text-decoration: none;
+		font-weight: 500;
+		transition: opacity 0.15s;
 	}
 
-	.prose :global(a:hover) { text-decoration: underline; }
+	.prose :global(a:hover) {
+		opacity: 0.75;
+	}
 
 	.prose :global(hr) {
 		border: none;
