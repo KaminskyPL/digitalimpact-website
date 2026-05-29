@@ -75,7 +75,7 @@ const { current } = Astro.props;
   function getCurrentTheme(): string {
     const stored = localStorage.getItem('di-theme');
     if (stored) return stored;
-    return 'light';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   // Init icon state on load
