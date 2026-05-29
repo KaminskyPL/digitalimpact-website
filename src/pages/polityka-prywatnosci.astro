@@ -163,10 +163,12 @@ import Nav from '../components/Nav.astro';
 	.prose a {
 		color: var(--color-accent);
 		text-decoration: none;
+		font-weight: 500;
+		transition: opacity 0.15s;
 	}
 
 	.prose a:hover {
-		text-decoration: underline;
+		opacity: 0.75;
 	}
 
 	.prose__meta {
