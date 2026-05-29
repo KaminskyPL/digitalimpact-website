@@ -257,28 +257,28 @@ import Nav from '../components/Nav.astro';
   var currentStep = 1;
   var totalSteps = 3;
 
-  var results = {
-    small: 'Przy mniejszym zespole AI najszybciej zwraca się tam, gdzie kilka osób powtarza te same czynności. Audyt procesów wskaże 1–2 miejsca, gdzie automatyzacja da efekt już w pierwszych tygodniach – bez dużych nakładów.',
-    mid: 'Przy zespole kilkunastu osób powtarzalne procesy zaczynają realnie kosztować. To moment, w którym audyt AI zwykle znajduje kilka procesów do automatyzacji naraz – z mierzalnym zwrotem w skali miesięcy.',
-    large: 'Przy zespole ponad 20 osób skala powtarzalnej pracy jest na tyle duża, że dobrze dobrana automatyzacja potrafi uwolnić etaty na zadania o wyższej wartości. Zacznijmy od audytu, który zmapuje największe rezerwy.',
-    high_data: 'Pracujesz z wrażliwymi danymi – to nie blokuje AI, ale wymaga odpowiedniego podejścia. Wdrażam wyłącznie modele lokalne: dane nie opuszczają Twojej infrastruktury.',
-    time_focus: 'Oszczędność czasu to najczęstszy i najszybciej mierzalny efekt wdrożenia AI. Przy 6+ osobach w zespole pierwsze automatyzacje zwracają się średnio w 6–8 tygodni.',
-    cost_focus: 'Redukcja kosztów operacyjnych to jeden z najłatwiej mierzalnych efektów AI. Automatyzacja powtarzalnych zadań bezpośrednio przekłada się na mniejsze koszty pracy i mniej błędów – z konkretną liczbą na koniec miesiąca.',
-    scale_focus: 'Skalowanie bez nowych etatów to jeden z najmocniejszych argumentów za AI w firmach 10–100 osób. Zacznijmy od rozmowy o procesach, które dziś blokują wzrost.'
+  var matrix = {
+    'low_time':   'Przy 1–5 osobach w zespole AI robi różnicę szybko i tanio. Jedno lub dwa zautomatyzowane zadania – obsługa maili, generowanie dokumentów, analiza danych – potrafią oddać kilka godzin tygodniowo każdej osobie. To realny zysk bez dużych inwestycji.',
+    'low_cost':   'W małym zespole każda godzina ma cenę. AI może przejąć powtarzalne zadania i obniżyć koszty operacyjne bez zatrudniania kolejnej osoby. Audyt pokaże gdzie tracisz pieniądze, których nie widzisz na co dzień.',
+    'low_scale':  'Skalowalność w małej firmie to często kwestia przeżycia – nie możesz po prostu zatrudnić kolejnych ludzi przy każdym nowym kliencie. AI pozwala obsłużyć więcej bez proporcjonalnego wzrostu kosztów.',
+    'mid_time':   'Przy kilkunastu osobach powtarzalne zadania zaczynają realnie kosztować – godziny mnożą się przez liczbę ludzi. Automatyzacja 2–3 procesów potrafi oddać zespołowi dziesiątki godzin miesięcznie, które można przeznaczyć na pracę wymagającą myślenia.',
+    'mid_cost':   'Kilkanaście osób wykonujących powtarzalne zadania to konkretne koszty, które AI może bezpośrednio redukować. Wdrożenie automatyzacji w tym przedziale zwykle zwraca się w ciągu kilku miesięcy – z mierzalną liczbą na fakturze.',
+    'mid_scale':  'Firma na etapie wzrostu z kilkunastoosobowym zespołem często trafia w ścianę: więcej klientów wymaga więcej ludzi. AI przerywa tę zależność – procesy operacyjne mogą obsłużyć 2× więcej bez 2× więcej etatów.',
+    'high_time':  'Przy ponad 20 osobach skala powtarzalnej pracy jest wystarczająco duża, żeby automatyzacja zrobiła natychmiastową różnicę. Jeden wdrożony proces AI może zwolnić dziesiątki godzin tygodniowo w całym zespole.',
+    'high_cost':  'W firmie powyżej 20 osób koszty powtarzalnych procesów są na tyle duże, że nawet 20% automatyzacji przekłada się na realne oszczędności. Audyt AI w tym przedziale niemal zawsze wskazuje 3–5 obszarów z szybkim zwrotem.',
+    'high_scale': 'Duży zespół z ambicją wzrostu to idealny moment na AI. Automatyzacja procesów operacyjnych pozwala skalować przychody bez proporcjonalnego wzrostu zatrudnienia – to jeden z najsilniejszych argumentów biznesowych za AI w firmach 20–150 osób.'
   };
 
+  var data_suffix = ' Pracujesz z wrażliwymi danymi – wdrażam wyłącznie modele lokalne, dane nie opuszczają Twojej infrastruktury.';
+
   function getResult() {
-    var sizeVal = answers[1] || '';
-    var dataVal = answers[2] || '';
-    var goalVal = answers[3] || '';
-    if (dataVal === 'high') return results.high_data;
-    if (goalVal === 'time') return results.time_focus;
-    if (goalVal === 'cost') return results.cost_focus;
-    if (goalVal === 'scale') return results.scale_focus;
-    if (sizeVal === 'low') return results.small;
-    if (sizeVal === 'mid') return results.mid;
-    if (sizeVal === 'high') return results.large;
-    return results.small;
+    var sizeVal = answers[1] || 'low';
+    var dataVal = answers[2] || 'low';
+    var goalVal = answers[3] || 'time';
+    var key = sizeVal + '_' + goalVal;
+    var text = matrix[key] || matrix['low_time'];
+    if (dataVal === 'high') text += data_suffix;
+    return text;
   }
 
   function updateProgress(step) {
