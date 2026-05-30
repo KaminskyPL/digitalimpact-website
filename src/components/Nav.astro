@@ -161,7 +161,7 @@ const { current } = Astro.props;
       requestAnimationFrame(() => requestAnimationFrame(() => {
         hint!.classList.add('nav__hint--visible');
       }));
-      hideTimer = setTimeout(hideHint, 8000);
+      hideTimer = setTimeout(hideHint, 5000);
     }
 
     function hideHint() {
