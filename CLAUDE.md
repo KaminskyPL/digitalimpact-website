@@ -36,7 +36,7 @@ No linting or test scripts are configured. Requires Node >=22.12.0.
 
 ## Stack
 
-- **Astro 6.3.7** — static site generator with MDX, sitemap, and RSS integrations
+- **Astro** (latest) — static site generator with MDX, sitemap, and RSS integrations
 - **TypeScript** — strict mode via `astro/tsconfigs/strict`
 - **Content Collections** — blog posts as `.md`/`.mdx` files with Zod schema validation
 - **No Tailwind** — plain CSS with scoped `<style>` blocks per component; global baseline in `src/styles/global.css`; 720px max content width, 720px mobile breakpoint
@@ -50,23 +50,19 @@ Blog posts live in `src/content/blog/` and are loaded via the glob loader define
 ### Page/Layout/Component hierarchy
 
 ```
-BaseHead.astro          ← SEO, Open Graph, font preloading
-Header.astro            ← global nav + social icons (hardcoded links)
-  └── HeaderLink.astro  ← active-state nav link
-Footer.astro
+Layout.astro            ← główny wrapper: SEO, Open Graph, stopka, cookie banner
+Nav.astro               ← nawigacja sticky z hamburgerem i przełącznikiem motywu
 FormattedDate.astro     ← wraps <time> with locale formatting
-
-BlogPost.astro (layout) ← wraps all blog post pages; imports the above
 ```
 
-Pages in `src/pages/` use these layouts and components directly. The `src/consts.ts` file exports site-wide metadata (`SITE_TITLE`, `SITE_DESCRIPTION`).
+Pages in `src/pages/` use `Layout.astro` and `Nav.astro` directly.
 
 ### Fonts
 
-Custom Atkinson font (woff files in `src/assets/fonts/`) is configured via Astro's `fontProviders` in `astro.config.mjs` and injected through `BaseHead.astro` using Astro's built-in `<Font>` component with `preload` and `display: swap`.
+DM Sans (woff2, lokalne pliki w `public/fonts/`) ładowana przez `@font-face` w `src/styles/global.css` z `font-display: optional`.
 
 ### Key config
 
-- Site URL is set to `https://example.com` in `astro.config.mjs` — update before deploying
+- Site URL: `https://digitalimpact.pl` (ustawione w `astro.config.mjs`)
 - RSS feed generated at `/rss.xml` via `src/pages/rss.xml.js`
 - Sitemap auto-generated at `/sitemap-index.xml` by `@astrojs/sitemap`

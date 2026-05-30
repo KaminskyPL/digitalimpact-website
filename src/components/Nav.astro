@@ -226,8 +226,8 @@ const { current } = Astro.props;
     border: none;
     cursor: pointer;
     padding: 4px;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
   }
 
   .nav__hamburger span {
@@ -259,8 +259,8 @@ const { current } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: none;
     border: 1.5px solid rgba(15, 31, 61, 0.15);
@@ -293,6 +293,10 @@ const { current } = Astro.props;
     transform: translateY(-6px);
     transition: opacity 0.25s, transform 0.25s;
     pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav__hint { transition: none; }
   }
 
   .nav__hint { visibility: hidden; }
