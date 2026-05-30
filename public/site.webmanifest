@@ -4,14 +4,18 @@
   "description": "Wdrożenia AI i automatyzacja procesów dla firm.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0F1F3D",
   "theme_color": "#0F1F3D",
+  "categories": ["business", "productivity"],
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ],
-  "lang": "pl"
+  "lang": "pl",
+  "dir": "ltr"
 }
