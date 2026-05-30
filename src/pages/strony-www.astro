@@ -140,36 +140,49 @@ import Nav from '../components/Nav.astro';
 		<div class="container">
 			<h2 class="section-title">Jak wygląda nasza współpraca</h2>
 			<p class="www-proces__lead">Od pierwszej rozmowy do wdrożenia — żadnych niespodzianek w połowie drogi.</p>
-			<ol class="www-proces__steps">
-				<li class="www-proces__step">
-					<span class="www-proces__num">01</span>
-					<div class="www-proces__step-body">
-						<h3 class="www-proces__step-title">Rozmowa i brief</h3>
-						<p class="www-proces__step-text">Zaczynamy od 30-minutowej rozmowy. Pytam o cel strony, odbiorców, konkurencję i to, co Cię irytuje w obecnej witrynie. Na tej podstawie przygotuję brief — dokument, który opisuje zakres projektu i którego trzymamy się przez całą współpracę.</p>
+			<div class="www-steps">
+
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">01</div>
 					</div>
-				</li>
-				<li class="www-proces__step">
-					<span class="www-proces__num">02</span>
-					<div class="www-proces__step-body">
-						<h3 class="www-proces__step-title">Projekt i wizualizacja</h3>
-						<p class="www-proces__step-text">Przygotowuję propozycję layoutu — strukturę sekcji, hierarchię treści, paletę kolorów. Pokazuję Ci wersję desktop i mobile. Komentujesz, wprowadzam poprawki. Zaczynamy kodować dopiero gdy layout jest zaakceptowany.</p>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Rozmowa i brief</h3>
+						<p class="www-step__desc">Zaczynamy od 30-minutowej rozmowy. Pytam o cel strony, odbiorców, konkurencję i to, co Cię irytuje w obecnej witrynie. Na tej podstawie przygotuję brief – dokument, który opisuje zakres projektu i którego trzymamy się przez całą współpracę.</p>
 					</div>
-				</li>
-				<li class="www-proces__step">
-					<span class="www-proces__num">03</span>
-					<div class="www-proces__step-body">
-						<h3 class="www-proces__step-title">Kodowanie i optymalizacja</h3>
-						<p class="www-proces__step-text">Piszę kod w Astro — czysto, bez zbędnych zależności. Na bieżąco mierzę Lighthouse i poprawiam każde odchylenie od 100. SEO, dostępność, bezpieczeństwo — to nie finalna lista kontrolna, tylko część procesu.</p>
+				</div>
+
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">02</div>
 					</div>
-				</li>
-				<li class="www-proces__step">
-					<span class="www-proces__num">04</span>
-					<div class="www-proces__step-body">
-						<h3 class="www-proces__step-title">Prezentacja i wdrożenie</h3>
-						<p class="www-proces__step-text">Przed wdrożeniem pokazuję Ci gotową stronę na środowisku testowym. Dostajesz czas na ostatnie uwagi. Po akceptacji — wdrożenie na Twojej domenie, konfiguracja DNS i SSL, przekazanie dostępów. Dostajesz też zrzut Lighthouse jako potwierdzenie jakości.</p>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Projekt i wizualizacja</h3>
+						<p class="www-step__desc">Przygotowuję propozycję layoutu – strukturę sekcji, hierarchię treści, paletę kolorów. Pokazuję Ci wersję desktop i mobile. Komentujesz, wprowadzam poprawki. Zaczynamy kodować dopiero gdy layout jest zaakceptowany.</p>
 					</div>
-				</li>
-			</ol>
+				</div>
+
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">03</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Kodowanie i optymalizacja</h3>
+						<p class="www-step__desc">Piszę kod w Astro – czysto, bez zbędnych zależności. Na bieżąco mierzę Lighthouse i poprawiam każde odchylenie od 100. SEO, dostępność, bezpieczeństwo – to nie finalna lista kontrolna, tylko część procesu.</p>
+					</div>
+				</div>
+
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">04</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Prezentacja i wdrożenie</h3>
+						<p class="www-step__desc">Przed wdrożeniem pokazuję Ci gotową stronę na środowisku testowym. Dostajesz czas na ostatnie uwagi. Po akceptacji – wdrożenie na Twojej domenie, konfiguracja DNS i SSL, przekazanie dostępów. Dostajesz też zrzut Lighthouse jako potwierdzenie jakości.</p>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</section>
 
@@ -271,7 +284,7 @@ import Nav from '../components/Nav.astro';
 <style>
 	/* HERO */
 	.hero {
-		background-color: var(--color-primary);
+		background-color: var(--color-surface);
 		padding: 6rem 1.5rem;
 		text-align: center;
 	}
@@ -279,7 +292,7 @@ import Nav from '../components/Nav.astro';
 	.hero__overline {
 		font-size: 0.875rem;
 		letter-spacing: 0.1em;
-		color: #E8F1FF;
+		color: var(--color-accent);
 		font-weight: 500;
 		margin: 0 0 1.25rem;
 		text-transform: uppercase;
@@ -289,13 +302,13 @@ import Nav from '../components/Nav.astro';
 		font-size: clamp(2rem, 5vw, 3.25rem);
 		font-weight: 800;
 		line-height: 1.15;
-		color: #FFFFFF;
+		color: var(--color-primary);
 		margin: 0 0 1.5rem;
 	}
 
 	.hero__subtitle {
 		font-size: 1.125rem;
-		color: rgba(232, 241, 255, 0.85);
+		color: var(--color-text-muted);
 		max-width: 600px;
 		margin-inline: auto;
 		margin-bottom: 2.5rem;
@@ -311,23 +324,24 @@ import Nav from '../components/Nav.astro';
 	}
 
 	.btn--ghost {
-		border: 2px solid rgba(232, 241, 255, 0.35);
-		color: #E8F1FF;
-		background: transparent;
-		padding: 0.875rem 2rem;
-		border-radius: var(--radius-md);
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
 		font-weight: 600;
 		font-size: 1rem;
 		font-family: var(--font-sans);
-		text-decoration: none;
-		display: inline-flex;
-		align-items: center;
-		transition: border-color 0.15s, color 0.15s;
+		border-radius: var(--radius-md);
+		padding: 0.75rem 1.5rem;
+		background: transparent;
+		border: 2px solid var(--color-primary);
+		color: var(--color-primary);
+		transition: background-color 0.15s, color 0.15s, border-color 0.15s;
 	}
 
 	.btn--ghost:hover {
-		border-color: rgba(232, 241, 255, 0.7);
+		background-color: var(--color-primary);
 		color: #FFFFFF;
+		border-color: var(--color-primary);
 	}
 
 	.hero__proof {
@@ -342,12 +356,12 @@ import Nav from '../components/Nav.astro';
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.875rem;
-		color: rgba(232, 241, 255, 0.75);
+		color: var(--color-text-muted);
 		font-weight: 500;
 	}
 
 	.hero__proof-item svg {
-		color: rgba(232, 241, 255, 0.8);
+		color: currentColor;
 		flex-shrink: 0;
 	}
 
@@ -471,7 +485,7 @@ import Nav from '../components/Nav.astro';
 
 	/* WWW-PROCES */
 	.www-proces {
-		background-color: var(--color-surface);
+		background-color: var(--color-white);
 		padding: 4rem 1.5rem;
 	}
 
@@ -484,69 +498,6 @@ import Nav from '../components/Nav.astro';
 		margin-top: -1.5rem;
 		margin-bottom: 3rem;
 		line-height: 1.6;
-	}
-
-	.www-proces__steps {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		max-width: 720px;
-		position: relative;
-	}
-
-	.www-proces__steps::before {
-		content: '';
-		position: absolute;
-		top: 1.125rem;
-		bottom: 1.125rem;
-		left: 1.125rem;
-		width: 2px;
-		background: rgba(15, 31, 61, 0.1);
-	}
-
-	.www-proces__step {
-		display: flex;
-		gap: 1.5rem;
-		padding-bottom: 2.5rem;
-		position: relative;
-	}
-
-	.www-proces__step:last-child {
-		padding-bottom: 0;
-	}
-
-	.www-proces__num {
-		width: 2.25rem;
-		height: 2.25rem;
-		border-radius: 50%;
-		background: var(--color-accent);
-		color: #FFFFFF;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 0.8125rem;
-		font-weight: 700;
-		flex-shrink: 0;
-		position: relative;
-		z-index: 1;
-	}
-
-	.www-proces__step-body {
-		padding-top: 0.3125rem;
-	}
-
-	.www-proces__step-title {
-		font-size: 1.125rem;
-		font-weight: 700;
-		color: var(--color-primary);
-		margin-bottom: 0.375rem;
-	}
-
-	.www-proces__step-text {
-		font-size: 0.9375rem;
-		color: var(--color-text-muted);
-		line-height: 1.65;
-		margin: 0;
 	}
 
 	/* WWW-AI-BRIDGE */
