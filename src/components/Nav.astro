@@ -28,7 +28,7 @@ const { current } = Astro.props;
     <!-- MOBILE: toggle + hamburger (widoczne tylko < 900px) -->
     <div class="nav__controls">
       <div class="nav__hint-wrap">
-        <div id="theme-hint" class="nav__hint" role="tooltip" aria-live="polite" hidden>
+        <div id="theme-hint" class="nav__hint" role="tooltip" aria-live="polite">
           <svg class="nav__hint-arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" aria-hidden="true">
             <path class="nav__hint-arrow-border" d="M0 7L7 0L14 7" stroke-width="1"/>
             <path class="nav__hint-arrow-fill" d="M0 7L7 0.5L14 7Z"/>
@@ -62,7 +62,7 @@ const { current } = Astro.props;
       <!-- DESKTOP: toggle jako ostatni element menu (widoczny tylko >= 900px) -->
       <li class="nav__theme-item">
         <div class="nav__hint-wrap">
-          <div id="theme-hint-desktop" class="nav__hint" role="tooltip" aria-live="polite" hidden>
+          <div id="theme-hint-desktop" class="nav__hint" role="tooltip" aria-live="polite">
             <svg class="nav__hint-arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" aria-hidden="true">
               <path class="nav__hint-arrow-border" d="M0 7L7 0L14 7" stroke-width="1"/>
               <path class="nav__hint-arrow-fill" d="M0 7L7 0.5L14 7Z"/>
@@ -157,17 +157,15 @@ const { current } = Astro.props;
     let hideTimer: ReturnType<typeof setTimeout>;
 
     function showHint() {
-      hint!.hidden = false;
-      requestAnimationFrame(() => requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         hint!.classList.add('nav__hint--visible');
-      }));
+      });
       hideTimer = setTimeout(hideHint, 5000);
     }
 
     function hideHint() {
       clearTimeout(hideTimer);
       hint!.classList.remove('nav__hint--visible');
-      hint!.addEventListener('transitionend', () => { hint!.hidden = true; }, { once: true });
       localStorage.setItem(HINT_KEY, '1');
     }
 
@@ -297,8 +295,13 @@ const { current } = Astro.props;
     pointer-events: none;
   }
 
-  .nav__hint:not([hidden]) { pointer-events: auto; }
-  .nav__hint.nav__hint--visible { opacity: 1; transform: translateY(0); }
+  .nav__hint { visibility: hidden; }
+  .nav__hint.nav__hint--visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
   .nav__hint-arrow {
     position: absolute;

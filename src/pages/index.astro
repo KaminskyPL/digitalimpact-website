@@ -289,18 +289,20 @@ import Nav from '../components/Nav.astro';
   function showStep(stepNum) {
     var allSteps = document.querySelectorAll('.quiz__step, .quiz__result');
     allSteps.forEach(function(el) { el.classList.add('quiz__step--hidden'); });
-    if (stepNum <= totalSteps) {
-      var el = document.getElementById('step-' + stepNum);
-      if (el) el.classList.remove('quiz__step--hidden');
-      updateProgress(stepNum - 1);
-    } else {
-      var result = document.getElementById('quiz-result');
-      if (result) result.classList.remove('quiz__step--hidden');
-      var resultText = document.getElementById('quiz-result-text');
-      if (resultText) resultText.textContent = getResult();
-      var progressBar = document.getElementById('quiz-progress-bar');
-      if (progressBar) progressBar.style.width = '100%';
-    }
+    requestAnimationFrame(function() {
+      if (stepNum <= totalSteps) {
+        var el = document.getElementById('step-' + stepNum);
+        if (el) el.classList.remove('quiz__step--hidden');
+        updateProgress(stepNum - 1);
+      } else {
+        var result = document.getElementById('quiz-result');
+        if (result) result.classList.remove('quiz__step--hidden');
+        var resultText = document.getElementById('quiz-result-text');
+        if (resultText) resultText.textContent = getResult();
+        var progressBar = document.getElementById('quiz-progress-bar');
+        if (progressBar) progressBar.style.width = '100%';
+      }
+    });
   }
 
   document.addEventListener('click', function(e) {
