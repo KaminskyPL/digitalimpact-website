@@ -54,9 +54,9 @@ const { current } = Astro.props;
       <li><a href="/#oferta" class={current === 'oferta' ? 'nav__active' : ''} aria-current={current === 'oferta' ? 'page' : undefined}>Oferta</a></li>
       <li><a href="/proces" class={current === 'proces' ? 'nav__active' : ''} aria-current={current === 'proces' ? 'page' : undefined}>Proces</a></li>
       <li><a href="/ai-act" class={current === 'ai-act' ? 'nav__active' : ''} aria-current={current === 'ai-act' ? 'page' : undefined}>AI Act</a></li>
+      <li><a href="/strony-www" class={current === 'strony-www' ? 'nav__active' : ''} aria-current={current === 'strony-www' ? 'page' : undefined}>Strony WWW</a></li>
       <li><a href="/case-studies" class={current === 'case-studies' ? 'nav__active' : ''} aria-current={current === 'case-studies' ? 'page' : undefined}>Case Studies</a></li>
       <li><a href="/blog" class={current === 'blog' ? 'nav__active' : ''} aria-current={current === 'blog' ? 'page' : undefined}>Blog</a></li>
-      <li><a href="/strony-www" class={current === 'strony-www' ? 'nav__active' : ''} aria-current={current === 'strony-www' ? 'page' : undefined}>Strony WWW</a></li>
       <li><a href="/o-mnie" class={current === 'o-mnie' ? 'nav__active' : ''} aria-current={current === 'o-mnie' ? 'page' : undefined}>O mnie</a></li>
       <li><a href="/kontakt" class={current === 'kontakt' ? 'nav__active' : ''} aria-current={current === 'kontakt' ? 'page' : undefined}>Kontakt</a></li>
 
@@ -377,6 +377,7 @@ const { current } = Astro.props;
       box-shadow: none;
       padding: 0;
       gap: 1.5rem;
+      margin-left: auto;
     }
 
     .nav__menu a {

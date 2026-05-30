@@ -67,44 +67,68 @@ import Nav from '../components/Nav.astro';
 	<!-- CO DOSTAJESZ -->
 	<section class="www-dostaniesz">
 		<div class="container">
-			<h2 class="section-title">Co dostajesz</h2>
+			<h2 class="section-title">Co wchodzi w zakres</h2>
 			<p class="www-dostaniesz__lead">Nie szablon kupiony w marketplace. Kod pisany od zera, dostosowany do Twojej firmy.</p>
-			<div class="www-dostaniesz__grid">
+			<div class="www-steps">
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-					<h3 class="www-card__title">Własny kod, nie szablon</h3>
-					<p class="www-card__text">Każda strona powstaje od zera w Astro — czystym frameworku generującym statyczny HTML. Zero zbędnych wtyczek, zero ukrytych zależności. Kod, który rozumiesz i możesz rozwijać.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">01</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Własny kod, nie szablon</h3>
+						<p class="www-step__desc">Każda strona powstaje od zera w Astro – czystym frameworku generującym statyczny HTML. Zero zbędnych wtyczek, zero ukrytych zależności. Kod, który rozumiesz i możesz rozwijać.</p>
+					</div>
 				</div>
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-					<h3 class="www-card__title">SEO gotowe od pierwszej linii</h3>
-					<p class="www-card__text">Meta tagi, OpenGraph, Schema.org JSON-LD, sitemap, robots.txt — wszystko skonfigurowane poprawnie już w dniu wdrożenia. Nie czekasz miesiącami na indeksację.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">02</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">SEO gotowe od pierwszej linii</h3>
+						<p class="www-step__desc">Meta tagi, OpenGraph, Schema.org JSON-LD, sitemap, robots.txt – wszystko skonfigurowane poprawnie już w dniu wdrożenia. Nie czekasz miesiącami na indeksację.</p>
+					</div>
 				</div>
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-					<h3 class="www-card__title">Wydajność mierzona, nie deklarowana</h3>
-					<p class="www-card__text">Dostajesz zrzut Lighthouse z wynikami 100/100 do każdego projektu. FCP poniżej 0.3s, zero layout shift — bo optymalizacja jest wbudowana w proces, nie doklejana na końcu.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">03</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Wydajność mierzona, nie deklarowana</h3>
+						<p class="www-step__desc">Dostajesz zrzut Lighthouse z wynikami 100/100 do każdego projektu. FCP poniżej 0.3s, zero layout shift – bo optymalizacja jest wbudowana w proces, nie doklejana na końcu.</p>
+					</div>
 				</div>
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-					<h3 class="www-card__title">Tryb ciemny w standardzie</h3>
-					<p class="www-card__text">Ciemny motyw to nie opcja premium — buduję go od początku, razem z jasnym. Przełącznik wykrywa preferencje systemowe i zapamiętuje wybór użytkownika.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">04</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Tryb ciemny w standardzie</h3>
+						<p class="www-step__desc">Ciemny motyw to nie opcja premium – buduję go od początku, razem z jasnym. Przełącznik wykrywa preferencje systemowe i zapamiętuje wybór użytkownika.</p>
+					</div>
 				</div>
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-					<h3 class="www-card__title">Mobile-first bez kompromisów</h3>
-					<p class="www-card__text">Projektuję od najmniejszego ekranu wzwyż — nie odwrotnie. Każdy touch target ma minimum 44×44px. Żadnych elementów, które na telefonie się "jakoś" mieszczą.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">05</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Mobile-first bez kompromisów</h3>
+						<p class="www-step__desc">Projektuję od najmniejszego ekranu wzwyż. Każdy touch target ma minimum 44×44px. Żadnych elementów, które na telefonie się „jakoś" mieszczą.</p>
+					</div>
 				</div>
 
-				<div class="www-card">
-					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-					<h3 class="www-card__title">Nagłówki bezpieczeństwa w standardzie</h3>
-					<p class="www-card__text">HSTS, CSP, X-Frame-Options, Referrer-Policy — skrojone pod konkretne zasoby strony, nie skopiowane z generatora. Cloudflare Pages jako hosting z automatycznym SSL.</p>
+				<div class="www-step">
+					<div class="www-step__left">
+						<div class="www-step__num">06</div>
+					</div>
+					<div class="www-step__content">
+						<h3 class="www-step__title">Nagłówki bezpieczeństwa w standardzie</h3>
+						<p class="www-step__desc">HSTS, CSP, X-Frame-Options, Referrer-Policy – skrojone pod konkretne zasoby strony, nie skopiowane z generatora. Cloudflare Pages jako hosting z automatycznym SSL.</p>
+					</div>
 				</div>
 
 			</div>
@@ -365,7 +389,7 @@ import Nav from '../components/Nav.astro';
 
 	/* WWW-DOSTANIESZ */
 	.www-dostaniesz {
-		background-color: var(--color-white);
+		background-color: var(--color-surface);
 		padding: 4rem 1.5rem;
 	}
 
@@ -380,34 +404,65 @@ import Nav from '../components/Nav.astro';
 		line-height: 1.6;
 	}
 
-	.www-dostaniesz__grid {
+	.www-steps {
+		position: relative;
+		max-width: 760px;
+		margin-inline: auto;
+	}
+
+	.www-steps::before {
+		content: '';
+		position: absolute;
+		top: 28px;
+		bottom: 28px;
+		left: 27px;
+		width: 2px;
+		background: linear-gradient(to bottom, var(--color-accent-light), var(--color-accent-light));
+	}
+
+	.www-step {
 		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.25rem;
+		grid-template-columns: 56px 1fr;
+		gap: 1.5rem;
+		padding: 0 0 2.5rem;
 	}
 
-	.www-card {
-		background: var(--color-white);
-		border-radius: var(--radius-lg);
-		border: 1px solid rgba(15, 31, 61, 0.08);
-		border-top: 3px solid var(--color-accent);
-		padding: 2rem;
+	.www-step:last-child { padding-bottom: 0; }
+
+	.www-step__left {
+		display: flex;
+		justify-content: center;
+		padding-top: 2px;
+		position: relative;
+		z-index: 1;
 	}
 
-	.www-card__icon {
+	.www-step__num {
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background-color: var(--color-accent-light);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1rem;
+		font-weight: 800;
 		color: var(--color-accent);
-		margin-bottom: 1rem;
-		display: block;
+		flex-shrink: 0;
 	}
 
-	.www-card__title {
-		font-size: 1.125rem;
+	.www-step__content {
+		padding-top: 0.875rem;
+	}
+
+	.www-step__title {
+		font-size: 1.25rem;
 		font-weight: 700;
 		color: var(--color-primary);
-		margin-bottom: 0.625rem;
+		margin: 0 0 0.5rem;
 	}
 
-	.www-card__text {
+	.www-step__desc {
 		font-size: 0.9375rem;
 		color: var(--color-text-muted);
 		line-height: 1.65;
@@ -638,10 +693,6 @@ import Nav from '../components/Nav.astro';
 	/* DESKTOP */
 	@media (min-width: 768px) {
 		.www-metrics__grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		.www-dostaniesz__grid {
 			grid-template-columns: repeat(3, 1fr);
 		}
 

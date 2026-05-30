@@ -168,6 +168,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 					<span class="site-footer__nav-heading">Strony</span>
 					<a href="/proces" class="site-footer__link">Proces współpracy</a>
 					<a href="/ai-act" class="site-footer__link">AI Act</a>
+					<a href="/strony-www" class="site-footer__link">Strony WWW</a>
 					<a href="/case-studies" class="site-footer__link">Case Studies</a>
 					<a href="/blog" class="site-footer__link">Blog</a>
 					<a href="/o-mnie" class="site-footer__link">O mnie</a>
@@ -895,8 +896,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 	}
 
 	/* ── strony-www dark mode ── */
-	[data-theme="dark"] .www-metrics__item,
-	[data-theme="dark"] .www-card {
+	[data-theme="dark"] .www-metrics__item {
 		background-color: rgba(232, 241, 255, 0.04) !important;
 		border-color: rgba(232, 241, 255, 0.1) !important;
 	}
@@ -905,16 +905,26 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		color: var(--color-primary) !important;
 	}
 
-	[data-theme="dark"] .www-card__title,
 	[data-theme="dark"] .www-proces__step-title,
 	[data-theme="dark"] .www-proces__lead {
 		color: var(--color-primary) !important;
 	}
 
 	[data-theme="dark"] .www-dostaniesz__lead,
-	[data-theme="dark"] .www-card__text,
 	[data-theme="dark"] .www-proces__step-text,
 	[data-theme="dark"] .www-cta__lead {
+		color: var(--color-text-muted) !important;
+	}
+
+	[data-theme="dark"] .www-step__num {
+		background-color: rgba(91, 158, 250, 0.15) !important;
+	}
+
+	[data-theme="dark"] .www-step__title {
+		color: var(--color-primary) !important;
+	}
+
+	[data-theme="dark"] .www-step__desc {
 		color: var(--color-text-muted) !important;
 	}
 </style>
