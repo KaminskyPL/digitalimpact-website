@@ -8,9 +8,10 @@ interface Props {
 	ogType?: string;
 	ogDate?: string;
 	breadcrumb?: { name: string; url: string }[];
+	robots?: string;
 }
 
-const { title, description = '', ogImage, ogType = 'website', ogDate, breadcrumb } = Astro.props;
+const { title, description = '', ogImage, ogType = 'website', ogDate, breadcrumb, robots } = Astro.props;
 const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 ---
 
@@ -34,6 +35,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 			})();
 		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{robots && <meta name="robots" content={robots} />}
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="preload" href="/fonts/dm-sans-latin-ext-500-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -71,6 +73,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		{
 			"@context": "https://schema.org",
 			"@type": ["LocalBusiness", "ProfessionalService"],
+			"@id": "https://digitalimpact.pl/#business",
 			"name": "Digital Impact",
 			"legalName": "Digital Impact Kamil Kiersnowski",
 			"description": "Konsulting AI dla firm – wdrożenia sztucznej inteligencji, automatyzacja procesów, szkolenia zespołów.",
