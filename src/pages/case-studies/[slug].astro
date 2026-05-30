@@ -23,6 +23,10 @@ const branza = entry.data['branża'];
 	description={efekt ?? entry.data.description ?? ''}
 	ogType="article"
 	ogDate={pubDate ? pubDate.toISOString() : undefined}
+	breadcrumb={[
+		{ name: 'Case Studies', url: 'https://digitalimpact.pl/case-studies' },
+		{ name: title, url: `https://digitalimpact.pl/case-studies/${entry.id}` }
+	]}
 >
 	<Nav current="case-studies" />
 

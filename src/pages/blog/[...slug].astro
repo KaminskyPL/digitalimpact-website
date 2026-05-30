@@ -22,6 +22,10 @@ const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', 
 	description={description ?? ''}
 	ogType="article"
 	ogDate={pubDate.toISOString()}
+	breadcrumb={[
+		{ name: 'Blog', url: 'https://digitalimpact.pl/blog' },
+		{ name: title, url: `https://digitalimpact.pl/blog/${entry.id}` }
+	]}
 >
 	<Nav current="blog" />
 
