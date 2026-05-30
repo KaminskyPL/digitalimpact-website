@@ -83,6 +83,17 @@ import Nav from '../components/Nav.astro';
 						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 					</a>
 				</div>
+				<div class="card card--service">
+					<span class="card__number">04</span>
+					<h3 class="card__title">Strony WWW</h3>
+					<p class="card__text card__text--muted">
+						Projektuję i buduję szybkie, widoczne w Google strony w Astro – zoptymalizowane pod Lighthouse 100/100.
+					</p>
+					<a href="/strony-www" class="card__roi-link">
+						Zobacz ofertę
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -751,6 +762,19 @@ import Nav from '../components/Nav.astro';
 
 		.wyrozniki__grid {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	/* Siatka kart oferty: 4 karty → 2 kolumny tablet, 4 kolumny desktop */
+	@media (min-width: 640px) {
+		.cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 900px) {
+		.cards {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 </style>

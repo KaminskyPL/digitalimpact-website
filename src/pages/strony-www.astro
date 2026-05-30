@@ -1,0 +1,652 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout
+	title="Projektowanie stron WWW – Digital Impact"
+	description="Projektuję nowoczesne strony WWW zoptymalizowane pod Lighthouse 100/100 i SEO. Astro, czyste CSS, zero zbędnego JS. Od briefu do gotowej strony."
+	breadcrumb={[{ name: 'Strony WWW', url: 'https://digitalimpact.pl/strony-www' }]}
+>
+	<Nav current="strony-www" />
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<p class="hero__overline">projektowanie stron www</p>
+			<h1 class="hero__title">
+				Strona, która robi robotę.<br />
+				Szybka, widoczna w Google, bez kompromisów.
+			</h1>
+			<p class="hero__subtitle">
+				Projektuję od zera — bez gotowych szablonów. Każda strona jest napisana
+				ręcznie w Astro, zoptymalizowana pod Lighthouse 100/100 i dostosowana
+				do Twoich celów biznesowych.
+			</p>
+			<div class="hero__actions">
+				<a href="/kontakt" class="btn btn--accent">Omów projekt</a>
+				<a href="#proces-www" class="btn btn--ghost">Zobacz jak pracuję</a>
+			</div>
+			<div class="hero__proof">
+				<span class="hero__proof-item">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+					Lighthouse 100 / 100 / 100 / 100
+				</span>
+				<span class="hero__proof-item">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+					FCP 0.2s, LCP 0.3s, CLS 0
+				</span>
+				<span class="hero__proof-item">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+					Zero zewnętrznych zależności
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- METRYKI -->
+	<section class="www-metrics">
+		<div class="container">
+			<div class="www-metrics__grid">
+				<div class="www-metrics__item">
+					<p class="www-metrics__value">100 / 100</p>
+					<p class="www-metrics__desc">Lighthouse Performance + SEO na tej stronie</p>
+				</div>
+				<div class="www-metrics__item">
+					<p class="www-metrics__value">0.2s FCP</p>
+					<p class="www-metrics__desc">First Contentful Paint – treść pojawia się błyskawicznie</p>
+				</div>
+				<div class="www-metrics__item">
+					<p class="www-metrics__value">0 ms TBT</p>
+					<p class="www-metrics__desc">Total Blocking Time – strona nigdy nie blokuje użytkownika</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CO DOSTAJESZ -->
+	<section class="www-dostaniesz">
+		<div class="container">
+			<h2 class="section-title">Co dostajesz</h2>
+			<p class="www-dostaniesz__lead">Nie szablon kupiony w marketplace. Kod pisany od zera, dostosowany do Twojej firmy.</p>
+			<div class="www-dostaniesz__grid">
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+					<h3 class="www-card__title">Własny kod, nie szablon</h3>
+					<p class="www-card__text">Każda strona powstaje od zera w Astro — czystym frameworku generującym statyczny HTML. Zero zbędnych wtyczek, zero ukrytych zależności. Kod, który rozumiesz i możesz rozwijać.</p>
+				</div>
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+					<h3 class="www-card__title">SEO gotowe od pierwszej linii</h3>
+					<p class="www-card__text">Meta tagi, OpenGraph, Schema.org JSON-LD, sitemap, robots.txt — wszystko skonfigurowane poprawnie już w dniu wdrożenia. Nie czekasz miesiącami na indeksację.</p>
+				</div>
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+					<h3 class="www-card__title">Wydajność mierzona, nie deklarowana</h3>
+					<p class="www-card__text">Dostajesz zrzut Lighthouse z wynikami 100/100 do każdego projektu. FCP poniżej 0.3s, zero layout shift — bo optymalizacja jest wbudowana w proces, nie doklejana na końcu.</p>
+				</div>
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+					<h3 class="www-card__title">Tryb ciemny w standardzie</h3>
+					<p class="www-card__text">Ciemny motyw to nie opcja premium — buduję go od początku, razem z jasnym. Przełącznik wykrywa preferencje systemowe i zapamiętuje wybór użytkownika.</p>
+				</div>
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+					<h3 class="www-card__title">Mobile-first bez kompromisów</h3>
+					<p class="www-card__text">Projektuję od najmniejszego ekranu wzwyż — nie odwrotnie. Każdy touch target ma minimum 44×44px. Żadnych elementów, które na telefonie się "jakoś" mieszczą.</p>
+				</div>
+
+				<div class="www-card">
+					<svg class="www-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+					<h3 class="www-card__title">Nagłówki bezpieczeństwa w standardzie</h3>
+					<p class="www-card__text">HSTS, CSP, X-Frame-Options, Referrer-Policy — skrojone pod konkretne zasoby strony, nie skopiowane z generatora. Cloudflare Pages jako hosting z automatycznym SSL.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- PROCES PRACY -->
+	<section class="www-proces" id="proces-www">
+		<div class="container">
+			<h2 class="section-title">Jak wygląda nasza współpraca</h2>
+			<p class="www-proces__lead">Od pierwszej rozmowy do wdrożenia — żadnych niespodzianek w połowie drogi.</p>
+			<ol class="www-proces__steps">
+				<li class="www-proces__step">
+					<span class="www-proces__num">01</span>
+					<div class="www-proces__step-body">
+						<h3 class="www-proces__step-title">Rozmowa i brief</h3>
+						<p class="www-proces__step-text">Zaczynamy od 30-minutowej rozmowy. Pytam o cel strony, odbiorców, konkurencję i to, co Cię irytuje w obecnej witrynie. Na tej podstawie przygotuję brief — dokument, który opisuje zakres projektu i którego trzymamy się przez całą współpracę.</p>
+					</div>
+				</li>
+				<li class="www-proces__step">
+					<span class="www-proces__num">02</span>
+					<div class="www-proces__step-body">
+						<h3 class="www-proces__step-title">Projekt i wizualizacja</h3>
+						<p class="www-proces__step-text">Przygotowuję propozycję layoutu — strukturę sekcji, hierarchię treści, paletę kolorów. Pokazuję Ci wersję desktop i mobile. Komentujesz, wprowadzam poprawki. Zaczynamy kodować dopiero gdy layout jest zaakceptowany.</p>
+					</div>
+				</li>
+				<li class="www-proces__step">
+					<span class="www-proces__num">03</span>
+					<div class="www-proces__step-body">
+						<h3 class="www-proces__step-title">Kodowanie i optymalizacja</h3>
+						<p class="www-proces__step-text">Piszę kod w Astro — czysto, bez zbędnych zależności. Na bieżąco mierzę Lighthouse i poprawiam każde odchylenie od 100. SEO, dostępność, bezpieczeństwo — to nie finalna lista kontrolna, tylko część procesu.</p>
+					</div>
+				</li>
+				<li class="www-proces__step">
+					<span class="www-proces__num">04</span>
+					<div class="www-proces__step-body">
+						<h3 class="www-proces__step-title">Prezentacja i wdrożenie</h3>
+						<p class="www-proces__step-text">Przed wdrożeniem pokazuję Ci gotową stronę na środowisku testowym. Dostajesz czas na ostatnie uwagi. Po akceptacji — wdrożenie na Twojej domenie, konfiguracja DNS i SSL, przekazanie dostępów. Dostajesz też zrzut Lighthouse jako potwierdzenie jakości.</p>
+					</div>
+				</li>
+			</ol>
+		</div>
+	</section>
+
+	<!-- AI BRIDGE -->
+	<section class="www-ai-bridge" id="www-ai">
+		<div class="container">
+			<h2 class="www-ai-bridge__title">Strona to narzędzie. AI robi z niej maszynę.</h2>
+			<p class="www-ai-bridge__lead">Każda strona, którą buduję, jest gotowa na integrację z AI. Kalkulator ROI, chatbot obsługi klienta, automatyczne generowanie ofert — to nie science-fiction, to gotowe integracje, które możesz uruchomić od razu po wdrożeniu strony.</p>
+			<div class="www-ai-bridge__cards">
+				<div class="www-ai-bridge__card">
+					<span class="www-ai-bridge__tag">Audyt AI</span>
+					<h3 class="www-ai-bridge__card-title">Sprawdź, co AI może zautomatyzować w Twojej firmie</h3>
+					<a href="/kalkulator-roi" class="www-ai-bridge__card-link">
+						Oblicz ROI
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+					</a>
+				</div>
+				<div class="www-ai-bridge__card">
+					<span class="www-ai-bridge__tag">Wdrożenie AI</span>
+					<h3 class="www-ai-bridge__card-title">Gotowy integrować AI z Twoją nową stroną?</h3>
+					<a href="/kontakt" class="www-ai-bridge__card-link">
+						Porozmawiajmy
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="www-faq">
+		<div class="container">
+			<h2 class="section-title">Najczęstsze pytania</h2>
+			<div class="faq-index__grid">
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Na jakiej technologii budujesz strony?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Pracuję wyłącznie na Astro — frameworku, który generuje czysty, statyczny HTML. Zero zbędnego JavaScriptu wysyłanego do przeglądarki. To bezpośredni powód, dla którego wyniki Lighthouse są takie, jakie są — nie dlatego, że "dbam o wydajność", ale dlatego, że architektura na to pozwala.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Czy mogę samodzielnie edytować treści?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Tak. Standardowo strona trafia na Twoje repozytorium GitHub, a treści możesz edytować jako pliki Markdown — bez dotykania kodu. Jeśli potrzebujesz CMS z interfejsem wizualnym, mogę dołączyć Decap CMS (bezpłatny, open-source). Kwestię omawiamy na briefie.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Czy wdrożenie u Ciebie oznacza, że nie skontaktuję się z hostem, rejestratorem domeny itd.?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">W standardzie konfiguruję wszystko sam — Cloudflare Pages jako hosting, DNS, SSL, nagłówki bezpieczeństwa. Potrzebuję tylko dostępu do panelu Twojego rejestratora domeny (np. OVH, home.pl, nazwa.pl) na czas konfiguracji. Resztą zajmuję się ja.</p>
+				</details>
+
+				<details class="faq-index__item">
+					<summary class="faq-index__question">
+						Jak to się łączy z AI consulting?
+						<svg class="faq-index__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+					</summary>
+					<p class="faq-index__answer">Strona WWW to fundament — bez niej AI nie ma gdzie "wylądować". Formularz kontaktowy, który obsługuje chatbot, kalkulator oparty na modelu językowym, automatyczne odpowiedzi — to wszystko wymaga dobrze zbudowanej strony jako bazy. Dlatego oferuję to jako kompletny pakiet: strona + AI, nie jedno albo drugie.</p>
+				</details>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="cta-section">
+		<div class="container">
+			<h2 class="cta-section__title">Porozmawiajmy o Twojej stronie.</h2>
+			<p class="www-cta__lead">30-minutowa rozmowa wystarczy, żeby ocenić zakres i oszacować czas realizacji.</p>
+			<a href="/kontakt" class="btn btn--accent">Napisz do mnie</a>
+		</div>
+	</section>
+
+	<!-- JSON-LD -->
+	<script type="application/ld+json" is:inline>{JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Projektowanie stron WWW",
+		"provider": {
+			"@type": "LocalBusiness",
+			"@id": "https://digitalimpact.pl/#business",
+			"name": "Digital Impact Kamil Kiersnowski"
+		},
+		"serviceType": "Web Design",
+		"description": "Projektowanie nowoczesnych stron WWW w Astro, zoptymalizowanych pod Lighthouse 100/100 i SEO.",
+		"areaServed": "PL",
+		"url": "https://digitalimpact.pl/strony-www"
+	})}</script>
+
+</Layout>
+
+<style>
+	/* HERO */
+	.hero {
+		background-color: var(--color-primary);
+		padding: 6rem 1.5rem;
+		text-align: center;
+	}
+
+	.hero__overline {
+		font-size: 0.875rem;
+		letter-spacing: 0.1em;
+		color: #E8F1FF;
+		font-weight: 500;
+		margin: 0 0 1.25rem;
+		text-transform: uppercase;
+	}
+
+	.hero__title {
+		font-size: clamp(2rem, 5vw, 3.25rem);
+		font-weight: 800;
+		line-height: 1.15;
+		color: #FFFFFF;
+		margin: 0 0 1.5rem;
+	}
+
+	.hero__subtitle {
+		font-size: 1.125rem;
+		color: rgba(232, 241, 255, 0.85);
+		max-width: 600px;
+		margin-inline: auto;
+		margin-bottom: 2.5rem;
+		line-height: 1.7;
+	}
+
+	.hero__actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 2.5rem;
+	}
+
+	.btn--ghost {
+		border: 2px solid rgba(232, 241, 255, 0.35);
+		color: #E8F1FF;
+		background: transparent;
+		padding: 0.875rem 2rem;
+		border-radius: var(--radius-md);
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: var(--font-sans);
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		transition: border-color 0.15s, color 0.15s;
+	}
+
+	.btn--ghost:hover {
+		border-color: rgba(232, 241, 255, 0.7);
+		color: #FFFFFF;
+	}
+
+	.hero__proof {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		justify-content: center;
+	}
+
+	.hero__proof-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		color: rgba(232, 241, 255, 0.75);
+		font-weight: 500;
+	}
+
+	.hero__proof-item svg {
+		color: rgba(232, 241, 255, 0.8);
+		flex-shrink: 0;
+	}
+
+	/* WWW-METRICS */
+	.www-metrics {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	.www-metrics__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.www-metrics__item {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		text-align: center;
+	}
+
+	.www-metrics__value {
+		font-size: clamp(2.25rem, 5vw, 2.75rem);
+		font-weight: 800;
+		color: var(--color-primary);
+		margin: 0 0 0.5rem;
+		line-height: 1;
+	}
+
+	.www-metrics__desc {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	/* WWW-DOSTANIESZ */
+	.www-dostaniesz {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.www-dostaniesz__lead {
+		text-align: center;
+		font-size: 1.0625rem;
+		color: var(--color-text-muted);
+		max-width: 560px;
+		margin-inline: auto;
+		margin-top: -1.5rem;
+		margin-bottom: 2.5rem;
+		line-height: 1.6;
+	}
+
+	.www-dostaniesz__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.www-card {
+		background: var(--color-white);
+		border-radius: var(--radius-lg);
+		border: 1px solid rgba(15, 31, 61, 0.08);
+		border-top: 3px solid var(--color-accent);
+		padding: 2rem;
+	}
+
+	.www-card__icon {
+		color: var(--color-accent);
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.www-card__title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.625rem;
+	}
+
+	.www-card__text {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.65;
+		margin: 0;
+	}
+
+	/* WWW-PROCES */
+	.www-proces {
+		background-color: var(--color-surface);
+		padding: 4rem 1.5rem;
+	}
+
+	.www-proces__lead {
+		text-align: center;
+		font-size: 1.0625rem;
+		color: var(--color-text-muted);
+		max-width: 560px;
+		margin-inline: auto;
+		margin-top: -1.5rem;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+	}
+
+	.www-proces__steps {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		max-width: 720px;
+		position: relative;
+	}
+
+	.www-proces__steps::before {
+		content: '';
+		position: absolute;
+		top: 1.125rem;
+		bottom: 1.125rem;
+		left: 1.125rem;
+		width: 2px;
+		background: rgba(15, 31, 61, 0.1);
+	}
+
+	.www-proces__step {
+		display: flex;
+		gap: 1.5rem;
+		padding-bottom: 2.5rem;
+		position: relative;
+	}
+
+	.www-proces__step:last-child {
+		padding-bottom: 0;
+	}
+
+	.www-proces__num {
+		width: 2.25rem;
+		height: 2.25rem;
+		border-radius: 50%;
+		background: var(--color-accent);
+		color: #FFFFFF;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.8125rem;
+		font-weight: 700;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.www-proces__step-body {
+		padding-top: 0.3125rem;
+	}
+
+	.www-proces__step-title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.375rem;
+	}
+
+	.www-proces__step-text {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.65;
+		margin: 0;
+	}
+
+	/* WWW-AI-BRIDGE */
+	.www-ai-bridge {
+		background-color: #0F1F3D;
+		padding: 5rem 1.5rem;
+	}
+
+	.www-ai-bridge__title {
+		font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+		font-weight: 800;
+		color: #FFFFFF;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.www-ai-bridge__lead {
+		font-size: 1.0625rem;
+		color: rgba(232, 241, 255, 0.8);
+		max-width: 580px;
+		margin-inline: auto;
+		text-align: center;
+		margin-bottom: 2.5rem;
+		line-height: 1.65;
+	}
+
+	.www-ai-bridge__cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+		max-width: 800px;
+		margin-inline: auto;
+	}
+
+	.www-ai-bridge__card {
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid rgba(232, 241, 255, 0.12);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+	}
+
+	.www-ai-bridge__tag {
+		display: inline-block;
+		background: rgba(91, 158, 250, 0.2);
+		color: #5B9EFA;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		border-radius: 999px;
+		padding: 0.25rem 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.www-ai-bridge__card-title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: #FFFFFF;
+		margin-bottom: 1rem;
+	}
+
+	.www-ai-bridge__card-link {
+		color: #5B9EFA;
+		text-decoration: none;
+		font-weight: 600;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+	}
+
+	.www-ai-bridge__card-link:hover {
+		color: #E8F1FF;
+		text-decoration: underline;
+	}
+
+	/* WWW-FAQ */
+	.www-faq {
+		background-color: var(--color-white);
+		padding: 4rem 1.5rem;
+	}
+
+	.faq-index__grid {
+		max-width: 720px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.faq-index__item {
+		border-bottom: 1px solid rgba(15, 31, 61, 0.08);
+	}
+
+	.faq-index__item:first-child {
+		border-top: 1px solid rgba(15, 31, 61, 0.08);
+	}
+
+	.faq-index__question {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.25rem 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		cursor: pointer;
+		list-style: none;
+		line-height: 1.4;
+	}
+
+	.faq-index__question::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-index__chevron {
+		flex-shrink: 0;
+		color: var(--color-accent);
+		transition: transform 0.2s;
+	}
+
+	details[open] .faq-index__chevron {
+		transform: rotate(180deg);
+	}
+
+	.faq-index__answer {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin: 0;
+		padding-bottom: 1.25rem;
+		max-width: 620px;
+	}
+
+	/* CTA */
+	.www-cta__lead {
+		text-align: center;
+		color: rgba(232, 241, 255, 0.85);
+		font-size: 1.0625rem;
+		max-width: 500px;
+		margin-inline: auto;
+		margin-top: -1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	/* DESKTOP */
+	@media (min-width: 768px) {
+		.www-metrics__grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.www-dostaniesz__grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.www-ai-bridge__cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+</style>
