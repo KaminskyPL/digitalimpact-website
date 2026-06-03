@@ -9,7 +9,7 @@ const { current } = Astro.props;
   <div class="nav__container">
 
     <a href="/" class="nav__logo">
-      <img src="/logo.svg" alt="Digital Impact AI Consulting" width="160" height="44" class="nav__logo-img" fetchpriority="high">
+      <img src="/logo.svg" alt="Digital Impact AI Consulting" height="44" class="nav__logo-img" fetchpriority="high">
     </a>
 
     <!-- SVG defs - ikony toggle używane przez oba przyciski (mobile + desktop) -->
@@ -190,7 +190,7 @@ const { current } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 1100px;
+    max-width: 1400px;
     margin-inline: auto;
     padding: 0.75rem 1.5rem;
     min-height: 64px;
@@ -364,7 +364,7 @@ const { current } = Astro.props;
      DESKTOP >= 900px
      ============================================= */
   @media (min-width: 900px) {
-    .nav__container  { padding: 0.75rem 1.25rem; }
+    .nav__container  { padding: 0.75rem 2rem; }
     .nav__logo-img   { height: 36px; }
     .nav__controls   { display: none; }
     .nav__hamburger  { display: none; }
