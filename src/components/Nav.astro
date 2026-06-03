@@ -9,7 +9,7 @@ const { current } = Astro.props;
   <div class="nav__container">
 
     <a href="/" class="nav__logo">
-      <img src="/logo.svg" alt="Digital Impact AI Consulting" height="44" class="nav__logo-img" fetchpriority="high">
+      <img src="/logo.svg" alt="Digital Impact AI Consulting" width="285" height="44" class="nav__logo-img" fetchpriority="high">
     </a>
 
     <!-- SVG defs - ikony toggle używane przez oba przyciski (mobile + desktop) -->
@@ -202,13 +202,14 @@ const { current } = Astro.props;
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
+    max-width: 160px;
+    overflow: hidden;
   }
 
   .nav__logo-img {
     display: block;
     height: 36px;
     width: auto;
-    max-width: 160px;
   }
 
   /* CONTROLS (mobile) */
@@ -369,7 +370,7 @@ const { current } = Astro.props;
       padding: 0.75rem 1.5rem;
       justify-content: space-between;
     }
-    .nav__logo-img   { height: 40px; max-width: 160px; }
+    .nav__logo-img   { height: 40px; }
     .nav__controls   { display: none; }
     .nav__hamburger  { display: none; }
     .nav__theme-item { display: flex; align-items: center; }
