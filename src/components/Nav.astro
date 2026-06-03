@@ -144,7 +144,7 @@ const { current } = Astro.props;
     const HINT_KEY = 'di-hint-shown';
     if (localStorage.getItem(HINT_KEY)) return;
 
-    const isMobile = window.innerWidth < 1150;
+    const isMobile = window.innerWidth < 1000;
     const suffix = isMobile ? '' : '-desktop';
     const hint = document.getElementById('theme-hint' + suffix);
     const hintText = document.getElementById('theme-hint-text' + suffix);
@@ -185,6 +185,7 @@ const { current } = Astro.props;
     z-index: 100;
     background-color: var(--color-white);
     border-bottom: 1px solid rgba(15, 31, 61, 0.08);
+    overflow-x: hidden;
   }
 
   /* ── KONTENER ── */
@@ -196,7 +197,6 @@ const { current } = Astro.props;
     padding: 0 1.5rem;
     min-height: 64px;
     position: relative;
-    overflow: hidden;
   }
 
   /* ── LOGO ── */
@@ -361,6 +361,11 @@ const { current } = Astro.props;
     line-height: 1.4;
   }
 
+  /* =============================================
+     KROK POŚREDNI 1000–1149px
+     Mniejsza czcionka i gap — menu mieści się w 1100px
+     Logo 260px + padding 48px + 8×66px + 7×10px + 36px = ~870px < 1052px ✓
+     ============================================= */
   @media (min-width: 1000px) and (max-width: 1149px) {
     .nav__controls   { display: none; }
     .nav__hamburger  { display: none; }
@@ -383,7 +388,7 @@ const { current } = Astro.props;
     .nav__menu a {
       padding: 0;
       border-bottom: none;
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       font-weight: 500;
       white-space: nowrap;
     }
@@ -393,8 +398,7 @@ const { current } = Astro.props;
   }
 
   /* =============================================
-     DESKTOP >= 1150px
-     Logo 260px + padding 48px + menu ~750px = ~1058px < 1100px ✓
+     DESKTOP >= 1150px — pełne menu
      ============================================= */
   @media (min-width: 1150px) {
     .nav__controls   { display: none; }
@@ -424,11 +428,10 @@ const { current } = Astro.props;
     }
 
     .nav__menu a:hover { color: var(--color-accent); }
-
     .nav__theme-item { margin-left: 0.25rem; }
   }
 
-  /* ── MOBILE MENU OPEN ── */
+  /* ── MOBILE MENU OPEN (< 1000px) ── */
   @media (max-width: 999px) {
     .nav__menu--open {
       display: flex;
