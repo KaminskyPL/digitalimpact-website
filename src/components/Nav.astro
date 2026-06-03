@@ -360,6 +360,38 @@ const { current } = Astro.props;
     line-height: 1.4;
   }
 
+  /* Krok pośredni 900–1149px: menu widoczne, mniejsza czcionka i gap */
+  @media (min-width: 900px) and (max-width: 1149px) {
+    .nav__controls   { display: none; }
+    .nav__hamburger  { display: none; }
+    .nav__theme-item { display: flex; align-items: center; }
+    .nav__theme-toggle { border-color: rgba(15, 31, 61, 0.2); }
+
+    .nav__menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      margin-left: auto;
+      gap: 0.625rem;
+    }
+
+    .nav__menu a {
+      padding: 0;
+      border-bottom: none;
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .nav__menu a:hover { color: var(--color-accent); }
+    .nav__theme-item { margin-left: 0.25rem; }
+  }
+
   /* =============================================
      DESKTOP >= 1150px
      Logo 260px + padding 48px + menu ~750px = ~1058px < 1100px ✓
