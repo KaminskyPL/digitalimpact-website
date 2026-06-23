@@ -264,7 +264,7 @@ import Nav from '../components/Nav.astro';
 	</section>
 
 	<!-- JSON-LD -->
-	<script type="application/ld+json" is:inline>{JSON.stringify({
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
 		"@context": "https://schema.org",
 		"@type": "Service",
 		"name": "Projektowanie stron WWW",
