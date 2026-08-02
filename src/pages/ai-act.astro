@@ -4,8 +4,8 @@ import Nav from '../components/Nav.astro';
 ---
 
 <Layout
-	title="AI Act dla firm – audyt, zgodność, wdrożenie | Digital Impact"
-	description="Pomagam firmom przejść przez AI Act: audyt systemów AI, plan zgodności, szkolenia AI literacy. Sierpień 2026 to deadline – zacznij teraz."
+	title="AI Act 2026 dla firm – co obowiązuje po 2 sierpnia | Digital Impact"
+	description="AI Act po 2 sierpnia 2026: przejrzystość już obowiązuje, wysokie ryzyko przesunięte na grudzień 2027. Audyt AI, plan zgodności, szkolenia dla firm."
 	breadcrumb={[{name: "AI Act", url: "https://digitalimpact.pl/ai-act"}]}
 >
 	<Nav current="ai-act" />
@@ -16,7 +16,23 @@ import Nav from '../components/Nav.astro';
 			<div class="hero__content">
 				<p class="hero__overline">zgodność z prawem UE</p>
 				<h1 class="hero__title">AI Act – co musisz wiedzieć i co powinieneś zrobić</h1>
-				<p class="hero__lead">Unia Europejska uchwaliła pierwsze na świecie kompleksowe prawo regulujące sztuczną inteligencję. Część przepisów już obowiązuje. Sierpień 2026 to data, do której większość firm musi być gotowa. Pomogę Ci przez to przejść – konkretnie i bez paniki.</p>
+				<p class="hero__lead">Od 2 sierpnia 2026 obowiązują unijne przepisy o przejrzystości AI: chatbot musi się przedstawić, a treści wygenerowane przez AI trzeba oznaczać. Obowiązki dla systemów wysokiego ryzyka przesunięto na grudzień 2027. Pokażę Ci, co dotyczy Twojej firmy dziś, a co dopiero za rok.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- AKTUALIZACJA -->
+	<section class="update-section">
+		<div class="container">
+			<div class="update-box">
+				<p class="update-box__label">Aktualizacja: 2 sierpnia 2026</p>
+				<h2 class="update-box__title">Harmonogram AI Act właśnie się zmienił</h2>
+				<ul class="update-box__list">
+					<li><strong>Weszło w życie:</strong> obowiązki przejrzystości (art. 50 AI Act) – informowanie, że użytkownik ma do czynienia z AI, oraz oznaczanie treści wygenerowanych sztucznie. Do tego nadzór rynku i realne kary.</li>
+					<li><strong>Przesunięte:</strong> pełne obowiązki dla systemów wysokiego ryzyka – z 2 sierpnia 2026 na 2 grudnia 2027 (załącznik III) i 2 sierpnia 2028 (załącznik I). Powód: nie zdążono z normami technicznymi, bez których nie da się przeprowadzić oceny zgodności.</li>
+					<li><strong>Podstawa prawna:</strong> rozporządzenie (UE) 2026/1744, tzw. Digital Omnibus on AI, w życiu od 27 lipca 2026.</li>
+					<li><strong>W Polsce:</strong> 24 lipca 2026 podpisano ustawę o systemach sztucznej inteligencji. Powołuje ona KRiBSI – Komisję Rozwoju i Bezpieczeństwa Sztucznej Inteligencji, organ nadzoru z prawem do kontroli i nakładania kar. Skargę na działanie systemu AI może złożyć każdy klient i każdy kandydat do pracy. Komisja ma rozpocząć działalność jesienią 2026.</li>
+				</ul>
 			</div>
 		</div>
 	</section>
@@ -79,10 +95,46 @@ import Nav from '../components/Nav.astro';
 						<div class="timeline__dot"></div>
 					</div>
 					<div class="timeline__content">
-						<span class="timeline__badge timeline__badge--warning">⚠️ NAJWAŻNIEJSZA DATA</span>
+						<span class="timeline__badge timeline__badge--warning">⚠️ NAJPILNIEJSZE TERAZ</span>
 						<p class="timeline__date">2 sierpnia 2026</p>
-						<h3 class="timeline__title">Pełne obowiązki dla systemów wysokiego ryzyka</h3>
-						<p class="timeline__desc">Dokumentacja, zarządzanie ryzykiem, nadzór człowieka, rejestracja w bazie EU AI. Kary do 35 mln EUR lub 7% globalnego obrotu.</p>
+						<h3 class="timeline__title">Przejrzystość, nadzór rynku i kary</h3>
+						<p class="timeline__desc">Art. 50 AI Act: musisz poinformować, że użytkownik rozmawia z AI, i oznaczyć treści wygenerowane sztucznie. Ruszył nadzór rynku i możliwość nakładania kar – do 15 mln EUR lub 3% obrotu. Od tej daty organy nadzoru egzekwują też obowiązek AI literacy z art. 4.</p>
+					</div>
+				</div>
+
+				<div class="timeline__item timeline__item--future">
+					<div class="timeline__marker">
+						<div class="timeline__dot"></div>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__badge timeline__badge--future">🗓 TERMIN PRZYSZŁY</span>
+						<p class="timeline__date">2 grudnia 2026</p>
+						<h3 class="timeline__title">Znakowanie maszynowe i nowe zakazy</h3>
+						<p class="timeline__desc">Koniec okresu przejściowego na maszynowe znakowanie treści przez dostawców narzędzi obecnych na rynku przed 2 sierpnia 2026. Zaczynają obowiązywać dwa nowe zakazy: generowanie materiałów przedstawiających wykorzystywanie seksualne dzieci oraz treści intymnych bez zgody osoby.</p>
+					</div>
+				</div>
+
+				<div class="timeline__item timeline__item--future">
+					<div class="timeline__marker">
+						<div class="timeline__dot"></div>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__badge timeline__badge--future">🗓 TERMIN PRZYSZŁY</span>
+						<p class="timeline__date">2 grudnia 2027</p>
+						<h3 class="timeline__title">Systemy wysokiego ryzyka – załącznik III</h3>
+						<p class="timeline__desc">Rekrutacja i ocena pracowników, scoring kredytowy, edukacja, infrastruktura krytyczna. Dokumentacja techniczna, zarządzanie ryzykiem, nadzór człowieka, rejestracja w bazie UE. Termin przesunięty z 2 sierpnia 2026.</p>
+					</div>
+				</div>
+
+				<div class="timeline__item timeline__item--future">
+					<div class="timeline__marker">
+						<div class="timeline__dot"></div>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__badge timeline__badge--future">🗓 TERMIN PRZYSZŁY</span>
+						<p class="timeline__date">2 sierpnia 2028</p>
+						<h3 class="timeline__title">AI w produktach regulowanych – załącznik I</h3>
+						<p class="timeline__desc">Systemy AI wbudowane jako element bezpieczeństwa w wyroby medyczne, zabawki i inne produkty objęte odrębnymi przepisami UE.</p>
 					</div>
 				</div>
 
@@ -102,7 +154,7 @@ import Nav from '../components/Nav.astro';
 						<h3 class="risk-card__title">Praktyki zakazane</h3>
 					</div>
 					<div class="risk-card__body">
-						<p class="risk-card__examples"><strong>Przykłady:</strong> social scoring obywateli, manipulacja podprogowa, masowy scraping twarzy z internetu.</p>
+						<p class="risk-card__examples"><strong>Przykłady:</strong> social scoring obywateli, manipulacja podprogowa, masowy scraping twarzy z internetu. Od 2 grudnia 2026 dochodzą zakazy generowania materiałów CSAM i tzw. nudyfikatorów.</p>
 						<p class="risk-card__status risk-card__status--red">Zakaz obowiązuje od 2.02.2025</p>
 					</div>
 				</div>
@@ -115,7 +167,7 @@ import Nav from '../components/Nav.astro';
 					<div class="risk-card__body">
 						<p class="risk-card__examples"><strong>Przykłady:</strong> AI w rekrutacji i ocenie pracowników, scoring kredytowy, systemy medyczne, AI w edukacji decydujące o ocenach.</p>
 						<p class="risk-card__obligations"><strong>Obowiązki:</strong> dokumentacja techniczna, zarządzanie ryzykiem, nadzór człowieka, rejestracja w EU AI database.</p>
-						<p class="risk-card__status risk-card__status--orange">Pełne obowiązki od 2.08.2026</p>
+						<p class="risk-card__status risk-card__status--orange">Pełne obowiązki od 2.12.2027 (zał. III) i 2.08.2028 (zał. I)</p>
 					</div>
 				</div>
 
@@ -125,9 +177,9 @@ import Nav from '../components/Nav.astro';
 						<h3 class="risk-card__title">Ograniczone ryzyko – obowiązki przejrzystości</h3>
 					</div>
 					<div class="risk-card__body">
-						<p class="risk-card__examples"><strong>Przykłady:</strong> chatboty, generatory treści, systemy rekomendacji.</p>
-						<p class="risk-card__obligations"><strong>Obowiązki:</strong> obowiązek informowania użytkownika, że rozmawia z AI.</p>
-						<p class="risk-card__status risk-card__status--blue">Obowiązuje od 2.08.2026</p>
+						<p class="risk-card__examples"><strong>Przykłady:</strong> chatboty i asystenci na stronie, grafiki i wideo generowane przez AI w reklamie, syntetyczny głos w lektorze, rozpoznawanie emocji.</p>
+						<p class="risk-card__obligations"><strong>Obowiązki:</strong> poinformowanie, że użytkownik ma kontakt z AI, oraz jasne oznaczenie treści wygenerowanych lub zmanipulowanych przez AI.</p>
+						<p class="risk-card__status risk-card__status--blue">Obowiązuje od 2.08.2026 – najpilniejsze</p>
 					</div>
 				</div>
 
@@ -209,7 +261,7 @@ import Nav from '../components/Nav.astro';
 					<span class="service-step__num">02</span>
 					<div class="service-step__content">
 						<h3 class="service-step__title">Plan zgodności</h3>
-						<p class="service-step__desc">Na podstawie audytu przygotowuję konkretny plan działania: co wymaga dokumentacji, jakie szkolenia trzeba przeprowadzić, co należy wdrożyć przed sierpniem 2026. Bez prawniczego żargonu – tylko lista zadań z priorytetami.</p>
+						<p class="service-step__desc">Na podstawie audytu przygotowuję konkretny plan działania: co wymaga dokumentacji, jakie szkolenia trzeba przeprowadzić, co wdrożyć od razu (przejrzystość, oznaczanie treści, kompetencje zespołu), a co zaplanować na 2027 rok. Bez prawniczego żargonu – tylko lista zadań z priorytetami.</p>
 					</div>
 				</div>
 
@@ -217,7 +269,7 @@ import Nav from '../components/Nav.astro';
 					<span class="service-step__num">03</span>
 					<div class="service-step__content">
 						<h3 class="service-step__title">Wdrożenie i szkolenia</h3>
-						<p class="service-step__desc">Pomagam wdrożyć procedury, przygotować politykę AI w firmie, przeprowadzić szkolenia zespołu z AI literacy (wymóg Art. 4, który już obowiązuje). Możliwa współpraca z prawnikiem specjalizującym się w AI Act – jeśli sytuacja tego wymaga.</p>
+						<p class="service-step__desc">Pomagam wdrożyć procedury, przygotować politykę AI w firmie, przeprowadzić szkolenia zespołu z AI literacy (art. 4 AI Act, obowiązuje od lutego 2025, a od sierpnia 2026 podlega nadzorowi organów). Możliwa współpraca z prawnikiem specjalizującym się w AI Act – jeśli sytuacja tego wymaga.</p>
 					</div>
 				</div>
 
@@ -242,29 +294,46 @@ import Nav from '../components/Nav.astro';
 				</details>
 
 				<details class="faq__item">
+					<summary class="faq__question">Czy muszę oznaczać grafiki i teksty tworzone przez AI?</summary>
+					<p class="faq__answer">Częściej niż się wydaje. Obowiązek z art. 50 ust. 4 dotyczy treści spełniających definicję deepfake'a, a po wytycznych Komisji Europejskiej z maja 2026 rozumie się ją szeroko: treść nie musi przedstawiać realnej osoby, wystarczy, że przypomina realistyczny obiekt. Wygenerowany przez AI produkt w gazetce reklamowej, wizualizacja mieszkania z dogenerowanymi meblami czy lektor z syntetycznym głosem – to wszystko wymaga oznaczenia. Rysunek smoka już nie, bo smoki nie istnieją. Poprawa ostrości czy kolorystyki zdjęcia to nie deepfake, ale daleko idąca modyfikacja tworząca wrażenie autentyczności – już tak. Wyjątek dotyczy tekstów informacyjnych poddanych kontroli redakcyjnej, za które ktoś ponosi odpowiedzialność. Obowiązek spoczywa na tym, kto treść tworzy: jeśli agencja generuje reklamę dla marki, oznacza ją agencja.</p>
+				</details>
+
+				<details class="faq__item">
 					<summary class="faq__question">Co to jest AI literacy i czy naprawdę już obowiązuje?</summary>
-					<p class="faq__answer">Tak, obowiązuje od 2 lutego 2025. Art. 4 AI Act nakłada obowiązek zapewnienia „wystarczającego poziomu kompetencji w zakresie AI" u każdego pracownika mającego kontakt z systemami AI. Musi być udokumentowany. Nie chodzi o kurs programowania – chodzi o zrozumienie jak działa AI, jakie ma ograniczenia i jak bezpiecznie z niej korzystać.</p>
+					<p class="faq__answer">Tak, obowiązuje od 2 lutego 2025. Digital Omnibus złagodził brzmienie art. 4: zamiast obowiązku „zapewnienia wystarczającego poziomu" kompetencji jest teraz obowiązek podejmowania środków wspierających ich rozwój. To obowiązek starannego działania, nie rezultatu – ale nadal obowiązek, a od sierpnia 2026 nadzorują go krajowe organy nadzoru rynku. W praktyce potrzebujesz dowodów: polityki korzystania z AI, listy przeszkolonych osób, zakresu szkolenia. Nie chodzi o kurs programowania, tylko o zrozumienie, jak działa AI, jakie ma ograniczenia i jak korzystać z niej bezpiecznie.</p>
 				</details>
 
 				<details class="faq__item">
 					<summary class="faq__question">Jakie są kary za naruszenie AI Act?</summary>
-					<p class="faq__answer">Zależą od kategorii naruszenia. Za zakazane praktyki (Art. 5) – do 35 mln EUR lub 7% globalnego obrotu. Za niespełnienie wymogów dla systemów wysokiego ryzyka – do 15 mln EUR lub 3% obrotu. To więcej niż maksymalne kary z RODO. Kary za systemy wysokiego ryzyka są egzekwowalne od 2 sierpnia 2026.</p>
+					<p class="faq__answer">Zależą od kategorii naruszenia. Za zakazane praktyki (art. 5) – do 35 mln EUR lub 7% globalnego obrotu. Za naruszenie obowiązków przejrzystości i wymogów dla systemów wysokiego ryzyka – do 15 mln EUR lub 3% obrotu. Za wprowadzenie organu nadzoru w błąd – do 7,5 mln EUR lub 1,5%. Kary za naruszenie przejrzystości można nakładać od 2 sierpnia 2026, za systemy wysokiego ryzyka dopiero od 2 grudnia 2027. W Polsce nakłada je KRiBSI, od jej decyzji przysługuje odwołanie do Sądu Ochrony Konkurencji i Konsumentów.</p>
 				</details>
 
 				<details class="faq__item">
-					<summary class="faq__question">Co to jest Digital Omnibus i czy zmienił AI Act?</summary>
-					<p class="faq__answer">Digital Omnibus to propozycja Parlamentu Europejskiego z 2025/2026 r., która przesuwa część obowiązków AI Act i upraszcza dokumentację – szczególnie dla mniejszych firm. Kluczowe terminy (sierpień 2026) pozostają jednak w mocy. Zmiany są jeszcze procedowane – doradzam nie czekać na finalne decyzje.</p>
+					<summary class="faq__question">Co zmienił Digital Omnibus i czy AI Act został odwołany?</summary>
+					<p class="faq__answer">Nie został odwołany – przesunięto jedną ścieżkę. Rozporządzenie (UE) 2026/1744, zaproponowane przez Komisję Europejską w listopadzie 2025, weszło w życie 27 lipca 2026. Przesuwa obowiązki dla samodzielnych systemów wysokiego ryzyka z 2 sierpnia 2026 na 2 grudnia 2027, a dla AI wbudowanej w produkty regulowane na 2 sierpnia 2028. Powód: nie zdążono z normami technicznymi, bez których nie da się przeprowadzić oceny zgodności. Nie przesunięto natomiast obowiązków przejrzystości, nadzoru rynku ani kar – te obowiązują od 2 sierpnia 2026. Teksty straszące pełną zgodnością wysokiego ryzyka od sierpnia 2026 powstały przed tą zmianą.</p>
+				</details>
+
+				<details class="faq__item">
+					<summary class="faq__question">Czym jest KRiBSI i kiedy zacznie kontrolować firmy?</summary>
+					<p class="faq__answer">Komisja Rozwoju i Bezpieczeństwa Sztucznej Inteligencji to polski organ nadzoru rynku AI, powołany ustawą o systemach sztucznej inteligencji podpisaną 24 lipca 2026. Może wszczynać kontrole, nakładać kary, nakazać wycofanie systemu z rynku, a także wydawać opinie indywidualne, które dają pewność co do legalności rozwiązania przed jego wdrożeniem. Przewodniczący ma zostać powołany w ciągu dwóch miesięcy od wejścia ustawy w życie, cała Komisja w ciągu trzech – start planowany na jesień 2026. Skargę na system AI może złożyć każdy: klient, pacjent, odrzucony kandydat do pracy. Mniejsze firmy są zwolnione z opłat za udział w piaskownicy regulacyjnej.</p>
 				</details>
 
 			</div>
 		</div>
 	</section>
 
+	<!-- STAN PRAWNY -->
+	<section class="page-meta-section">
+		<div class="container">
+			<p class="page-meta">Stan prawny na 2 sierpnia 2026. Źródła: rozporządzenie (UE) 2024/1689 (AI Act), rozporządzenie (UE) 2026/1744 (Digital Omnibus on AI), wytyczne Komisji Europejskiej dotyczące obowiązków przejrzystości, ustawa o systemach sztucznej inteligencji. Strona ma charakter informacyjny i nie stanowi porady prawnej.</p>
+		</div>
+	</section>
+
 	<!-- CTA -->
 	<section class="cta-section">
 		<div class="container">
-			<h2 class="cta-section__title">Nie czekaj na sierpień 2026</h2>
-			<p class="cta-section__sub">Obowiązek szkoleń AI literacy obowiązuje już teraz. Audyt procesów zajmuje tygodnie – nie godziny. Im wcześniej zaczniesz, tym mniej będzie kosztować.</p>
+			<h2 class="cta-section__title">Wysokie ryzyko dostało 16 miesięcy więcej. Przejrzystość – ani dnia</h2>
+			<p class="cta-section__sub">Obowiązki z art. 50 obowiązują od 2 sierpnia 2026, a jesienią rusza polski organ nadzoru z prawem do kontroli. Audyt systemów AI w firmie zajmuje tygodnie, nie godziny. Sprawdźmy, gdzie naprawdę stoisz.</p>
 			<a href="/kontakt" class="btn btn--accent">Umów bezpłatną konsultację</a>
 		</div>
 	</section>
@@ -312,6 +381,54 @@ import Nav from '../components/Nav.astro';
 		max-width: 700px;
 		line-height: 1.75;
 		margin: 0;
+	}
+
+	/* AKTUALIZACJA */
+	.update-section {
+		padding: 3rem 1.5rem 0;
+	}
+
+	.update-box {
+		max-width: 760px;
+		margin-inline: auto;
+		background-color: var(--color-accent-light);
+		border: 1.5px solid var(--color-accent);
+		border-radius: var(--radius-lg);
+		padding: 1.75rem 1.75rem 1.5rem;
+	}
+
+	.update-box__label {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-accent);
+		margin: 0 0 0.5rem;
+	}
+
+	.update-box__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin: 0 0 1rem;
+		line-height: 1.3;
+	}
+
+	.update-box__list { margin: 0; padding-left: 1.1rem; }
+
+	.update-box__list li {
+		font-size: 0.9375rem;
+		line-height: 1.65;
+		color: var(--color-text);
+		margin-bottom: 0.75rem;
+	}
+
+	.update-box__list li:last-child { margin-bottom: 0; }
+
+	.update-box__list strong { color: var(--color-primary); }
+
+	@media (max-width: 600px) {
+		.update-box { padding: 1.25rem; }
 	}
 
 	/* INTRO */
@@ -401,6 +518,11 @@ import Nav from '../components/Nav.astro';
 		box-shadow: 0 0 0 4px rgba(224, 124, 36, 0.15);
 	}
 
+	.timeline__item--future .timeline__dot {
+		background-color: var(--color-white);
+		border: 3px solid var(--color-text-muted);
+	}
+
 	.timeline__content {
 		padding-top: 1px;
 	}
@@ -423,6 +545,11 @@ import Nav from '../components/Nav.astro';
 	.timeline__badge--warning {
 		background-color: rgba(224, 124, 36, 0.12);
 		color: var(--color-warning);
+	}
+
+	.timeline__badge--future {
+		background-color: rgba(107, 114, 128, 0.12);
+		color: var(--color-text-muted);
 	}
 
 	.timeline__date {
@@ -780,6 +907,20 @@ import Nav from '../components/Nav.astro';
 		line-height: 1.7;
 		margin: 0;
 		border-top: 1px solid var(--color-surface);
+	}
+
+	/* STAN PRAWNY */
+	.page-meta-section {
+		padding: 0 1.5rem 3rem;
+	}
+
+	.page-meta {
+		max-width: 760px;
+		margin-inline: auto;
+		font-size: 0.8125rem;
+		line-height: 1.6;
+		color: var(--color-text-muted);
+		text-align: center;
 	}
 
 	.cta-section__sub {
