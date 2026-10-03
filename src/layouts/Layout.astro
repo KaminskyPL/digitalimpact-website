@@ -51,7 +51,7 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<link rel="canonical" href={Astro.url} />
+		{!robots?.includes('noindex') && <link rel="canonical" href={Astro.url} />}
 		<link rel="alternate" type="application/rss+xml" title="Digital Impact – Blog o AI dla firm" href="https://digitalimpact.pl/rss.xml" />
 
 		<meta property="og:locale" content="pl_PL" />
