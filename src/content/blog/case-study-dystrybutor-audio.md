@@ -5,6 +5,8 @@ klient: "Wiodący dystrybutor audio-video, ponad 200 osób w strukturach"
 branża: "Dystrybucja, B2B"
 efekt: "Eliminacja kosztów sesji lifestyle'owych, samodzielna realizacja zadań programistycznych, wspólny standard pracy z AI dla zespołu"
 description: "Jak wdrożenie AI wyeliminowało koszty sesji lifestyle'owych, zastąpiło zewnętrznych podwykonawców i dało zespołowi wspólny standard pracy z AI."
+seoTitle: "Case study: AI w firmie dystrybucyjnej – Digital Impact"
+seoDescription: "Pokazuję, jak wdrożenie AI u dystrybutora audio-video wyeliminowało koszty sesji lifestyle'owych i dało zespołowi wspólny standard pracy z AI."
 kategoria: "Case Study"
 czas_czytania: "4 min"
 ---

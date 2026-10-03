@@ -1,7 +1,8 @@
 ---
 title: "5 procesów w firmie które możesz zautomatyzować z AI już dziś"
 pubDate: 2026-05-25
-description: "Nie musisz zaczynać od rewolucji. Oto 5 konkretnych miejsc gdzie AI oszczędza czas i pieniądze – bez wielomiesięcznych wdrożeń."
+description: "Nie musisz zaczynać od rewolucji. Oto 5 konkretnych miejsc, gdzie AI oszczędza czas i pieniądze – bez wielomiesięcznych wdrożeń."
+seoTitle: "5 procesów w firmie, które zautomatyzujesz z AI już dziś"
 kategoria: "Praktyczny AI"
 czas_czytania: "6 min"
 ---

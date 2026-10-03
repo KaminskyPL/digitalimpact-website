@@ -14,13 +14,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, description, kategoria, czas_czytania, pubDate } = entry.data;
+const { title, description, seoTitle, seoDescription, kategoria, czas_czytania, pubDate } = entry.data;
 const pubDateFormatted = pubDate.toLocaleDateString('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <Layout
-	title={`${title} – Digital Impact`}
-	description={description ?? ''}
+	title={seoTitle ?? `${title} – Digital Impact`}
+	description={seoDescription ?? description ?? ''}
 	ogType="article"
 	ogDate={pubDate.toISOString()}
 	breadcrumb={[

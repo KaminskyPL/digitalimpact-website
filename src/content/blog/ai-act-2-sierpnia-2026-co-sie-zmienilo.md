@@ -2,6 +2,8 @@
 title: "AI Act po 2 sierpnia 2026 – co naprawdę weszło w życie, a co przesunięto"
 pubDate: 2026-08-02
 description: "Wysokie ryzyko przesunięto na grudzień 2027. Obowiązki przejrzystości weszły w życie 2 sierpnia 2026 i dotyczą znacznie więcej firm niż wysokie ryzyko. Sprawdź, co dotyczy Twojej firmy."
+seoTitle: "AI Act po 2 sierpnia 2026 – co obowiązuje, a co przesunięto"
+seoDescription: "Wysokie ryzyko przesunięto na grudzień 2027, ale obowiązki przejrzystości działają od 2 sierpnia 2026 i dotyczą więcej firm niż wysokie ryzyko."
 kategoria: "AI Act"
 czas_czytania: "7 min"
 ---

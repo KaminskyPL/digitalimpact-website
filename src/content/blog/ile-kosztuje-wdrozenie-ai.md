@@ -1,7 +1,8 @@
 ---
 title: "Ile naprawdę kosztuje wdrożenie AI w małej firmie?"
 pubDate: 2026-05-25
-description: "Bez owijania w bawełnę – konkretne liczby, realne przykłady i odpowiedź na pytanie które zadaje każdy zanim zadzwoni."
+description: "Bez owijania w bawełnę – konkretne liczby, realne przykłady i odpowiedź na pytanie, które zadaje każdy, zanim zadzwoni."
+seoTitle: "Ile naprawdę kosztuje wdrożenie AI w małej firmie?"
 kategoria: "Biznes i AI"
 czas_czytania: "5 min"
 ---
