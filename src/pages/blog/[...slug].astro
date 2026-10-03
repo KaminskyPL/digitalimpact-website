@@ -4,7 +4,8 @@ import { getCollection, render } from 'astro:content';
 import Nav from '../../components/Nav.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
+	const allPosts = await getCollection('blog');
+	const posts = allPosts.filter((p) => !p.id.startsWith('case-study-'));
 	return posts.map((post) => ({
 		params: { slug: post.id },
 		props: { entry: post },
