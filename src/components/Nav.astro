@@ -212,6 +212,12 @@ const { current } = Astro.props;
     width: auto;
   }
 
+  /* ── WĄSKIE EKRANY <= 400px: mniejsze logo i padding, żeby hamburger się mieścił ── */
+  @media (max-width: 400px) {
+    .nav__container { padding: 0 1rem; }
+    .nav__logo-img  { height: auto; width: min(220px, calc(100vw - 8.5rem)); }
+  }
+
   /* ── MOBILE CONTROLS ── */
   .nav__controls {
     display: flex;

@@ -623,6 +623,17 @@ const ogImageUrl = ogImage ?? 'https://digitalimpact.pl/og-image.jpg';
 		border: 1.5px solid rgba(255, 255, 255, 0.6);
 	}
 
+	@media (max-width: 400px) {
+		.cookie-banner__btns {
+			flex-shrink: 1;
+			width: 100%;
+		}
+
+		.cookie-btn {
+			flex: 1 1 100%;
+		}
+	}
+
 	/* Focus visible — dostępność klawiaturowa */
 	:focus-visible {
 		outline: 2px solid var(--color-accent);
